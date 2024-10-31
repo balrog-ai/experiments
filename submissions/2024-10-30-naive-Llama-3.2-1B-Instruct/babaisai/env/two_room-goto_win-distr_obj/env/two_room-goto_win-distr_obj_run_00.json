@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-goto_win-distr_obj",
+    "action_frequency": {
+        "idle": 2,
+        "up": 89,
+        "left": 1,
+        "down": 8
+    },
+    "input_tokens": 420342,
+    "output_tokens": 359,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "You want to examine the current rules of the level:\n\n`wall 3 steps to the right and 4 step up`\n`wall 3 steps to the right and 3 step up`\n`wall 3 steps to the right and 1 step up`\n`wall 3 steps to the right and 1 step down`\n\nYou notice that the `wall` objects are defined as \"STOP\" properties, which means they cannot be moved or taken steps on. However, the `wall` objects are positioned at specific steps, which could potentially be useful for creating new rules.\n\nYou also notice that the `baba` object is positioned 2 steps to the left and 2 steps down, which could be useful for creating a new rule.\n\nWhat action would you like to take next?",
+        "key"
+    ],
+    "target_plan": "goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-17",
+    "seed": 1138358256,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

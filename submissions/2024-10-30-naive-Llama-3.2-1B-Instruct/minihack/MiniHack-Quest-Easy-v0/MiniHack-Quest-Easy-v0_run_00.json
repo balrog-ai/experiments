@@ -1,0 +1,57 @@
+{
+    "task": "MiniHack-Quest-Easy-v0",
+    "action_frequency": {
+        "north": 14,
+        "search": 2,
+        "wait": 2,
+        "loot": 2,
+        "eat": 60,
+        "apply": 6,
+        "pray": 5,
+        "more": 2,
+        "northeast": 7
+    },
+    "input_tokens": 391001,
+    "output_tokens": 244,
+    "done": true,
+    "episode_return": 0.005,
+    "num_steps": 100,
+    "failed_candidates": [
+        "search: search for hidden doors and passages",
+        "use pick up things",
+        "kill",
+        "next",
+        "prayer",
+        "use tool",
+        "pick up the uncursed +0 small shield",
+        "use tool",
+        "use pick up f",
+        "pick up an uncursed +1 small shield",
+        "prayer",
+        "prayer"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-18",
+    "seed": 4206345274,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

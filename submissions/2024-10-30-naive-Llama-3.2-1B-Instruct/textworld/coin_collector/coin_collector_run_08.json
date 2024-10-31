@@ -1,0 +1,41 @@
+{
+    "task": "coin_collector",
+    "action_frequency": {
+        "/go: The exit to the north is unguarded, so you decide to go north to see what's on the other side": 1,
+        "/go: The exit to the east seems to lead to a dark corridor, but you're not sure what's on the other side": 1,
+        "/go:": 9,
+        "/go": 31,
+        "take coin": 36,
+        "go": 1,
+        "go north": 1
+    },
+    "input_tokens": 48631,
+    "output_tokens": 255,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-16",
+    "seed": 2034846339,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

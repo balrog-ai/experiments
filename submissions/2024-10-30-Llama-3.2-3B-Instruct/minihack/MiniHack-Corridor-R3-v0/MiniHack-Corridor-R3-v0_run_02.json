@@ -1,0 +1,51 @@
+{
+    "task": "MiniHack-Corridor-R3-v0",
+    "action_frequency": {
+        "search": 28,
+        "open": 23,
+        "north": 16,
+        "kick": 24,
+        "south": 1,
+        "east": 4,
+        "southwest": 1,
+        "northwest": 3
+    },
+    "input_tokens": 314981,
+    "output_tokens": 214,
+    "done": true,
+    "episode_return": 0.03100000000000002,
+    "num_steps": 100,
+    "failed_candidates": [
+        "open south",
+        "move south",
+        "up",
+        "open southwest",
+        "up",
+        "open westsouthwest",
+        "k Kick the vertical wall"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-6",
+    "seed": 3474359077,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "base_url": "https://wild-ducks-post.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

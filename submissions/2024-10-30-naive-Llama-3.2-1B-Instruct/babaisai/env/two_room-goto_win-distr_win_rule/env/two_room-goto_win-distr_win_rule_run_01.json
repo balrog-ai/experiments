@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-goto_win-distr_win_rule",
+    "action_frequency": {
+        "idle": 6,
+        "up": 72,
+        "down": 11,
+        "left": 11
+    },
+    "input_tokens": 497880,
+    "output_tokens": 239,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "You are currently standing on the wall.\n\nAction: move wall 2 steps to the right",
+        "Wall 2 steps to the left and 2 step down",
+        "wall 2 steps to the right and 1 step down"
+    ],
+    "target_plan": "goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-15",
+    "seed": 1826838462,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

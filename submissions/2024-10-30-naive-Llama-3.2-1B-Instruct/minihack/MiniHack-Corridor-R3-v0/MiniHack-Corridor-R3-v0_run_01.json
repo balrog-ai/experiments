@@ -1,0 +1,42 @@
+{
+    "task": "MiniHack-Corridor-R3-v0",
+    "action_frequency": {
+        "north": 2,
+        "kick": 61,
+        "open": 14,
+        "search": 23
+    },
+    "input_tokens": 323549,
+    "output_tokens": 215,
+    "done": true,
+    "episode_return": 0.01900000000000001,
+    "num_steps": 100,
+    "failed_candidates": [
+        "I'll try to be cautious given the new moon. I'll head north.",
+        "use"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-4",
+    "seed": 866303287,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

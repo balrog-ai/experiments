@@ -1,0 +1,43 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/open",
+    "action_frequency": {
+        "go forward": 11,
+        "toggle": 94,
+        "turn right": 14,
+        "pick up": 1,
+        "drop": 3,
+        "turn left": 5
+    },
+    "input_tokens": 187543,
+    "output_tokens": 329,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "Since I don't know which object I want to interact with next, I'll use the 'toggle' action to manipulate the object in front of me. I see the blue key in front of me.\n\nAction: toggle"
+    ],
+    "mission": "open the door",
+    "progression": 0.0,
+    "process_num": "ForkProcess-23",
+    "seed": 323675982,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

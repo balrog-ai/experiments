@@ -1,0 +1,58 @@
+{
+    "task": "MiniHack-Boxoban-Hard-v0",
+    "action_frequency": {
+        "north": 31,
+        "east": 23,
+        "west": 45,
+        "south": 1
+    },
+    "input_tokens": 614444,
+    "output_tokens": 346,
+    "done": true,
+    "episode_return": -0.09900000000000007,
+    "num_steps": 100,
+    "failed_candidates": [
+        "I'll take the action of walking north.",
+        "push",
+        "move north",
+        "You can move up to one square towards the stairs.\n\nYour current position is (x=40, y=12).",
+        "b: an uncursed +1 robe (being worn)\n\nAgent the Candidate            St:15 Dx:13 Co:17 In:9 Wi:14 Ch:7 Neutral S:0    \nDlvl:1 $:0 HP:14(14) Pw:4(4) AC:4 Xp:1/0",
+        "move north",
+        "curse the boulder",
+        "East",
+        "stairs up",
+        "push",
+        "You try to move the boulder, but in vain.\n\naction: north",
+        "You can only output one of the above actions at a time.",
+        "use food rations",
+        "stairs up",
+        "b: an uncursed +1 robe (being worn)",
+        "push",
+        "East",
+        "up"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-31",
+    "seed": 2053806347,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

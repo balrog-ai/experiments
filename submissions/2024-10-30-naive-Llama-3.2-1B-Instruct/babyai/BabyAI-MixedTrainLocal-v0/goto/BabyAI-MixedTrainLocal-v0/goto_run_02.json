@@ -1,0 +1,44 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "go forward": 4,
+        "toggle": 17,
+        "turn left": 13,
+        "turn right": 26,
+        "drop": 3,
+        "pick up": 1
+    },
+    "input_tokens": 80871,
+    "output_tokens": 196,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 64,
+    "failed_candidates": [
+        "I'll choose to go forward. I am currently 3 steps forward from the red box. I'll take one step forward.",
+        "move forward"
+    ],
+    "mission": "go to a purple ball",
+    "progression": 0.0,
+    "process_num": "ForkProcess-3",
+    "seed": 2693902984,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

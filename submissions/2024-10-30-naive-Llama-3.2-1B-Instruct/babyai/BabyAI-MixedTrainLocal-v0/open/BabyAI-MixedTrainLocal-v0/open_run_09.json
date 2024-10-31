@@ -1,0 +1,45 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/open",
+    "action_frequency": {
+        "go forward": 8,
+        "turn left": 13,
+        "toggle": 89,
+        "pick up": 2,
+        "drop": 1,
+        "turn right": 15
+    },
+    "input_tokens": 173057,
+    "output_tokens": 315,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "Since I can only output one action at a time, I will choose to go forward.\n\nAction: go forward",
+        "touch the blue box",
+        "tap"
+    ],
+    "mission": "open the door",
+    "progression": 0.0,
+    "process_num": "ForkProcess-30",
+    "seed": 334977148,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

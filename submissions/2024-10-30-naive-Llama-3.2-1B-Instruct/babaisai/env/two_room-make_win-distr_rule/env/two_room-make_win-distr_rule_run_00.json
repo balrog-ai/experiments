@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-make_win-distr_rule",
+    "action_frequency": {
+        "idle": 2,
+        "up": 74,
+        "down": 16,
+        "left": 8
+    },
+    "input_tokens": 429080,
+    "output_tokens": 498,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Since the current rules are:\n\nbaba is you\nwall 1 step to the right and 4 step up\nrule `is` 5 steps to the right and 4 step up\nrule `win` 6 steps to the right and 4 step up\nwall 1 step to the right and 3 step up\nwall 1 step to the right and 2 step up\nrule `key` 3 steps to the right and 2 step up\nrule `ball` 4 steps to the right and 2 step up\nwall 1 step to the right and 1 step up\nwall 1 step to the right and 1 step down\nrule `is` 2 step to the left\nwall 1 step to the right and 1 step down\nball 3 step to the left and 1 step down\nwall 1 step to the right and 2 steps down\nrule `baba` 4 step to the left and 2 steps down\nrule `you` 2 step to the left and 2 steps down\n\nYour current position is:\n\nwall 1 step to the right and 1 step up\n\nTo move to the ball, you need to be 4 steps up (to reach the ball) and 4 steps to the right (to get there). \n\nAction: move 1 step up and 4 steps to the right",
+        "wall 1 step to the right and 1 step up"
+    ],
+    "target_plan": "make[ball is win], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-13",
+    "seed": 3684482725,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

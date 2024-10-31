@@ -1,0 +1,41 @@
+{
+    "task": "env/two_room-make_you-make_win",
+    "action_frequency": {
+        "idle": 1,
+        "left": 2,
+        "up": 84,
+        "down": 13
+    },
+    "input_tokens": 447200,
+    "output_tokens": 393,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "To execute the action \"left\" (i.e., move the wall 3 steps to the left), you'll need to examine the current rules first to understand how the rules interact with each other.\n\nCurrent information:\n- The wall is 3 steps to the right.\n- The \"wall\" rule has 3 steps to the right and 3 steps up.\n- The \"baba\" and \"you\" rules are not directly affected by the wall's position.\n- The \"key\" rule has 4 steps to the right and 2 steps down.\n\nConsidering the \"wall\" rule, moving it 3 steps to the left would change its position, affecting the \"baba\" and \"you\" rules as well. \n\nPossible actions:\n- move wall 3 steps to the left (this changes the position of the wall and potentially affects other rules)\n- examine the wall rule to see if there are any ways to manipulate it without changing other rules."
+    ],
+    "target_plan": "make[key is you], make[door is win], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 2404978733,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-make_you-make_win",
+    "action_frequency": {
+        "idle": 28,
+        "up": 58,
+        "down": 11,
+        "left": 3
+    },
+    "input_tokens": 450531,
+    "output_tokens": 392,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "The current rules appear to be:\n\n1. The 'wall' is stop.\n2. 'BABA IS YOU' is a rule that defines the goal to move towards 'BABA' and 'YOU'.\n3. The 'key' is a rule that defines the goal to move towards 'key' and 'you'.\n4. The 'door' is a rule that defines the goal to move towards the 'door'.\n5. The 'rule' is a rule that defines the win condition.\n\nThe current active rules are:\n- wall is stop\n- Baba IS YOU\n- key is stop\n- door is stop\n\nConsidering the positions and movements of the objects, the goal seems to be to reach the 'BABA' and 'YOU' or the 'key' and 'you'.\n\nTo move towards the 'BABA', 'YOU', or 'key', you need to move the current active rule to the left.\n\nAction: left",
+        "baba is you",
+        "wall"
+    ],
+    "target_plan": "make[door is you], make[key is win], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-6",
+    "seed": 361663422,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

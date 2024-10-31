@@ -1,0 +1,41 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "go forward": 3,
+        "turn right": 34,
+        "toggle": 45,
+        "turn left": 46
+    },
+    "input_tokens": 201427,
+    "output_tokens": 369,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "I'll navigate through the game.\n\nAction:_turn right_\n\nI'll turn right to move towards the grey box 1 step left and 1 step forward."
+    ],
+    "mission": "go to a grey key after you pick up the blue ball",
+    "progression": 0.0,
+    "process_num": "ForkProcess-9",
+    "seed": 1993108146,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

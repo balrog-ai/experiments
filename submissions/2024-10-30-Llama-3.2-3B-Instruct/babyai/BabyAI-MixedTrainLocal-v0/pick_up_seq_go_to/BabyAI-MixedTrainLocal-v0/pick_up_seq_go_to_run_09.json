@@ -1,0 +1,43 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "turn right": 8,
+        "go forward": 73,
+        "toggle": 26,
+        "pick up": 10,
+        "drop": 8,
+        "turn left": 3
+    },
+    "input_tokens": 187893,
+    "output_tokens": 379,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "So the observation has not changed, I need to perform an action to try to get to the yellow key. In this case, I can:\n\nturn right"
+    ],
+    "mission": "go to a yellow key after you pick up the blue box",
+    "progression": 0.0,
+    "process_num": "ForkProcess-9",
+    "seed": 3233734618,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

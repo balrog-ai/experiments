@@ -1,0 +1,65 @@
+{
+    "task": "MiniHack-MazeWalk-9x9-v0",
+    "action_frequency": {
+        "east": 31,
+        "north": 51,
+        "west": 2,
+        "south": 3,
+        "northwest": 12,
+        "northeast": 1
+    },
+    "input_tokens": 308768,
+    "output_tokens": 261,
+    "done": true,
+    "episode_return": 0.008,
+    "num_steps": 100,
+    "failed_candidates": [
+        "up",
+        "up",
+        "examine surroundings",
+        "examine surroundings",
+        "use pick-axe",
+        "examine cursor",
+        "examinate stairs up",
+        "examine surroundings",
+        "e (using the +0 pick-axe as an alternate weapon)",
+        "examine",
+        "examine cursor",
+        "examine",
+        "inventory",
+        "examine",
+        "examine (cursor)",
+        "examine cursor",
+        "examine environment",
+        "examine cursor",
+        "inventory",
+        "examine",
+        "e",
+        "use pick-axe",
+        "examine surroundings"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-7",
+    "seed": 3968762952,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "base_url": "https://wild-ducks-post.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

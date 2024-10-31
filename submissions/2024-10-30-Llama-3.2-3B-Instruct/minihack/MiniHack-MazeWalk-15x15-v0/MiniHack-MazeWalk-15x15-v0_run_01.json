@@ -1,0 +1,70 @@
+{
+    "task": "MiniHack-MazeWalk-15x15-v0",
+    "action_frequency": {
+        "east": 27,
+        "west": 5,
+        "north": 46,
+        "south": 3,
+        "southwest": 3,
+        "northwest": 13,
+        "northeast": 3
+    },
+    "input_tokens": 303540,
+    "output_tokens": 278,
+    "done": true,
+    "episode_return": 0.024000000000000014,
+    "num_steps": 100,
+    "failed_candidates": [
+        "up",
+        "up",
+        "examine",
+        "use magic marker",
+        "look around",
+        "examine",
+        "westsouthwest",
+        "examine",
+        "use magic marker",
+        "examine (or examine northeast)",
+        "examine",
+        "I will output an action. \n\nnorth",
+        "examine east",
+        "examine",
+        "examine",
+        "examine",
+        "use magic marker (x=61)",
+        "use magic marker",
+        "examine",
+        "use magic marker",
+        "examine",
+        "westsouthwest",
+        "examine northwest",
+        "examine surroundings",
+        "examine",
+        "use (magic marker, 0:61)",
+        "examine"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-1",
+    "seed": 2504583952,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "base_url": "https://wild-ducks-post.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

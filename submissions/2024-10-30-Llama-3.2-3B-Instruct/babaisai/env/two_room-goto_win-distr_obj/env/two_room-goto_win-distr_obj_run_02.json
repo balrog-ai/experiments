@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-goto_win-distr_obj",
+    "action_frequency": {
+        "up": 38,
+        "idle": 2,
+        "down": 12,
+        "right": 17,
+        "left": 31
+    },
+    "input_tokens": 416534,
+    "output_tokens": 202,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "right 4"
+    ],
+    "target_plan": "goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-12",
+    "seed": 522203771,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "base_url": "https://funny-berries-smile.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

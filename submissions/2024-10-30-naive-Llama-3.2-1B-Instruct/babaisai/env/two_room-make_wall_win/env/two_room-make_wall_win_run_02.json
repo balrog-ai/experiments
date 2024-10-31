@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-make_wall_win",
+    "action_frequency": {
+        "idle": 2,
+        "left": 3,
+        "right": 1,
+        "up": 90,
+        "down": 4
+    },
+    "input_tokens": 442320,
+    "output_tokens": 227,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Based on the current observation, I'll make the following action:\n\nAction: move wall 3 steps to the right and 1 step up",
+        "wall"
+    ],
+    "target_plan": "break[wall is stop], make[wall is win], goto[wall]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-28",
+    "seed": 2282848094,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

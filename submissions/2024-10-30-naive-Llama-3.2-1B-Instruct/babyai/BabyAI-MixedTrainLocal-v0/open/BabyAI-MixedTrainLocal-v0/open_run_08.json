@@ -1,0 +1,43 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/open",
+    "action_frequency": {
+        "go forward": 1,
+        "toggle": 70,
+        "turn right": 30,
+        "turn left": 21,
+        "pick up": 1,
+        "drop": 5
+    },
+    "input_tokens": 176967,
+    "output_tokens": 430,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "I'll take the action \"turn right\" to move forward. I'll now see the observation in its new position.\n\nCurrent Observation:\n\na blue ball 4 steps left and 1 step forward\na red box 1 step left\na purple ball 3 steps forward\na purple box 7 steps forward\na grey box 1 step right and 6 steps forward\na blue box 1 step right and 3 steps forward\na yellow key 6 steps right and 1 step forward\na yellow box 1 step right and 5 steps forward\na blue ball 3 steps right"
+    ],
+    "mission": "open the yellow door",
+    "progression": 0.0,
+    "process_num": "ForkProcess-29",
+    "seed": 144738965,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

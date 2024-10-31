@@ -1,0 +1,41 @@
+{
+    "task": "env/two_room-goto_win",
+    "action_frequency": {
+        "idle": 2,
+        "up": 9,
+        "down": 5
+    },
+    "input_tokens": 39935,
+    "output_tokens": 77,
+    "done": true,
+    "episode_return": 0.856,
+    "num_steps": 16,
+    "failed_candidates": [
+        "Since the key is the win object, and considering the new wall object, one possible action could be to move the key to the wall, which is defined as \"STOP\". \n\nAction: move key to wall",
+        "wall 3 steps down"
+    ],
+    "target_plan": "goto[key]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-11",
+    "seed": 2564580212,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

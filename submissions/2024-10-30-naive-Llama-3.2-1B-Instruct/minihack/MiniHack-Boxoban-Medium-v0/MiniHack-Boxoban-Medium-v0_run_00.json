@@ -1,0 +1,53 @@
+{
+    "task": "MiniHack-Boxoban-Medium-v0",
+    "action_frequency": {
+        "north": 31,
+        "east": 20,
+        "west": 41,
+        "south": 8
+    },
+    "input_tokens": 531653,
+    "output_tokens": 534,
+    "done": true,
+    "episode_return": -0.09900000000000007,
+    "num_steps": 100,
+    "failed_candidates": [
+        "I'll choose to move east.",
+        "push",
+        "walk",
+        "Obesrvation:\nmessage:\nYou try to push the boulder, but it's too heavy.\n\nlanguage observation:\nbars far eastnortheast, east, eastsoutheast, southeast, southsoutheast, south, and southsouthwest\ndark area far east, southeast, and south\nbars near eastnortheast, southeast, southsoutheast, and southsouthwest\nbars near eastnortheast, southeast, southsoutheast, and southsouthwest\nboulders near eastsoutheast\nfountains near eastsoutheast\ndark area very near north, northeast, southwest, west, and northwest\nbars very near eastnortheast, southsoutheast, and southsouthwest\nboulder very near east\nstairs up very near southeast\nfountain very near south\nbars adjacent north, northeast, southwest, west, and northwest\n\ncursor:\nYourself a barbarian\n(x=35, y=9)\n\nmap:\n                                                                                \n                                                                                \n                                                                                \n                                                                                \n                                                                                \n                                                                                \n                                                                                \n                                  ##########                                    \n                                  #@.`....##                                    \n                                  #...``.###                                    \n                                  #{#<`{{.##                                    \n                                  #..#..{###                                    \n                                  #.########                                    \n                                  #..#######                                    \n                                  #..#######                                    \n                                  ##########                                    \n                                  ##########                                    \n                                                                                \n                                                                                \n                                                                                \n                                                                                \nAgent the Plunderer            St:18 Dx:17 Co:18 In:7 Wi:9 Ch:6 Chaotic S:0     \nDlvl:1 $:0 HP:15(15) Pw:2(2) AC:8 Xp:1/0",
+        "push",
+        "move west",
+        "move",
+        "push",
+        "push north",
+        "push",
+        "push east",
+        "push",
+        "push"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-20",
+    "seed": 1551946392,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "task": "env/two_room-make_win",
+    "action_frequency": {
+        "idle": 4,
+        "up": 79,
+        "left": 1,
+        "down": 16
+    },
+    "input_tokens": 394384,
+    "output_tokens": 513,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Since there are no rules to manipulate, I will choose to \"up\" (move the \"baba\" object 1 step up).\n\nCurrent State:\nActive rules:\nbaba is you\nobjects on the map:\ndoor 2 steps to the right and 3 step up\nwall 4 steps to the right and 3 step up\nrule `is` 8 steps to the right and 3 step up\nrule `win` 9 steps to the right and 3 step up\nrule `wall` 1 step to the left and 2 step up\nrule `stop` 1 step to the right and 2 step up\nwall 4 steps to the right and 2 step up\nwall 4 steps to the right and 1 step up\nrule `is` 1 step to the right\nwall 4 steps to the right\nrule `door` 7 steps to the right\nwall 4 steps to the right and 1 step down\nwall 4 steps to the right and 2 steps down\nrule `baba` 1 step to the left and 3 steps down\nrule `is` 3 steps down\nrule `you` 1 step to the right and 3 steps down\nwall 4 steps to the right and 3 steps down\n\nYou can only move the \"baba\" object 1 step up.",
+        "wall 4 steps to the right",
+        "up\n\nYou are currently standing at the wall, 1 step to the right, with 3 steps down.",
+        "You"
+    ],
+    "target_plan": "make[door is win], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-11",
+    "seed": 2204119428,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

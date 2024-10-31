@@ -1,0 +1,41 @@
+{
+    "task": "env/two_room-maybe_break_stop-goto_win-distr_rule",
+    "action_frequency": {
+        "idle": 1,
+        "up": 82,
+        "left": 5,
+        "down": 12
+    },
+    "input_tokens": 424280,
+    "output_tokens": 508,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "I'll take the step to the right for now, as it's the first action that doesn't block me from moving forward.\n\nCurrent Observation:\nActive rules:\ndoor is win\nwall is stop\nbaba is you\n\nObjects on the map:\nwall 1 step to the right and 3 step up\nrule `door` 4 steps to the right and 3 step up\nrule `is` 5 steps to the right and 3 step up\nrule `win` 6 steps to the right and 3 step up\nrule `wall` 4 step to the left and 2 step up\nrule `is` 3 step to the left and 2 step up\nrule `stop` 2 step to the left and 2 step up\nwall 1 step to the right and 2 step up\ndoor 3 steps to the right and 2 step up\nwall 1 step to the right and 1 step up\nwall 1 step to the right\nwall 1 step to the right and 1 step down\nrule `key` 2 steps to the right and 1 step down\nwall 1 step to the right and 2 steps down\nrule `baba` 4 step to the left and 3 steps down\nrule `is` 3 step to the left and 3 steps down\nrule `you` 2 step to the left and 3 steps down\nwall 1 step to the right and 3 steps down"
+    ],
+    "target_plan": "break[wall is stop], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-29",
+    "seed": 1381744494,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

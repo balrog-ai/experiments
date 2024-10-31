@@ -1,0 +1,44 @@
+{
+    "task": "env/two_room-goto_win-distr_rule",
+    "action_frequency": {
+        "idle": 13,
+        "up": 67,
+        "down": 14,
+        "left": 5,
+        "right": 1
+    },
+    "input_tokens": 437004,
+    "output_tokens": 222,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Since the current observation is quite detailed, I'll focus on the most direct and helpful actions.\n\nAction: \nup",
+        "key",
+        "Stop"
+    ],
+    "target_plan": "goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-25",
+    "seed": 2357397696,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

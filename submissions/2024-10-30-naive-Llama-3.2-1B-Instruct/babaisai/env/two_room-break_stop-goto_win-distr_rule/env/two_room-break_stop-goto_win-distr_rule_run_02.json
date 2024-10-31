@@ -1,0 +1,41 @@
+{
+    "task": "env/two_room-break_stop-goto_win-distr_rule",
+    "action_frequency": {
+        "idle": 1,
+        "up": 79,
+        "down": 17,
+        "left": 3
+    },
+    "input_tokens": 435380,
+    "output_tokens": 310,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Given the current observation and the active rules, the most effective action would be to manipulate the rule `door` to make the door win by changing its conditions.\n\nSpecifically, we can try to change the conditions of the rule `door` from `4 steps to the right and 2 steps up` to `6 steps to the right and 2 steps up`. This would effectively make the door win, and this action does not violate any of the active rules.\n\nSo, the action would be:\n\nAction: up, 3 steps to the right"
+    ],
+    "target_plan": "break[wall is stop], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-23",
+    "seed": 3735643467,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

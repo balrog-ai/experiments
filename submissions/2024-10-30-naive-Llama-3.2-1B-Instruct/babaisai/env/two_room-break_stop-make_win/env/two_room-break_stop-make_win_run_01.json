@@ -1,0 +1,41 @@
+{
+    "task": "env/two_room-break_stop-make_win",
+    "action_frequency": {
+        "idle": 1,
+        "up": 70,
+        "down": 19,
+        "left": 10
+    },
+    "input_tokens": 403808,
+    "output_tokens": 246,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Considering the current state of the game and the rules, one possible action is to examine the `wall` rule again, as it seems to be the key to unlocking a new rule that can help you reach the `win` object."
+    ],
+    "target_plan": "break[wall is stop], make[key is win], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-31",
+    "seed": 621372765,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

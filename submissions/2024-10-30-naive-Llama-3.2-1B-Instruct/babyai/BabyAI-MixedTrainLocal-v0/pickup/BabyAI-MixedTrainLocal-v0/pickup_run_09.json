@@ -1,0 +1,42 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pickup",
+    "action_frequency": {
+        "go forward": 3,
+        "toggle": 28,
+        "pick up": 2,
+        "turn left": 14,
+        "turn right": 17
+    },
+    "input_tokens": 87044,
+    "output_tokens": 275,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 64,
+    "failed_candidates": [
+        "I'll navigate through the environment step by step.\n\nCurrent Observation:\n\na wall 3 steps right\na yellow ball 3 steps left and 4 steps forward\na grey box 3 steps left and 2 steps forward\na blue key 3 steps left and 1 step forward\na grey box 2 steps left\na purple key 1 step left and 3 steps forward\na grey box 1 step left and 2 steps forward\na green box 4 steps forward\na blue box 3 steps forward\n\nAction: turn left"
+    ],
+    "mission": "pick up a grey box",
+    "progression": 0.0,
+    "process_num": "ForkProcess-19",
+    "seed": 1644387933,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

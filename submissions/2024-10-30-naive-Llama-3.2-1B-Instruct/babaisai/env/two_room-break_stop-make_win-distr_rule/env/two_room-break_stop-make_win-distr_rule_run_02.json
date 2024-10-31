@@ -1,0 +1,45 @@
+{
+    "task": "env/two_room-break_stop-make_win-distr_rule",
+    "action_frequency": {
+        "idle": 18,
+        "up": 50,
+        "left": 16,
+        "down": 16
+    },
+    "input_tokens": 435152,
+    "output_tokens": 256,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Considering the current state of the map and rules, my action would be:\n\nup\n\nThis action will help me gain some height, which might be useful in my goal to move towards the win condition.",
+        "wall 1 step to the right and 3 step up",
+        "You",
+        "wall 1 step to the left",
+        "wall"
+    ],
+    "target_plan": "break[wall is stop], make[key is win], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-22",
+    "seed": 3916519709,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

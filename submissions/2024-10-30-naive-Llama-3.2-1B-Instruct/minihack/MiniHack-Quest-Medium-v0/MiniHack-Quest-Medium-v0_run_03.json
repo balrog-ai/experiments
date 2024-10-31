@@ -1,0 +1,62 @@
+{
+    "task": "MiniHack-Quest-Medium-v0",
+    "action_frequency": {
+        "north": 11,
+        "south": 1,
+        "eat": 31,
+        "k": 1,
+        "search": 4,
+        "loot": 7,
+        "more": 12,
+        "pray": 5,
+        "force": 1,
+        "open": 3,
+        "puton": 5,
+        "wait": 5,
+        "northeast": 7,
+        "apply": 5,
+        "east": 1,
+        "kick": 1
+    },
+    "input_tokens": 340082,
+    "output_tokens": 248,
+    "done": true,
+    "episode_return": 0.011000000000000003,
+    "num_steps": 100,
+    "failed_candidates": [
+        "I'll stay still and observe the environment, as I don't have any other action to take.",
+        "use sword",
+        "use sword",
+        "pick up",
+        "quit",
+        "closet",
+        "fight",
+        "prayer",
+        "quit",
+        "knight"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-20",
+    "seed": 502566127,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

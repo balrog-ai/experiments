@@ -1,0 +1,40 @@
+{
+    "task": "env/two_room-goto_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "idle": 2,
+        "up": 2
+    },
+    "input_tokens": 3982,
+    "output_tokens": 90,
+    "done": true,
+    "episode_return": 0.964,
+    "num_steps": 4,
+    "failed_candidates": [
+        "Considering the current rules and the objects on the map, I think a good action to take would be to move the `ball` 2 steps up, as it's the only object that can reach the `wall` and the `wall` has a specific rule. This action also doesn't create any new rules and can help to set up the next stage of the puzzle.",
+        "up \n\n Current Observation remains the same."
+    ],
+    "target_plan": "goto[ball]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-13",
+    "seed": 277480781,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

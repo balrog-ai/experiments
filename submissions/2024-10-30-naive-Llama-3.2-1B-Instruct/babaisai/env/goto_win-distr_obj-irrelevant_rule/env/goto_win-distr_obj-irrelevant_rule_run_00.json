@@ -1,0 +1,42 @@
+{
+    "task": "env/goto_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "idle": 1,
+        "up": 84,
+        "down": 6,
+        "left": 6,
+        "right": 3
+    },
+    "input_tokens": 259928,
+    "output_tokens": 322,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Since the current rules are \"key\" IS key, \"baba\" IS you, and \"you\" IS you, and the key IS key and is key, it's clear that \"baba\" is an object that is being used as a reference.\n\nConsidering the objects on the map, the \"key\" IS key and is key, and the \"baba\" is an object that IS key. This means that the \"baba\" is being used as a reference for the \"key\". To change this reference, we need to move the \"baba\" to the left.\n\nAction: left"
+    ],
+    "target_plan": "goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-22",
+    "seed": 700101898,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

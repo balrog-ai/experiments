@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-make_wall_win",
+    "action_frequency": {
+        "idle": 8,
+        "up": 81,
+        "down": 5,
+        "left": 5,
+        "right": 1
+    },
+    "input_tokens": 438710,
+    "output_tokens": 243,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "I will start by examining the current state of the map and identifying the rules to manipulate. I notice that there are several rules that can be changed, but I'll focus on the rules that can be simplified or combined.",
+        "wall"
+    ],
+    "target_plan": "break[wall is stop], make[wall is win], goto[wall]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-11",
+    "seed": 2142670268,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

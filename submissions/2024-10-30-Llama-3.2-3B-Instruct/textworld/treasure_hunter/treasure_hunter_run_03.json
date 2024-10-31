@@ -1,0 +1,43 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "go east": 9,
+        "go north": 25,
+        "go west": 9,
+        "pick up key": 1,
+        "go south": 27,
+        "open closed passageway": 3,
+        "take key": 3,
+        "open drawer": 1,
+        "look": 2
+    },
+    "input_tokens": 138026,
+    "output_tokens": 248,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-6",
+    "seed": 3030448911,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "base_url": "https://wild-ducks-post.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

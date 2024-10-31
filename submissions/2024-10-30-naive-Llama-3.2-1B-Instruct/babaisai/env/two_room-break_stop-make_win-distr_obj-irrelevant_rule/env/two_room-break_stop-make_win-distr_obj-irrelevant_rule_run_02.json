@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-break_stop-make_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "idle": 1,
+        "up": 65,
+        "down": 23,
+        "left": 6,
+        "right": 5
+    },
+    "input_tokens": 443944,
+    "output_tokens": 372,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "I can only move an object or text that is not defined as \"STOP\" or similar immovable properties. \n\nConsidering the current position of the objects and rules, my options are:\n\n- Move the key 2 steps down to the left, as it is defined as a \"key\" and the rule for \"key\" is 8 steps to the right and 2 steps down.\n- Move the ball 2 steps down to the left, as it is defined as a \"ball\" and the rule for \"ball\" is 7 steps to the right and 2 steps down.\n- Move the door 1 step down to the left, as it is defined as a \"door\" and the rule for \"door\" is 6 steps to the right.\n- Move the rule `is` 1 step up to balance the key's position."
+    ],
+    "target_plan": "break[wall is stop], make[key is win], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-30",
+    "seed": 4026737400,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

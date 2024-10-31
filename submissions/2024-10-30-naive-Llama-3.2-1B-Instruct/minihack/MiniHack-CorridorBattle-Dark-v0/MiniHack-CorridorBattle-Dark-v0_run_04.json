@@ -1,0 +1,54 @@
+{
+    "task": "MiniHack-CorridorBattle-Dark-v0",
+    "action_frequency": {
+        "north": 17,
+        "east": 10,
+        "west": 17,
+        "south": 11,
+        "northeast": 7,
+        "southeast": 1,
+        "southwest": 2,
+        "northwest": 6
+    },
+    "input_tokens": 222930,
+    "output_tokens": 179,
+    "done": true,
+    "episode_return": -0.0009999999999999662,
+    "num_steps": 71,
+    "failed_candidates": [
+        "I'll move northwest to avoid the dark area near my location.",
+        "back",
+        "move north",
+        "walk",
+        "move east",
+        "move north",
+        "take 11 uncursed apples",
+        "move",
+        "castle",
+        "attack"
+    ],
+    "progression": 0.0,
+    "end_reason": 1,
+    "process_num": "ForkProcess-28",
+    "seed": 2048444881,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}
