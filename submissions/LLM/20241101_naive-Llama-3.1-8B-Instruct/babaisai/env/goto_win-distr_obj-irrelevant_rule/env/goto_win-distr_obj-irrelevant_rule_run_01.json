@@ -1,0 +1,42 @@
+{
+    "task": "env/goto_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "idle": 1,
+        "right": 2,
+        "down": 3,
+        "left": 2,
+        "up": 1
+    },
+    "input_tokens": 9870,
+    "output_tokens": 42,
+    "done": true,
+    "episode_return": 0.919,
+    "num_steps": 9,
+    "failed_candidates": [
+        "down \n\nOur goal is to reach the 'key' to win, and it's currently 2 steps down from us."
+    ],
+    "target_plan": "goto[key]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-19",
+    "seed": 113284640,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

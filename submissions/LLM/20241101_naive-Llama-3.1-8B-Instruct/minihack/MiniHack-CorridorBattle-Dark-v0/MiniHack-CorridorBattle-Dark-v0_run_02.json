@@ -1,0 +1,43 @@
+{
+    "task": "MiniHack-CorridorBattle-Dark-v0",
+    "action_frequency": {
+        "east": 10,
+        "west": 7,
+        "north": 16,
+        "south": 25,
+        "southwest": 2,
+        "northwest": 2
+    },
+    "input_tokens": 182100,
+    "output_tokens": 128,
+    "done": true,
+    "episode_return": -0.0009999999999999662,
+    "num_steps": 62,
+    "failed_candidates": [
+        "attack"
+    ],
+    "progression": 0.0,
+    "end_reason": 1,
+    "process_num": "ForkProcess-5",
+    "seed": 2232539799,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "https://short-stars-matter.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

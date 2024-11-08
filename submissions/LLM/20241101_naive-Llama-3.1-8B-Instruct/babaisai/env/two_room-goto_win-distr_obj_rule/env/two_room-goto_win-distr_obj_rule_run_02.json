@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-goto_win-distr_obj_rule",
+    "action_frequency": {
+        "idle": 2,
+        "right": 26,
+        "up": 26,
+        "down": 18,
+        "left": 28
+    },
+    "input_tokens": 453200,
+    "output_tokens": 281,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Based on the current state of the level, it seems that the goal is to reach the \"ball\" which is currently 4 steps to the left. The \"door\" is also present but seems to be locked, blocked by a wall.\n\nTo start, I will move the \"ball\" 1 step to the right to bring it closer to the \"door\" and possibly other objects.\n\nAction: right"
+    ],
+    "target_plan": "goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-17",
+    "seed": 91383061,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

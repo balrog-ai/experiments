@@ -1,0 +1,54 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "look": 12,
+        "go north": 9,
+        "take key": 5,
+        "go east": 9,
+        "inventory": 5,
+        "go west": 8,
+        "open drawer": 4,
+        "go south": 8,
+        "open passageway": 2,
+        "unlock passageway with key": 1,
+        "goal": 3,
+        "take everything": 1,
+        "unlock non-euclidean safe with key": 4,
+        "open unguarded": 1,
+        "open wall": 1,
+        "open safe with key": 1,
+        "drop key": 1,
+        "pick up key": 1,
+        "open safe": 3,
+        "unlock safe with key": 1
+    },
+    "input_tokens": 109381,
+    "output_tokens": 258,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-5",
+    "seed": 2681411194,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "https://short-stars-matter.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

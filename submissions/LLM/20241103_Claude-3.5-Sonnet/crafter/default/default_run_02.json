@@ -1,0 +1,78 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Noop": 6,
+        "Move North": 21,
+        "Move West": 9,
+        "Do": 51,
+        "Place Table": 3,
+        "Make Wood Pickaxe": 3,
+        "Move South": 8,
+        "Make Stone Pickaxe": 10,
+        "Move East": 74,
+        "Make Wood Sword": 2,
+        "Make Stone Sword": 2,
+        "Sleep": 15
+    },
+    "input_tokens": 420029,
+    "output_tokens": 1073,
+    "done": true,
+    "episode_return": 6.1,
+    "num_steps": 204,
+    "failed_candidates": [
+        "Based on the current observation, the best action to take is to move towards the tree to collect wood, which is necessary for crafting tools and advancing in the game.\n\nAction: Move North",
+        "Move North-East",
+        "Move South-East",
+        "Move South-East",
+        "Move South-East",
+        "Move South-East"
+    ],
+    "score": 7.0,
+    "progression": 0.3181818181818182,
+    "achievements": {
+        "collect_coal": 2,
+        "collect_diamond": 0,
+        "collect_drink": 0,
+        "collect_iron": 0,
+        "collect_sapling": 0,
+        "collect_stone": 5,
+        "collect_wood": 7,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 1,
+        "eat_cow": 0,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 0,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 2,
+        "make_wood_sword": 1,
+        "place_furnace": 0,
+        "place_plant": 0,
+        "place_stone": 0,
+        "place_table": 2,
+        "wake_up": 0
+    },
+    "process_num": "ForkProcess-1",
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "claude",
+        "model_id": "claude-3-5-sonnet-20240620",
+        "base_url": "https://spotty-toys-teach.loca.lt/v1",
+        "is_chat_model": true,
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

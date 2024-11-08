@@ -1,0 +1,50 @@
+{
+    "task": "MiniHack-Quest-Medium-v0",
+    "action_frequency": {
+        "north": 21,
+        "wait": 2,
+        "east": 19,
+        "south": 9,
+        "pickup": 12,
+        "zap": 13,
+        "southwest": 8,
+        "search": 2,
+        "northwest": 5,
+        "down": 1,
+        "west": 2,
+        "kick": 6
+    },
+    "input_tokens": 345771,
+    "output_tokens": 214,
+    "done": true,
+    "episode_return": 0.05600000000000004,
+    "num_steps": 100,
+    "failed_candidates": [
+        "prayer",
+        "attack"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-8",
+    "seed": 3489384700,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "https://short-stars-matter.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "task": "env/two_room-goto_win",
+    "action_frequency": {
+        "idle": 3,
+        "left": 11,
+        "right": 10,
+        "up": 9,
+        "down": 7
+    },
+    "input_tokens": 147818,
+    "output_tokens": 247,
+    "done": true,
+    "episode_return": 0.6399999999999999,
+    "num_steps": 40,
+    "failed_candidates": [
+        "Based on the active rules and the objects on the map, we need to reach the door to win. However, the door is blocked by walls. We need to change the rules or move the objects around to make a path to the door.\n\nSince the rule 'wall is stop' is not present, we can move the wall objects around. The 'rule baba is you' allows us to move the Baba character. \n\nLet's move the Baba character to the position where the rule 'is' is located, which is 7 steps to the right and 2 steps up. \n\nAction: right",
+        "swap rule `baba` and `wall` using `rule 'baba' is wall` and `rule 'wall' is baba`",
+        "move rule 'baba' to the position of the current 'baba' object."
+    ],
+    "target_plan": "goto[door]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-31",
+    "seed": 646261239,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

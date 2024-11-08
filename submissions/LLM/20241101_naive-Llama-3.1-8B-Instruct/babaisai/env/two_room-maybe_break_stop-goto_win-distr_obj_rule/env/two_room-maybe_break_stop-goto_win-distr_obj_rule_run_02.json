@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-maybe_break_stop-goto_win-distr_obj_rule",
+    "action_frequency": {
+        "idle": 2,
+        "right": 34,
+        "down": 17,
+        "up": 21,
+        "left": 26
+    },
+    "input_tokens": 462252,
+    "output_tokens": 293,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Since the goal is to reach the \"ball\", but it's currently blocked by the wall and is not in a reachable position, let's try to figure out how to open a path. \n\nOne option could be to move the rule \"key\" to a position that could be used to \"win\" the level by changing the rule \"ball is win\" to something else. \n\nConsidering that, let's move the key 1 step up. \n\nAction: up"
+    ],
+    "target_plan": "goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-16",
+    "seed": 4229620744,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

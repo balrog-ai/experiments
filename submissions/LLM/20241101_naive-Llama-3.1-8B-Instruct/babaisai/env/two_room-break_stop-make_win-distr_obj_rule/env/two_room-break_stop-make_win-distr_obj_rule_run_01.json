@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-break_stop-make_win-distr_obj_rule",
+    "action_frequency": {
+        "idle": 1,
+        "up": 18,
+        "left": 26,
+        "right": 34,
+        "down": 21
+    },
+    "input_tokens": 450712,
+    "output_tokens": 249,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Since the goal is usually to reach an object defined as \"WIN\", and the current rules and objects suggest that moving right will help reach the win condition, let's try moving right to see if we can reach the win condition. \n\nAction: right"
+    ],
+    "target_plan": "break[wall is stop], make[door is win], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-19",
+    "seed": 1046958239,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

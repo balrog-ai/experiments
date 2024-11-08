@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-maybe_break_stop-goto_win-distr_obj",
+    "action_frequency": {
+        "idle": 2,
+        "left": 26,
+        "right": 39,
+        "down": 17,
+        "up": 14
+    },
+    "input_tokens": 431750,
+    "output_tokens": 248,
+    "done": true,
+    "episode_return": 0.118,
+    "num_steps": 98,
+    "failed_candidates": [
+        "left.",
+        "Move the rule `baba 1 step to the left and 3 steps down` over the rule `wall 4 steps to the right and 3 steps down` so that the text blocks `baba is` and `wall is` overlap."
+    ],
+    "target_plan": "break[wall is stop], goto[door]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-10",
+    "seed": 1696893500,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

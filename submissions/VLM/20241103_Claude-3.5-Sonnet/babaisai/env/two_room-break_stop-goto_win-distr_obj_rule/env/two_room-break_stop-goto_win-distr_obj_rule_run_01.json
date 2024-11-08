@@ -1,0 +1,41 @@
+{
+    "task": "env/two_room-break_stop-goto_win-distr_obj_rule",
+    "action_frequency": {
+        "right": 74,
+        "up": 11,
+        "down": 14,
+        "idle": 1
+    },
+    "input_tokens": 543724,
+    "output_tokens": 1101,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Based on the image and the current game state, I can see that we are very close to the key, which is defined as the win condition. The best action to take now is:\n\nright\n\nThis will move us one step closer to the key, which we need to reach to win the level."
+    ],
+    "target_plan": "break[wall is stop], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-2",
+    "seed": 1768950474,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 1,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "claude",
+        "model_id": "claude-3-5-sonnet-20240620",
+        "base_url": "http://localhost:8000/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

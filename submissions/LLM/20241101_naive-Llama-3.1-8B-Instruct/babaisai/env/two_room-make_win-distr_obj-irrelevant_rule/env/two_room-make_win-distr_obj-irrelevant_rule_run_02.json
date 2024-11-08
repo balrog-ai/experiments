@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-make_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "idle": 5,
+        "left": 24,
+        "down": 19,
+        "right": 33,
+        "up": 19
+    },
+    "input_tokens": 448435,
+    "output_tokens": 259,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "down.",
+        "take the \"rule 'baba' 1 step to the left and 2 steps down\" block and move it to the \"baba\" object, making the \"baba\" object now be \"1 step to the left and 2 steps down\" instead of its original position."
+    ],
+    "target_plan": "make[ball is win], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-29",
+    "seed": 3636511535,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

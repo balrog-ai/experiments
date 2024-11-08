@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-break_stop-goto_win-distr_rule",
+    "action_frequency": {
+        "right": 63,
+        "up": 9,
+        "down": 9,
+        "idle": 1,
+        "left": 18
+    },
+    "input_tokens": 518440,
+    "output_tokens": 1081,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Based on the image and the current game state, I can see that Baba (represented by the white triangle) is one step away from the door, which is defined as the win condition. To win the game, I should move Baba onto the door.\n\nAction: right"
+    ],
+    "target_plan": "break[wall is stop], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-2",
+    "seed": 2250586327,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 1,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "claude",
+        "model_id": "claude-3-5-sonnet-20240620",
+        "base_url": "http://localhost:8000/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

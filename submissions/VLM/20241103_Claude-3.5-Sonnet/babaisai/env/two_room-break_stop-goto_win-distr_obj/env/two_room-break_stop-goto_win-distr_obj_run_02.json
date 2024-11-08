@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-break_stop-goto_win-distr_obj",
+    "action_frequency": {
+        "right": 69,
+        "up": 10,
+        "down": 12,
+        "idle": 2,
+        "left": 7
+    },
+    "input_tokens": 524984,
+    "output_tokens": 1135,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Based on the current game state and the image provided, I can see that Baba (represented by the white character) is right next to the ball (blue circle), which is defined as the win condition. The next logical move is to touch the ball and win the level.\n\nright",
+        "Based on the current game state and the image provided, I can see that Baba (represented by the white character) is right next to the ball (blue circle), which is defined as the win condition. The next logical move is to touch the ball and win the level.\n\nAction: right"
+    ],
+    "target_plan": "break[wall is stop], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-4",
+    "seed": 2051061060,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 1,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "claude",
+        "model_id": "claude-3-5-sonnet-20240620",
+        "base_url": "http://localhost:8000/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

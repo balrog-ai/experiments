@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-goto_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "idle": 1,
+        "left": 25,
+        "right": 32,
+        "up": 24,
+        "down": 18
+    },
+    "input_tokens": 459110,
+    "output_tokens": 290,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Since the goal is to reach the \"key\" and the current rules are \"baba is you\" and \"key is win\", to start solving the level, I will move the \"rule 'is'\" block that is 7 steps to the right and 2 steps up, which is currently blocking the path to the key, to a safe location where it won't interfere with the current rules. I will move it up. \n\nAction: up"
+    ],
+    "target_plan": "goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-18",
+    "seed": 4018872124,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

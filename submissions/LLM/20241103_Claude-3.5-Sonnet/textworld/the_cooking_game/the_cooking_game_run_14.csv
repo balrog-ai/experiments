@@ -1,0 +1,659 @@
+Step,Observation,Action,Reasoning,Reward,Done
+0,"That's not a verb I recognise.
+
+>                                                                                                                                -= Livingroom =-0/1","I'll start by looking around to get more information about the environment.
+
+look",,0,False
+1,"I beg your pardon?
+
+>                                                                                                                                -= Livingroom =-0/1","I apologize for the confusion. Let's start by examining the room more closely.
+
+examine livingroom",,0,False
+2,"-= Livingroom =-
+You are in a livingroom. A normal kind of place.
+
+You can make out a sofa. The sofa is comfy. The sofa appears to be empty. Oh! Why couldn't there just be stuff on it?
+
+There is a closed front door leading north. There is an exit to the east. Don't worry, there is no door. There is an exit to the west.
+
+
+>                                                                                                                                -= Livingroom =-0/2","I apologize for the confusion. Let's try a basic command to get more information about our surroundings.
+
+goal",,0,False
+3,"That's not a verb I recognise.
+
+>                                                                                                                                -= Livingroom =-0/2","Understood. Let's start by exploring the available exits.
+
+go east",,0,False
+4,"I beg your pardon?
+
+>                                                                                                                                -= Livingroom =-0/2","I apologize for the confusion. Let's try a valid movement command.
+
+go east",,0,False
+5,"-= Kitchen =-
+Well I'll be, you are in a place we're calling a kitchen. The room is well lit.
+
+You see a fridge. Now why would someone leave that there? Were you looking for an oven? Because look over there, it's an oven. You see a table. The table is massive. On the table you can make out a cookbook. You see a counter. You see a yellow apple, a raw purple potato, a yellow bell pepper, a red apple and a knife on the counter. You make out a stove. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed plain door leading north. You need an exit without a door? You should try going west.
+
+
+>                                                                                                                                -= Kitchen =-0/3","I apologize for the confusion. It seems the game doesn't recognize the standard movement commands. Let's try a different approach.
+
+inventory",,0,False
+6,"You seem to want to talk to someone, but I can't see whom.
+
+>                                                                                                                                -= Kitchen =-0/3","Thank you for the updated observation. Now that we're in the kitchen, let's examine the cookbook to find the recipe.
+
+examine cookbook",,0,False
+7,"I beg your pardon?
+
+>                                                                                                                                -= Kitchen =-0/3","I apologize for the confusion. Let's try a basic action to interact with the cookbook.
+
+take cookbook",,0,False
+8,"You open the copy of ""Cooking: A Modern Approach (3rd Ed.)"" and start reading:
+
+Recipe #1
+---------
+Gather all following ingredients and follow the directions to prepare this tasty meal.
+
+Ingredients:
+purple potato
+  white onion
+  yellow apple
+  yellow onion
+  yellow potato
+
+Directions:
+chop the purple potato
+  roast the purple potato
+  slice the white onion
+  fry the white onion
+  dice the yellow apple
+  grill the yellow apple
+  slice the yellow onion
+  grill the yellow onion
+  slice the yellow potato
+  roast the yellow potato
+  prepare meal
+
+
+
+>                                                                                                                                -= Kitchen =-0/4","I apologize for the confusion. Let's try a different approach to interact with the cookbook.
+
+Action: examine table",,0,False
+9,"You take the yellow apple from the counter.
+
+
+Your score has just gone up by one point.
+
+>                                                                                                                                -= Kitchen =-1/5",take yellow apple,,1,False
+10,"You take the knife from the counter.
+
+
+>                                                                                                                                -= Kitchen =-1/6",take knife,,1,False
+11,"You dice the yellow apple.
+
+
+Your score has just gone up by one point.
+
+>                                                                                                                                -= Kitchen =-2/7",dice yellow apple with knife,,2,False
+12,"-= Livingroom =-
+You are in a livingroom. A normal kind of place.
+
+You can make out a sofa. The sofa is comfy. The sofa appears to be empty. Oh! Why couldn't there just be stuff on it?
+
+There is a closed front door leading north. There is an exit to the east. Don't worry, there is no door. There is an exit to the west.
+
+
+>                                                                                                                                -= Livingroom =-2/8",go west,,2,False
+13,"-= Bedroom =-
+I am sorry to announce that you are now in the bedroom.
+
+You make out a bed. Wow, isn't TextWorld just the best? But the thing is empty. Hm. Oh well
+
+There is an exit to the east. There is an exit to the north.
+
+
+>                                                                                                                                -= Bedroom =-2/9",go west,,2,False
+14,"-= Corridor =-
+You've just walked into a corridor.
+
+
+
+There is a closed fiberglass door leading east. There is a closed sliding patio door leading west. You don't like doors? Why not try going north, that entranceway is not blocked by one. You need an exit without a door? You should try going south.
+
+
+>                                                                                                                                -= Corridor =-2/10",go north,,2,False
+15,"-= Bathroom =-
+Look at you, bigshot, walking into a bathroom like it isn't some huge deal. You begin to take stock of what's here.
+
+If you haven't noticed it already, there seems to be something there by the wall, it's a toilet. The toilet is white. But the thing is empty.
+
+There is an exit to the south. Don't worry, there is no door.
+
+
+>                                                                                                                                -= Bathroom =-2/11",go north,,2,False
+16,"-= Corridor =-
+You've just walked into a corridor.
+
+
+
+There is a closed fiberglass door leading east. There is a closed sliding patio door leading west. You don't like doors? Why not try going north, that entranceway is not blocked by one. You need an exit without a door? You should try going south.
+
+
+>                                                                                                                                -= Corridor =-2/12",go south,,2,False
+17,"You have to open the fiberglass door first.
+
+
+>                                                                                                                                -= Corridor =-2/13",go east,,2,False
+18,"You open fiberglass door.
+
+
+>                                                                                                                                -= Corridor =-2/14",open fiberglass door,,2,False
+19,"-= Driveway =-
+You've just walked into a driveway. You begin to take stock of what's in the room.
+
+
+
+There is a closed front door leading south. There is an open fiberglass door leading west. You need an exit without a door? You should try going north.
+
+
+>                                                                                                                                -= Driveway =-2/15",go east,,2,False
+20,"-= Street =-
+You are in a street. A standard one.
+
+
+
+There is a closed sliding door leading north. There is an exit to the south. Don't worry, there is no door.
+
+
+>                                                                                                                                -= Street =-2/16",go north,,2,False
+21,"-= Driveway =-
+You've just walked into a driveway. You begin to take stock of what's in the room.
+
+
+
+There is a closed front door leading south. There is an open fiberglass door leading west. You need an exit without a door? You should try going north.
+
+
+>                                                                                                                                -= Driveway =-2/17",go south,,2,False
+22,"-= Corridor =-
+You've just walked into a corridor.
+
+
+
+There is an open fiberglass door leading east. There is a closed sliding patio door leading west. You don't like doors? Why not try going north, that entranceway is not blocked by one. You need an exit without a door? You should try going south.
+
+
+>                                                                                                                                -= Corridor =-2/18",go west,,2,False
+23,"-= Bedroom =-
+I am sorry to announce that you are now in the bedroom.
+
+You make out a bed. Wow, isn't TextWorld just the best? But the thing is empty. Hm. Oh well
+
+There is an exit to the east. There is an exit to the north.
+
+
+>                                                                                                                                -= Bedroom =-2/19",go south,,2,False
+24,"-= Livingroom =-
+You are in a livingroom. A normal kind of place.
+
+You can make out a sofa. The sofa is comfy. The sofa appears to be empty. Oh! Why couldn't there just be stuff on it?
+
+There is a closed front door leading north. There is an exit to the east. Don't worry, there is no door. There is an exit to the west.
+
+
+>                                                                                                                                -= Livingroom =-2/20",go east,,2,False
+25,"-= Kitchen =-
+Well I'll be, you are in a place we're calling a kitchen. The room is well lit.
+
+You see a fridge. Now why would someone leave that there? Were you looking for an oven? Because look over there, it's an oven. You see a table. The table is massive. On the table you can make out a cookbook. You see a counter. You see a raw purple potato, a yellow bell pepper and a red apple on the counter. You make out a stove. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is a closed plain door leading north. You need an exit without a door? You should try going west.
+
+
+>                                                                                                                                -= Kitchen =-2/21",go east,,2,False
+26,"You open the copy of ""Cooking: A Modern Approach (3rd Ed.)"" and start reading:
+
+Recipe #1
+---------
+Gather all following ingredients and follow the directions to prepare this tasty meal.
+
+Ingredients:
+purple potato
+  white onion
+  yellow apple
+  yellow onion
+  yellow potato
+
+Directions:
+chop the purple potato
+  roast the purple potato
+  slice the white onion
+  fry the white onion
+  dice the yellow apple
+  grill the yellow apple
+  slice the yellow onion
+  grill the yellow onion
+  slice the yellow potato
+  roast the yellow potato
+  prepare meal
+
+
+
+>                                                                                                                                -= Kitchen =-2/22",examine cookbook,,2,False
+27,"You take the purple potato from the counter.
+
+
+Your score has just gone up by one point.
+
+>                                                                                                                                -= Kitchen =-3/23",take purple potato,,3,False
+28,"You take the yellow bell pepper from the counter.
+
+
+>                                                                                                                                -= Kitchen =-3/24",take yellow bell pepper,,3,False
+29,"You take the red apple from the counter.
+
+
+>                                                                                                                                -= Kitchen =-3/25",take red apple,,3,False
+30,"You are carrying: a red apple, a yellow bell pepper, a raw purple potato, a knife and a diced yellow apple.
+
+
+>                                                                                                                                -= Kitchen =-3/26",inventory,,3,False
+31,"You open plain door.
+
+
+>                                                                                                                                -= Kitchen =-3/27",open plain door,,3,False
+32,"-= Pantry =-
+You are in a pantry. A typical kind of place.
+
+You scan the room, seeing a shelf. The shelf is wooden. Looks like someone's already been here and taken everything off it, though.
+
+There is an open plain door leading south.
+
+
+>                                                                                                                                -= Pantry =-3/28",go north,,3,False
+33,"-= Kitchen =-
+Well I'll be, you are in a place we're calling a kitchen. The room is well lit.
+
+You see a fridge. Now why would someone leave that there? Were you looking for an oven? Because look over there, it's an oven. You see a table. The table is massive. On the table you can make out a cookbook. You see a counter. Looks like someone's already been here and taken everything off it, though. Aw, here you were, all excited for there to be things on it! You make out a stove. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is an open plain door leading north. You need an exit without a door? You should try going west.
+
+
+>                                                                                                                                -= Kitchen =-3/29",go south,,3,False
+34,"You chop the purple potato.
+
+
+Your score has just gone up by one point.
+
+>                                                                                                                                -= Kitchen =-4/30",chop purple potato with knife,,4,False
+35,"You roasted the purple potato.
+
+
+Your score has just gone up by one point.
+
+>                                                                                                                                -= Kitchen =-5/31",cook purple potato with oven,,5,False
+36,"-= Livingroom =-
+You are in a livingroom. A normal kind of place.
+
+You can make out a sofa. The sofa is comfy. The sofa appears to be empty. Oh! Why couldn't there just be stuff on it?
+
+There is a closed front door leading north. There is an exit to the east. Don't worry, there is no door. There is an exit to the west.
+
+
+>                                                                                                                                -= Livingroom =-5/32",go west,,5,False
+37,"-= Bedroom =-
+I am sorry to announce that you are now in the bedroom.
+
+You make out a bed. Wow, isn't TextWorld just the best? But the thing is empty. Hm. Oh well
+
+There is an exit to the east. There is an exit to the north.
+
+
+>                                                                                                                                -= Bedroom =-5/33",go west,,5,False
+38,"-= Corridor =-
+You've just walked into a corridor.
+
+
+
+There is an open fiberglass door leading east. There is a closed sliding patio door leading west. You don't like doors? Why not try going north, that entranceway is not blocked by one. You need an exit without a door? You should try going south.
+
+
+>                                                                                                                                -= Corridor =-5/34",go north,,5,False
+39,"-= Driveway =-
+You've just walked into a driveway. You begin to take stock of what's in the room.
+
+
+
+There is a closed front door leading south. There is an open fiberglass door leading west. You need an exit without a door? You should try going north.
+
+
+>                                                                                                                                -= Driveway =-5/35",go east,,5,False
+40,"-= Street =-
+You are in a street. A standard one.
+
+
+
+There is a closed sliding door leading north. There is an exit to the south. Don't worry, there is no door.
+
+
+>                                                                                                                                -= Street =-5/36",go north,,5,False
+41,"-= Driveway =-
+You've just walked into a driveway. You begin to take stock of what's in the room.
+
+
+
+There is a closed front door leading south. There is an open fiberglass door leading west. You need an exit without a door? You should try going north.
+
+
+>                                                                                                                                -= Driveway =-5/37",go south,,5,False
+42,"-= Corridor =-
+You've just walked into a corridor.
+
+
+
+There is an open fiberglass door leading east. There is a closed sliding patio door leading west. You don't like doors? Why not try going north, that entranceway is not blocked by one. You need an exit without a door? You should try going south.
+
+
+>                                                                                                                                -= Corridor =-5/38",go west,,5,False
+43,"-= Bedroom =-
+I am sorry to announce that you are now in the bedroom.
+
+You make out a bed. Wow, isn't TextWorld just the best? But the thing is empty. Hm. Oh well
+
+There is an exit to the east. There is an exit to the north.
+
+
+>                                                                                                                                -= Bedroom =-5/39",go south,,5,False
+44,"-= Livingroom =-
+You are in a livingroom. A normal kind of place.
+
+You can make out a sofa. The sofa is comfy. The sofa appears to be empty. Oh! Why couldn't there just be stuff on it?
+
+There is a closed front door leading north. There is an exit to the east. Don't worry, there is no door. There is an exit to the west.
+
+
+>                                                                                                                                -= Livingroom =-5/40",go east,,5,False
+45,"-= Kitchen =-
+Well I'll be, you are in a place we're calling a kitchen. The room is well lit.
+
+You see a fridge. Now why would someone leave that there? Were you looking for an oven? Because look over there, it's an oven. You see a table. The table is massive. On the table you can make out a cookbook. You see a counter. Looks like someone's already been here and taken everything off it, though. Aw, here you were, all excited for there to be things on it! You make out a stove. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is an open plain door leading north. You need an exit without a door? You should try going west.
+
+
+>                                                                                                                                -= Kitchen =-5/41",go east,,5,False
+46,"You open the copy of ""Cooking: A Modern Approach (3rd Ed.)"" and start reading:
+
+Recipe #1
+---------
+Gather all following ingredients and follow the directions to prepare this tasty meal.
+
+Ingredients:
+purple potato
+  white onion
+  yellow apple
+  yellow onion
+  yellow potato
+
+Directions:
+chop the purple potato
+  roast the purple potato
+  slice the white onion
+  fry the white onion
+  dice the yellow apple
+  grill the yellow apple
+  slice the yellow onion
+  grill the yellow onion
+  slice the yellow potato
+  roast the yellow potato
+  prepare meal
+
+
+
+>                                                                                                                                -= Kitchen =-5/42",examine cookbook,,5,False
+47,"You can't see any such thing.
+
+>                                                                                                                                -= Kitchen =-5/42",slice white onion,,5,False
+48,"You open the fridge, revealing a raw pork chop and a carrot.
+
+
+>                                                                                                                                -= Kitchen =-5/43",open fridge,,5,False
+49,"You can't see any such thing.
+
+>                                                                                                                                -= Kitchen =-5/43",take white onion from fridge,,5,False
+50,"You take the carrot from the fridge.
+
+
+>                                                                                                                                -= Kitchen =-5/44",take carrot,,5,False
+51,"You take the pork chop from the fridge.
+
+
+>                                                                                                                                -= Kitchen =-5/45",take raw pork chop,,5,False
+52,"-= Pantry =-
+You are in a pantry. A typical kind of place.
+
+You scan the room, seeing a shelf. The shelf is wooden. Looks like someone's already been here and taken everything off it, though.
+
+There is an open plain door leading south.
+
+
+>                                                                                                                                -= Pantry =-5/46",go north,,5,False
+53,"The shelf is stable.
+
+
+>                                                                                                                                -= Pantry =-5/47",examine shelf,,5,False
+54,"-= Kitchen =-
+Well I'll be, you are in a place we're calling a kitchen. The room is well lit.
+
+You see a fridge. Now why would someone leave that there? Empty! What kind of nightmare TextWorld is this? Were you looking for an oven? Because look over there, it's an oven. You see a table. The table is massive. On the table you can make out a cookbook. You see a counter. Looks like someone's already been here and taken everything off it, though. Aw, here you were, all excited for there to be things on it! You make out a stove. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is an open plain door leading north. You need an exit without a door? You should try going west.
+
+
+>                                                                                                                                -= Kitchen =-5/48",go south,,5,False
+55,"-= Livingroom =-
+You are in a livingroom. A normal kind of place.
+
+You can make out a sofa. The sofa is comfy. The sofa appears to be empty. Oh! Why couldn't there just be stuff on it?
+
+There is a closed front door leading north. There is an exit to the east. Don't worry, there is no door. There is an exit to the west.
+
+
+>                                                                                                                                -= Livingroom =-5/49",go west,,5,False
+56,"You have to open the front door first.
+
+
+>                                                                                                                                -= Livingroom =-5/50",go north,,5,False
+57,"You open front door.
+
+
+>                                                                                                                                -= Livingroom =-5/51",open front door,,5,False
+58,"-= Driveway =-
+You've just walked into a driveway. You begin to take stock of what's in the room.
+
+
+
+There is an open front door leading south. There is an open fiberglass door leading west. You need an exit without a door? You should try going north.
+
+
+>                                                                                                                                -= Driveway =-5/52",go north,,5,False
+59,"-= Corridor =-
+You've just walked into a corridor.
+
+
+
+There is an open fiberglass door leading east. There is a closed sliding patio door leading west. You don't like doors? Why not try going north, that entranceway is not blocked by one. You need an exit without a door? You should try going south.
+
+
+>                                                                                                                                -= Corridor =-5/53",go west,,5,False
+60,"-= Bedroom =-
+I am sorry to announce that you are now in the bedroom.
+
+You make out a bed. Wow, isn't TextWorld just the best? But the thing is empty. Hm. Oh well
+
+There is an exit to the east. There is an exit to the north.
+
+
+>                                                                                                                                -= Bedroom =-5/54",go south,,5,False
+61,"-= Livingroom =-
+You are in a livingroom. A normal kind of place.
+
+You can make out a sofa. The sofa is comfy. The sofa appears to be empty. Oh! Why couldn't there just be stuff on it?
+
+There is an open front door leading north. There is an exit to the east. Don't worry, there is no door. There is an exit to the west.
+
+
+>                                                                                                                                -= Livingroom =-5/55",go east,,5,False
+62,"-= Kitchen =-
+Well I'll be, you are in a place we're calling a kitchen. The room is well lit.
+
+You see a fridge. Now why would someone leave that there? Empty! What kind of nightmare TextWorld is this? Were you looking for an oven? Because look over there, it's an oven. You see a table. The table is massive. On the table you can make out a cookbook. You see a counter. Looks like someone's already been here and taken everything off it, though. Aw, here you were, all excited for there to be things on it! You make out a stove. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is an open plain door leading north. You need an exit without a door? You should try going west.
+
+
+>                                                                                                                                -= Kitchen =-5/56",go east,,5,False
+63,"You open the copy of ""Cooking: A Modern Approach (3rd Ed.)"" and start reading:
+
+Recipe #1
+---------
+Gather all following ingredients and follow the directions to prepare this tasty meal.
+
+Ingredients:
+purple potato
+  white onion
+  yellow apple
+  yellow onion
+  yellow potato
+
+Directions:
+chop the purple potato
+  roast the purple potato
+  slice the white onion
+  fry the white onion
+  dice the yellow apple
+  grill the yellow apple
+  slice the yellow onion
+  grill the yellow onion
+  slice the yellow potato
+  roast the yellow potato
+  prepare meal
+
+
+
+>                                                                                                                                -= Kitchen =-5/57",examine cookbook,,5,False
+64,"-= Pantry =-
+You are in a pantry. A typical kind of place.
+
+You scan the room, seeing a shelf. The shelf is wooden. Looks like someone's already been here and taken everything off it, though.
+
+There is an open plain door leading south.
+
+
+>                                                                                                                                -= Pantry =-5/58",go north,,5,False
+65,"-= Kitchen =-
+Well I'll be, you are in a place we're calling a kitchen. The room is well lit.
+
+You see a fridge. Now why would someone leave that there? Empty! What kind of nightmare TextWorld is this? Were you looking for an oven? Because look over there, it's an oven. You see a table. The table is massive. On the table you can make out a cookbook. You see a counter. Looks like someone's already been here and taken everything off it, though. Aw, here you were, all excited for there to be things on it! You make out a stove. Unfortunately, there isn't a thing on it. Hm. Oh well
+
+There is an open plain door leading north. You need an exit without a door? You should try going west.
+
+
+>                                                                                                                                -= Kitchen =-5/59",go south,,5,False
+66,"-= Livingroom =-
+You are in a livingroom. A normal kind of place.
+
+You can make out a sofa. The sofa is comfy. The sofa appears to be empty. Oh! Why couldn't there just be stuff on it?
+
+There is an open front door leading north. There is an exit to the east. Don't worry, there is no door. There is an exit to the west.
+
+
+>                                                                                                                                -= Livingroom =-5/60",go west,,5,False
+67,"-= Driveway =-
+You've just walked into a driveway. You begin to take stock of what's in the room.
+
+
+
+There is an open front door leading south. There is an open fiberglass door leading west. You need an exit without a door? You should try going north.
+
+
+>                                                                                                                                -= Driveway =-5/61",go north,,5,False
+68,"-= Street =-
+You are in a street. A standard one.
+
+
+
+There is a closed sliding door leading north. There is an exit to the south. Don't worry, there is no door.
+
+
+>                                                                                                                                -= Street =-5/62",go north,,5,False
+69,"You open sliding door.
+
+
+>                                                                                                                                -= Street =-5/63",open sliding door,,5,False
+70,"-= Supermarket =-
+You've just shown up in a supermarket. You try to gain information on your surroundings by using a technique you call ""looking.""
+
+You see a showcase. But there isn't a thing on it. You swear loudly.
+
+There is an open sliding door leading south.
+
+
+>                                                                                                                                -= Supermarket =-5/64",go north,,5,False
+71,"The showcase is unstable.
+
+
+>                                                                                                                                -= Supermarket =-5/65",examine showcase,,5,False
+72,"You already have that.
+
+
+
+>                                                                                                                                -= Supermarket =-5/66",take yellow apple,,5,False
+73,"I only understood you as far as wanting to take inventory.
+
+>                                                                                                                                -= Supermarket =-5/66","I apologize for the confusion. Let me try a different action.
+
+take purple potato",,5,False
+74,"I beg your pardon?
+
+>                                                                                                                                -= Supermarket =-5/66",inventory,,5,False
+75,"You already have that.
+
+
+
+>                                                                                                                                -= Supermarket =-5/67","I apologize for the confusion. Let's try to find the ingredients we need.
+
+go south",,5,False
+76,"I only understood you as far as wanting to take inventory.
+
+>                                                                                                                                -= Supermarket =-5/67","I apologize for the confusion. Let's try to move out of this location.
+
+go south",,5,False
+77,"I beg your pardon?
+
+>                                                                                                                                -= Supermarket =-5/67","I apologize for the confusion. Let me try a clear, single action.
+
+inventory",,5,False
+78,"-= Street =-
+You are in a street. A standard one.
+
+
+
+There is an open sliding door leading north. There is an exit to the south. Don't worry, there is no door.
+
+
+>                                                                                                                                -= Street =-5/68","I apologize for the confusion. It seems the game is not responding as expected. Let's try a basic action to see if we can get a response.
+
+look",,5,False
+79,"-= Driveway =-
+You've just walked into a driveway. You begin to take stock of what's in the room.
+
+
+
+There is an open front door leading south. There is an open fiberglass door leading west. You need an exit without a door? You should try going north.
+
+
+>                                                                                                                                -= Driveway =-5/69",go south,,5,True

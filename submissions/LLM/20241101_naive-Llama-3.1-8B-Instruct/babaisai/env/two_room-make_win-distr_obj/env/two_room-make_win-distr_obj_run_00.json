@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-make_win-distr_obj",
+    "action_frequency": {
+        "idle": 1,
+        "down": 17,
+        "right": 34,
+        "up": 20,
+        "left": 28
+    },
+    "input_tokens": 428310,
+    "output_tokens": 326,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "To start solving the level, we need to understand the current state and the rules. The rule \"baba is you\" suggests that \"baba\" and \"you\" are interchangeable. The presence of a key near a step up indicates that we might need to use the key to unlock a door.\n\nLet's move the rule \"baba is you\" to be above the \"rule is 1 step to the left and 2 steps down\" and the \"rule is 7 steps to the right and 4 step up\" blocks, to make these rules more accessible and to prepare for potential future moves.\n\nAction: up"
+    ],
+    "target_plan": "make[door is win], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-21",
+    "seed": 1925962501,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

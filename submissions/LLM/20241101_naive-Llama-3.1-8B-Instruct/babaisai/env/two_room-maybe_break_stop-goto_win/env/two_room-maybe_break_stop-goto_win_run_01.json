@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-maybe_break_stop-goto_win",
+    "action_frequency": {
+        "idle": 1,
+        "left": 33,
+        "up": 19,
+        "right": 32,
+        "down": 15
+    },
+    "input_tokens": 419424,
+    "output_tokens": 231,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Based on the current state and rules, I would like to move the `ball` (which is currently the win condition) 2 steps down. \n\ndown"
+    ],
+    "target_plan": "break[wall is stop], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-8",
+    "seed": 2704386524,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

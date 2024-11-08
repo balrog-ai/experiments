@@ -1,0 +1,41 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "turn right": 12,
+        "go forward": 53,
+        "turn left": 14,
+        "toggle": 29,
+        "pick up": 17,
+        "drop": 3
+    },
+    "input_tokens": 157361,
+    "output_tokens": 352,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [],
+    "mission": "pick up a red box, then go to a red ball",
+    "progression": 0.0,
+    "process_num": "ForkProcess-5",
+    "seed": 4290583300,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "task": "env/goto_win-distr_obj",
+    "action_frequency": {
+        "idle": 5,
+        "right": 28,
+        "down": 16,
+        "up": 26,
+        "left": 25
+    },
+    "input_tokens": 243730,
+    "output_tokens": 326,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "To proceed, let's focus on moving the \"key\" to the door. If we reposition the \"key\" near the door, we may be able to find a way to rule-match the \"key\" with the \"door\" as the \"win\" condition. \n\nTo start, let's move the \"key\" one step to the right. \n\nAction: right",
+        "right \n\n(I'm moving the key to the right to potentially change its position relative to the rules.)",
+        "move the rule \"is\" 3 steps to the left and 3 steps down on top of the \"baba\" object to the left.",
+        "pick up key",
+        "baba"
+    ],
+    "target_plan": "goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-22",
+    "seed": 3551617179,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "task": "env/two_room-break_stop-goto_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "idle": 4,
+        "up": 20,
+        "right": 27,
+        "left": 23,
+        "down": 16
+    },
+    "input_tokens": 414205,
+    "output_tokens": 330,
+    "done": true,
+    "episode_return": 0.18999999999999995,
+    "num_steps": 90,
+    "failed_candidates": [
+        "Given the current state, our goal is to reach the key. The active rules are:\n\n- key is win\n- wall is stop\n- baba is you\n\nSince we are the baba, we can move around the map. However, we are blocked by the walls. We can try to move around the walls to reach the key.\n\nLet's try moving down to see if we can reach the key from the bottom. \n\nAction: down",
+        "left \n\n(I'll try to move the rule \"is\" to the top-left of the key, which could potentially change the \"key is win\" rule to something else.)",
+        "left \n\n(I'm trying to move the rule \"baba is you\" to the right)",
+        "rule `you` is `baba`"
+    ],
+    "target_plan": "break[wall is stop], goto[key]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-23",
+    "seed": 2350040352,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

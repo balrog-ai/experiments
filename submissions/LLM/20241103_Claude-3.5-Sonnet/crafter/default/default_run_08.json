@@ -1,0 +1,77 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Move West": 18,
+        "Do": 44,
+        "Move South": 19,
+        "Place Table": 3,
+        "Make Wood Pickaxe": 11,
+        "Noop": 6,
+        "Make Wood Sword": 11,
+        "Move East": 30,
+        "Move North": 21,
+        "Make Stone Pickaxe": 3,
+        "Sleep": 4
+    },
+    "input_tokens": 285518,
+    "output_tokens": 1207,
+    "done": true,
+    "episode_return": 7.099999999999999,
+    "num_steps": 170,
+    "failed_candidates": [
+        "Based on the current observation, it seems we don't have enough wood to craft a wood pickaxe. We need to collect more wood. Let's move towards the tree to gather more wood.\n\nMove South",
+        "Given the current situation, my health and drink levels are quite low, and there's a zombie nearby. The best course of action is to move away from the zombie and try to find water or food.\n\nMove East",
+        "Given the current situation, my health and drink levels are low, and there's a zombie nearby. The safest action right now is:\n\nMove North\n\nThis will move me away from the zombie and towards the path, which might lead to a safer area or resources I need.",
+        "Given the current situation, my health is low and there's a zombie nearby. The best action is to try to move away from the zombie and find a safer spot.\n\nMove North",
+        "Given the current situation, my priority is to improve my health and other vital stats. The zombie is getting closer, but we're not in immediate danger. Let's focus on gathering resources and improving our situation.\n\nPlace Table\n\nThis action will allow us to craft more advanced tools and weapons, which we'll need to progress further in the game. It's also one of the achievements we haven't completed yet.",
+        "Based on the current observation, my health and drink levels are low, and there's a zombie nearby. The safest action right now is to move away from the zombie and try to find a source of water to replenish my drink level.\n\nMove East"
+    ],
+    "score": 8.0,
+    "progression": 0.36363636363636365,
+    "achievements": {
+        "collect_coal": 1,
+        "collect_diamond": 0,
+        "collect_drink": 0,
+        "collect_iron": 0,
+        "collect_sapling": 0,
+        "collect_stone": 9,
+        "collect_wood": 10,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 1,
+        "eat_cow": 1,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 1,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 3,
+        "make_wood_sword": 0,
+        "place_furnace": 0,
+        "place_plant": 0,
+        "place_stone": 0,
+        "place_table": 2,
+        "wake_up": 0
+    },
+    "process_num": "ForkProcess-2",
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "claude",
+        "model_id": "claude-3-5-sonnet-20240620",
+        "base_url": "https://spotty-toys-teach.loca.lt/v1",
+        "is_chat_model": true,
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

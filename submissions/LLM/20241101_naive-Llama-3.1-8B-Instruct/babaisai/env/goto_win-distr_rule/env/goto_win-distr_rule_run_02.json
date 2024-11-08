@@ -1,0 +1,45 @@
+{
+    "task": "env/goto_win-distr_rule",
+    "action_frequency": {
+        "idle": 4,
+        "right": 24,
+        "down": 15,
+        "up": 19,
+        "left": 22
+    },
+    "input_tokens": 215064,
+    "output_tokens": 228,
+    "done": true,
+    "episode_return": 0.244,
+    "num_steps": 84,
+    "failed_candidates": [
+        "up\n\nThis will move the character \"baba\" one step up, which is one step up from its current position.",
+        "right \n\nThis action is necessary to move the character (baba is you) to the right in order to interact with the door.",
+        "Up",
+        "swap rule `baba` and rule `is`"
+    ],
+    "target_plan": "goto[ball]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-24",
+    "seed": 230929872,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

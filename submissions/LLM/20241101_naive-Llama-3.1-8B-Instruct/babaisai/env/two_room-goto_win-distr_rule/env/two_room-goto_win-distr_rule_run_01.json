@@ -1,0 +1,44 @@
+{
+    "task": "env/two_room-goto_win-distr_rule",
+    "action_frequency": {
+        "idle": 3,
+        "right": 33,
+        "down": 21,
+        "left": 25,
+        "up": 18
+    },
+    "input_tokens": 446135,
+    "output_tokens": 316,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Given the rules and objects, it appears that the goal is to reach the \"key\" object, but it's currently 2 steps down from a wall. \n\nTo move the key up and potentially change the rules to make it easier to reach, I'll try moving the rule \"key is win\" up towards the key. \n\nAction: up",
+        "up\n\nThis action is a change from moving in a horizontal direction, and might allow us to reach the rule 'key' in a new way.",
+        "move the rule \"key\" object to be on top of the rule \"is\" object."
+    ],
+    "target_plan": "goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-2",
+    "seed": 1194175781,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

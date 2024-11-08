@@ -1,0 +1,39 @@
+{
+    "task": "env/two_room-make_you-make_win",
+    "action_frequency": {
+        "down": 15,
+        "right": 41,
+        "up": 18,
+        "left": 26
+    },
+    "input_tokens": 469205,
+    "output_tokens": 200,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [],
+    "target_plan": "make[ball is you], make[key is win], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-25",
+    "seed": 250818853,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

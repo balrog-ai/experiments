@@ -1,0 +1,80 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Noop": 18,
+        "Move West": 15,
+        "Do": 55,
+        "Move North": 26,
+        "Place Plant": 1,
+        "Move East": 8,
+        "Sleep": 13,
+        "Move South": 11,
+        "Make Wood Sword": 6,
+        "Make Wood Pickaxe": 2,
+        "Place Stone": 1,
+        "Place Table": 3
+    },
+    "input_tokens": 277338,
+    "output_tokens": 431,
+    "done": true,
+    "episode_return": 3.0999999999999996,
+    "num_steps": 159,
+    "failed_candidates": [
+        "Move West.",
+        "Move North-West",
+        "Collect material",
+        "Wake Up",
+        "Drink",
+        "Take the stone and put it in inventory and then place it.",
+        "Collect wood",
+        "Collect Wood"
+    ],
+    "score": 4.0,
+    "progression": 0.18181818181818182,
+    "achievements": {
+        "collect_coal": 0,
+        "collect_diamond": 0,
+        "collect_drink": 0,
+        "collect_iron": 0,
+        "collect_sapling": 0,
+        "collect_stone": 0,
+        "collect_wood": 4,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 0,
+        "eat_cow": 2,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 0,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 0,
+        "make_wood_sword": 0,
+        "place_furnace": 0,
+        "place_plant": 0,
+        "place_stone": 0,
+        "place_table": 1,
+        "wake_up": 2
+    },
+    "process_num": "ForkProcess-9",
+    "seed": 119847186,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

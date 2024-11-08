@@ -142,21 +142,22 @@ def collect_and_summarize_results(output_dir):
 
     # Now compute overall average progression as the mean of environment average progressions
     total_envs = len(env_avg_progressions)
-    overall_avg_progression = (
-        sum(env_avg_progressions) / total_envs if total_envs > 0 else 0.0
-    )
-    if total_envs > 1:
-        env_variance = sum(
-            (x - overall_avg_progression) ** 2 for x in env_avg_progressions
-        ) / (total_envs - 1)
-        env_std_dev = math.sqrt(env_variance)
-        overall_std_error = env_std_dev / math.sqrt(total_envs)
+    if total_envs > 0:
+        overall_avg_progression = sum(env_avg_progressions) / total_envs
+        # Collect per-environment standard errors
+        env_standard_errors = [
+            env_data["standard_error"] for env_data in overall_env_summaries.values()
+        ]
+        # Correctly calculate the combined standard error
+        sum_of_squares = sum(se**2 for se in env_standard_errors)
+        overall_std_error = math.sqrt(sum_of_squares) / total_envs
     else:
+        overall_avg_progression = 0.0
         overall_std_error = 0.0
 
     summary = {
-        "Final score": 100 * overall_avg_progression,
-        "standard_error": 100 * overall_std_error,
+        "average_progress": 100 * overall_avg_progression,
+        "standard_error": overall_std_error,
         "environments": overall_env_summaries,
         "total_input_tokens": overall_total_input_tokens,
         "total_output_tokens": overall_total_output_tokens,
@@ -176,7 +177,7 @@ def collect_and_summarize_results(output_dir):
 def print_summary_table(summary):
     print("\nSummary of Results:")
     print(
-        f"Overall Average Progression: {summary['Final score']:.2f}% ± {summary['standard_error']:.2f}%"
+        f"Overall Average Progression: {summary['average_progress']:.2f}% ± {summary['standard_error']:.2f}%"
     )
     print("Per-Environment Results:")
     for env_name, env_data in summary["environments"].items():

@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-break_stop-goto_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "idle": 1,
+        "right": 35,
+        "up": 21,
+        "down": 17,
+        "left": 26
+    },
+    "input_tokens": 467765,
+    "output_tokens": 341,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Given the current situation, our goal is to reach the \"door\" which is located 2 steps to the right and 1 step down. However, the active rules prevent us from moving through the \"wall\" (which is a stop object).\n\nLet's try to change the rules to our advantage. The rule \"baba is you\" allows us to manipulate the rules. We can move the rule \"baba is you\" to change the subject or the property.\n\nFirst, let's move the rule \"baba is you\" to be next to the rule \"is\" at 5 steps to the right and 4 step up. This will change the rule to \"BABA IS IS\"."
+    ],
+    "target_plan": "break[wall is stop], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-26",
+    "seed": 4283783849,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

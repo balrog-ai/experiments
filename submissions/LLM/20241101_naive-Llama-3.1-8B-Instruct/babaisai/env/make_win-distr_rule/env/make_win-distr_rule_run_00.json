@@ -1,0 +1,42 @@
+{
+    "task": "env/make_win-distr_rule",
+    "action_frequency": {
+        "idle": 1,
+        "right": 27,
+        "down": 18,
+        "up": 25,
+        "left": 29
+    },
+    "input_tokens": 242064,
+    "output_tokens": 288,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Given the current situation, we need to reach the \"win\" condition, which is located at 3 steps to the left and 1 step up. However, the rule \"baba is you\" says that we are Baba, and Baba is at 5 steps to the left and 4 steps down.\n\nFirst, I will try to move Baba up to be at the same level as the \"win\" condition. \n\nAction: up"
+    ],
+    "target_plan": "make[door is win], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-12",
+    "seed": 1192498795,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}
