@@ -1,0 +1,44 @@
+{
+    "task": "env/two_room-make_win-distr_obj",
+    "action_frequency": {
+        "idle": 3,
+        "left": 31,
+        "down": 16,
+        "right": 33,
+        "up": 17
+    },
+    "input_tokens": 436353,
+    "output_tokens": 239,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "right.",
+        "id",
+        "move the rule `is` 6 steps to the right and 4 step up to the left 1 step so that it becomes 5 steps to the right and 4 step up."
+    ],
+    "target_plan": "make[ball is win], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-26",
+    "seed": 3988656766,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

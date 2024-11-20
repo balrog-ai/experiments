@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-goto_win-distr_win_rule",
+    "action_frequency": {
+        "idle": 61,
+        "up": 37,
+        "down": 2
+    },
+    "input_tokens": 519944,
+    "output_tokens": 352,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "You are currently standing at the wall 3 steps to the right and 2 steps up. You can move in the following directions:\n\nUp: \n- wall 1 step up (1 step up total)\n- wall 2 step up (2 steps up total)\n- wall 3 step up (3 steps up total)\n\nDown: \n- wall 2 step down (2 steps down total)\n- wall 3 step down (3 steps down total)\n\nLeft: \n- wall 1 step to the left (1 step left total)\n- wall 2 step to the left (2 steps left total)\n- wall 3 step to the left (3 steps left total)\n\nAction: Move up",
+        "wall 3 steps to the right and 4 steps down",
+        "wall",
+        "wall"
+    ],
+    "target_plan": "goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-2",
+    "seed": 4114625127,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

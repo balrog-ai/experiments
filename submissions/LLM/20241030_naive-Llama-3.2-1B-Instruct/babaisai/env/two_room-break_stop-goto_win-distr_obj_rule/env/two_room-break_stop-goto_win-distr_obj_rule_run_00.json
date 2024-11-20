@@ -1,0 +1,44 @@
+{
+    "task": "env/two_room-break_stop-goto_win-distr_obj_rule",
+    "action_frequency": {
+        "idle": 5,
+        "up": 80,
+        "left": 2,
+        "right": 2,
+        "down": 11
+    },
+    "input_tokens": 444780,
+    "output_tokens": 407,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Since the current rules are:\n\n- wall is stop\n- door is win\n- baba is you\n\nI will perform the action 'right' to move the ball 6 steps to the right.\n\nCurrent Observation:\n\nActive rules:\ndoor is win\nwall is stop\nbaba is you\nball 6 steps to the right\n\nObjects on the map:\nwall 4 steps to the right and 1 step up\nwall 4 steps to the right and 2 steps down\nwall 4 steps to the right and 3 steps down\nwall 4 steps to the right and 4 steps down\nwall 4 steps to the right and 1 step up\nball 6 steps to the right\ndoor 6 steps to the right and 4 steps down\nwall 4 steps to the right and 4 steps down\ndoor 6 steps to the right and 4 steps down\nball 6 steps to the right and 4 steps down",
+        "wall 4 steps to the right and 1 step up",
+        "wall"
+    ],
+    "target_plan": "break[wall is stop], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-24",
+    "seed": 4279581872,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "task": "env/goto_win-distr_obj_rule",
+    "action_frequency": {
+        "idle": 1,
+        "up": 86,
+        "left": 4,
+        "down": 8,
+        "right": 1
+    },
+    "input_tokens": 257312,
+    "output_tokens": 257,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Since the current rules are `door` (4 steps left, 2 steps up) and `baba is you` (5 steps left), the only possible action is to move the `door` to the right. \n\nAction: move the door 4 steps to the right."
+    ],
+    "target_plan": "goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-12",
+    "seed": 4198374875,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

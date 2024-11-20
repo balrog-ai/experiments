@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-maybe_break_stop-goto_win-distr_obj",
+    "action_frequency": {
+        "right": 66,
+        "up": 14,
+        "down": 12,
+        "idle": 2,
+        "left": 6
+    },
+    "input_tokens": 507674,
+    "output_tokens": 1157,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Based on the current observation, I can see that we've moved Baba to be right next to the door. Since \"door is win\" is an active rule, we should be able to win the level by moving onto the door.\n\nAction: right",
+        "I apologize for the confusion in my previous response. You're right, I should only output a single valid action. Let me correct that:\n\nright"
+    ],
+    "target_plan": "break[wall is stop], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 2768683344,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "claude",
+        "model_id": "claude-3-5-sonnet-20240620",
+        "base_url": "http://localhost:8000/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

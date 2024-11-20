@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-break_stop-make_win",
+    "action_frequency": {
+        "idle": 2,
+        "up": 19,
+        "right": 33,
+        "down": 18,
+        "left": 28
+    },
+    "input_tokens": 417359,
+    "output_tokens": 277,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "up.",
+        "The goal is to reach the key, and the key is above the rule 'key 1 step to the right and 2 step up'. If we move 'rule `key` 1 step to the right and 2 step up' down one step, it will be above the win and we can reach the key. \n\nLet's move rule `key` down.\n\nup"
+    ],
+    "target_plan": "break[wall is stop], make[key is win], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-17",
+    "seed": 3750634949,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

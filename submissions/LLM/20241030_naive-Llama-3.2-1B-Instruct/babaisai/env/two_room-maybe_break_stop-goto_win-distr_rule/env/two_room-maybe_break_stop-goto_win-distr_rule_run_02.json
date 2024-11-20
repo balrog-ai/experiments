@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-maybe_break_stop-goto_win-distr_rule",
+    "action_frequency": {
+        "idle": 1,
+        "up": 73,
+        "left": 6,
+        "down": 18,
+        "right": 2
+    },
+    "input_tokens": 426816,
+    "output_tokens": 303,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "It seems like you've examined the current state of the level and have identified the active rules and objects. \n\nGiven that the wall is considered a \"STOP\" object and the key is an \"OBJECT\", you should be able to take the following actions:\n\n1. up: Take one step up to clear the wall.\n2. left: Take one step to the left to move the wall further to the left.\n3. down: Take one step down to change the wall's position.\n\nChoose an action to proceed."
+    ],
+    "target_plan": "break[wall is stop], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-21",
+    "seed": 1553867257,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

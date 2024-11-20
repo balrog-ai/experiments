@@ -1,0 +1,41 @@
+{
+    "task": "env/two_room-make_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "idle": 1,
+        "up": 66,
+        "left": 17,
+        "down": 16
+    },
+    "input_tokens": 450504,
+    "output_tokens": 311,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Given the current observation, I want to break apart the existing rules to find an optimal solution.\n\n1. The key is 2 steps to the right, and it's under the rule `wall 4 steps to the right and 1 step up`.\n\nI can move the key by up 1 step or right 1 step, but I should avoid the rule `wall 4 steps to the right and 1 step up`, as it's under the key's description. Therefore, I will move the key by up 1 step.\n\nAction: up"
+    ],
+    "target_plan": "make[door is win], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-27",
+    "seed": 763791079,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

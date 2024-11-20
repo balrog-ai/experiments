@@ -1,0 +1,52 @@
+{
+    "task": "MiniHack-Boxoban-Medium-v0",
+    "action_frequency": {
+        "north": 26,
+        "west": 41,
+        "east": 30,
+        "south": 3
+    },
+    "input_tokens": 610608,
+    "output_tokens": 261,
+    "done": true,
+    "episode_return": -0.09900000000000007,
+    "num_steps": 100,
+    "failed_candidates": [
+        "I'd like to move north.",
+        "move",
+        "boulder",
+        "You try to push the boulder.\n\nnorth",
+        "You can push boulder near south southwest and southwest to the fountain near southsoutheast, southsouthwest, and southwest.",
+        "floor",
+        "move north",
+        "speak",
+        "You must push the boulder north.",
+        "push east",
+        "You cannot pass through the bars.",
+        "You can only move north."
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-29",
+    "seed": 978577532,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

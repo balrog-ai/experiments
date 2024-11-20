@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>BALROG</title>
+  <meta name="description" content="BALROG: Benchmarking Agentic LLM/VLM Reasoning On Games" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta property="og:image" content="img/logo.png" />
+  <link rel="shortcut icon" href="img/logo.png" />
+  <link rel="icon" href="img/logo.png" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="..." crossorigin="anonymous" />
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9XFCMDPNS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-H9XFCMDPNS");
+  </script>
+</head>
+
+<body>
+  <div style="padding-bottom: 50px">
+    <section style="background-color: var(--dark_accent_color)">
+      <div class="content-wrapper title-wrapper" style="flex-direction: column">
+        <div style="
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              padding-bottom: 15px;
+            ">
+          <h1 style="font-size: 60px; padding-top: 0.4em">BALROG</h1>
+          <img src="img/logo.png" style="height: 120px; padding-top: 0em; padding-left: 0.5em" />
+        </div>
+        <h3>Benchmarking Agentic LLM/VLM Reasoning On Games</h3>
+        <!-- <h3 style="font-size: 20px; padding-top: 1.2em">ICLR 2024</h3> -->
+        <p style="text-align: center;margin-top:1em;">
+          Davide Paglieri*, Bartłomiej Cupiał*, Samuel Coward, Ulyana Piterbarg, <br />
+          Maciej Wolczyk, Akbir Khan, Eduardo Pignatelli, Łukasz Kuciński, Lerrel Pinto <br />
+          Rob Fergus, Jakob Nicolaus Foerster, Jack Parker-Holder, Tim Rocktäschel
+        </p>
+        <div class="content-wrapper" style="margin-top: 2em">
+          <a href="https://openreview.net/forum?id=fp6t3F669F">
+            <button class="outline">
+              <i class="fa fa-paperclip"></i> Paper&nbsp;
+            </button>
+          </a>
+          <a href="https://github.com/DavidePaglieri/BALROG">
+            <button class="outline">
+              <i class="fab fa-github"></i> Code&nbsp;
+            </button>
+          </a>
+          <a href="submit.html">
+            <button class="outline">
+              <i class="fa fa-upload"></i> Submit&nbsp;
+            </button>
+          </a>
+          <!-- <a href="viewer.html">
+            <button class="outline">
+              <i class="fa fa-chart-simple"></i> Analysis&nbsp;
+            </button>
+          </a> -->
+        </div>
+      </div>
+    </section>
+    <section class="main-container">
+      <div class="content-wrapper"
+        style="margin-top: 1em; display: flex; justify-content: center; align-items: center;">
+      </div>
+      <div class="content-wrapper" style="display: flex; justify-content: center; align-items: center;">
+        <div class="content-box">
+          <h2 class="text-title">News</h2>
+          <p style="margin-bottom: 0.5em">
+            📣 [11/2024] Introducing <b>BALROG</b>
+            [<a style="color:var(--accent_color)" href="">TODO</a>]
+          </p>
+          </p>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <div class="content-box">
+          <h2 class="text-title">Leaderboard</h2>
+          <ul class="tab">
+            <li><button id="tab-llm" class="tablinks" data-leaderboard="LLM">LLM</button></li>
+            <li><button id="tab-vlm" class="tablinks" data-leaderboard="VLM">VLM</button></li>
+          </ul>
+          {% for leaderboard in leaderboards %}
+          <div class="tabcontent" style="display: block" id="leaderboard-{{leaderboard.name}}">
+            <!-- Assign an ID to your table -->
+            <table id="leaderboard-table-{{leaderboard.name}}" class="table scrollable">
+              <thead>
+                <tr>
+                  <th>
+                    <div class="sticky-header-content">Agent</div>
+                  </th>
+                  <th>
+                    <div class="sticky-header-content">% Progress</div>
+                  </th>
+                  <th>
+                    <div class="sticky-header-content">BabyAI</div>
+                  </th>
+                  <th>
+                    <div class="sticky-header-content">Crafter</div>
+                  </th>
+                  {% if leaderboard.name != 'VLM' %}
+                  <th>
+                    <div class="sticky-header-content">TextWorld</div>
+                  </th>
+                  {% endif %}
+                  <th>
+                    <div class="sticky-header-content">BabaIsAI</div>
+                  </th>
+                  <th>
+                    <div class="sticky-header-content">MiniHack</div>
+                  </th>
+                  <th>
+                    <div class="sticky-header-content">NetHack</div>
+                  </th>
+                  <th>
+                    <div class="sticky-header-content">Date</div>
+                  </th>
+                </tr>
+              </thead>
+              {% set sorted_results = leaderboard.results|sort(attribute='average', reverse=True) %}
+              {% set ns = namespace(medal_map={}) %}
+              {% for item in sorted_results[:3] %}
+              {% set medal = ["🥇", "🥈", "🥉"][loop.index0] %}
+              {% set _ = ns.medal_map.update({item.name: medal}) %}
+              {% endfor %}
+              <tbody>
+                {% for item in leaderboard.results %}
+                <tr
+                  onclick="window.location.href='viewer.html?model={{ item.name|urlencode }}&leaderboard={{ leaderboard.name|urlencode }}'"
+                  style="cursor: pointer;">
+                  <td>
+                    <p class="model-type">
+                      {% if item.name in ns.medal_map %}
+                      {{ ns.medal_map[item.name] }}
+                      {% endif %}
+                      {% if item.oss %}🕹️{% endif %}
+                      {% if item.verified %}✔️{% endif %}
+                      {{ item.name }}
+                    </p>
+                  </td>
+                  <!-- Use data-order for sorting -->
+                  <td
+                    data-order="{% if item.average is iterable and item.average is not string %}{{ item.average[0]|float }}{% else %}{{ item.average|float }}{% endif %}">
+                    <p class="number">
+                      {% if item.average is iterable and item.average is not string %}
+                      {{ "%.1f"|format(item.average[0]|float) }} ± {{ "%.1f"|format(item.average[1]|float) }}
+                      {% else %}
+                      {{ "%.1f"|format(item.average|float) }}
+                      {% endif %}
+                    </p>
+                  </td>
+                  <!-- BabyAI Column -->
+                  <td
+                    data-order="{% if item.babyai is iterable and item.babyai is not string %}{{ item.babyai[0]|float }}{% else %}{{ item.babyai|float }}{% endif %}">
+                    <p class="number">
+                      {% if item.babyai is iterable and item.babyai is not string %}
+                      {{ "%.1f"|format(item.babyai[0]|float) }} ± {{ "%.1f"|format(item.babyai[1]|float) }}
+                      {% else %}
+                      {{ "%.1f"|format(item.babyai|float) }}
+                      {% endif %}
+                    </p>
+                  </td>
+                  <!-- Crafter Column -->
+                  <td
+                    data-order="{% if item.crafter is iterable and item.crafter is not string %}{{ item.crafter[0]|float }}{% else %}{{ item.crafter|float }}{% endif %}">
+                    <p class="number">
+                      {% if item.crafter is iterable and item.crafter is not string %}
+                      {{ "%.1f"|format(item.crafter[0]|float) }} ± {{ "%.1f"|format(item.crafter[1]|float) }}
+                      {% else %}
+                      {{ "%.1f"|format(item.crafter|float) }}
+                      {% endif %}
+                    </p>
+                  </td>
+                  <!-- TextWorld Column -->
+                  {% if leaderboard.name != 'VLM' %}
+                  <td
+                    data-order="{% if item.textworld is iterable and item.textworld is not string %}{{ item.textworld[0]|float }}{% else %}{{ item.textworld|float }}{% endif %}">
+                    <p class="number">
+                      {% if item.textworld is iterable and item.textworld is not string %}
+                      {{ "%.1f"|format(item.textworld[0]|float) }} ± {{ "%.1f"|format(item.textworld[1]|float) }}
+                      {% else %}
+                      {{ "%.1f"|format(item.textworld|float) }}
+                      {% endif %}
+                    </p>
+                  </td>
+                  {% endif %}
+                  <!-- BabaIsAI Column -->
+                  <td
+                    data-order="{% if item.babaisai is iterable and item.babaisai is not string %}{{ item.babaisai[0]|float }}{% else %}{{ item.babaisai|float }}{% endif %}">
+                    <p class="number">
+                      {% if item.babaisai is iterable and item.babaisai is not string %}
+                      {{ "%.1f"|format(item.babaisai[0]|float) }} ± {{ "%.1f"|format(item.babaisai[1]|float) }}
+                      {% else %}
+                      {{ "%.1f"|format(item.babaisai|float) }}
+                      {% endif %}
+                    </p>
+                  </td>
+                  <!-- MiniHack Column -->
+                  <td
+                    data-order="{% if item.minihack is iterable and item.minihack is not string %}{{ item.minihack[0]|float }}{% else %}{{ item.minihack|float }}{% endif %}">
+                    <p class="number">
+                      {% if item.minihack is iterable and item.minihack is not string %}
+                      {{ "%.1f"|format(item.minihack[0]|float) }} ± {{ "%.1f"|format(item.minihack[1]|float) }}
+                      {% else %}
+                      {{ "%.1f"|format(item.minihack|float) }}
+                      {% endif %}
+                    </p>
+                  </td>
+                  <!-- NLE Column -->
+                  <td
+                    data-order="{% if item.nle is iterable and item.nle is not string %}{{ item.nle[0]|float }}{% else %}{{ item.nle|float }}{% endif %}">
+                    <p class="number">
+                      {% if item.nle is iterable and item.nle is not string %}
+                      {{ "%.1f"|format(item.nle[0]|float) }} ± {{ "%.1f"|format(item.nle[1]|float) }}
+                      {% else %}
+                      {{ "%.1f"|format(item.nle|float) }}
+                      {% endif %}
+                    </p>
+                  </td>
+                  <!-- Date Column -->
+                  <td data-order="{{ item.date }}">
+                    <p><span class="label-date">{{item.date}}</span></p>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          {% endfor %}
+          <p class="text-content">
+            <!-- BALROG <b>LLM</b> is the leaderboard for language-only evaluation mode.
+            [<a href="lite.html">Post</a>].
+            <br> -->
+            <!-- BALROG <b>VLM</b> is the leaderboard for vision-language evaluation mode.
+            [<a href="#">Post</a>].
+            <✔️br><br> -->
+            - The <span style="color:var(--accent_color);"><b>% Progress</b></span> metric refers to the average
+            completion
+            percentage of BALROG
+            environments of the model.
+            <br>
+            - <span style="color:var(--accent_color);"><b>✔️ Checked</b></span> indicates that we, the BALROG team,
+            received
+            access to the system and
+            were able to reproduce the patch generations.
+            <br>
+            - 🕹️ <span style="color:var(--accent_color);"><b> Open</b></span> refers to submissions that have
+            open-source
+            code. This
+            does <i>not</i>
+            necessarily mean the underlying model is open-source.
+            <br>
+            - The leaderboard is updated once a week on <b>Monday</b>.
+            <br>
+            - If you would like to submit your model to the leaderboard, please check the <a
+              href="submit.html">submission</a> page.
+          </p>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <div class="content-box">
+          <h2 class="text-title">About</h2>
+          <img src="img/diagram.png" style="width:80%;margin:auto;display:block;" />
+          <p class="text-content">
+            BALROG is a benchmark designed to evaluate the agentic capabilities of large language and
+            vision-language models (LLMs and VLMs) on long-horizon tasks, testing their ability to plan, reason
+            spatially, and explore in dynamic environments. Our benchmark reveals that while current models show some
+            success on simpler tasks, they struggle with more complex, procedurally generated environments like NetHack,
+            especially when vision-based decision-making is involved. We provide an open, fine-grained
+            evaluation framework to drive progress in autonomous agent research. Read more about agent quest in our <a
+              href="#" , target="_blank">paper</a>!
+          </p class="text-content">
+          <h3 class="text-title" style="margin-bottom:0.5em">Citation</h3>
+          <pre id="citation"><code>@inproceedings{
+    author2024BALROG,
+    title={BALROG: Benchmarking Agentic LLM/VLM Reasoning On Games},
+    author={Davide Paglieri*, Bartłomiej Cupiał*, Samuel Coward, Ulyana Piterbarg, 
+      Maciej Wolczyk, Akbir Khan, Eduardo Pignatelli, Łukasz Kuciński, Lerrel Pinto, 
+      Rob Fergus, Jakob Nicolaus Foerster, Jack Parker-Holder, Tim Rocktäschel},
+    booktitle={pre-print},
+    year={2024},
+    url={https://example.com/BALROG}
+}</code></pre>
+          <p class="text-content" style="margin-bottom: 0;">
+          <p style="line-height: 1.6667em;">
+            <b>Usage:</b> BALROG's website and leaderboard use the template made available by <a
+              href="https://princeton-nlp.github.io/SWE-bench/">SWE-bench</a>.
+            If you would like to use this template for your own leaderboard, please visit their website and request
+            permission
+          </p>
+          <p class="text-content">
+            Correspondence to: <a href="mailto:d.paglieri@cs.ucl.ac.uk">d.paglieri@cs.ucl.ac.uk</a>
+          </p>
+          <div class="content-wrapper" style="display: flex; flex-direction: row; margin-top: 0.5em;">
+            <a href="https://www.ucl.ac.uk/">
+              <img src="img/UCL.jpg" style="height: 3em;padding-top:0.5em;padding-right: 1em" />
+            </a>
+            <a href="https://ideas-ncbr.pl/en/">
+              <img src="img/IDEAS.png" style="height: 3em;padding-top:0.5em;padding-right: 1em" />
+            </a>
+            <a href="https://www.ox.ac.uk/">
+              <img src="img/oxford.svg" style="height: 3em;padding-top:0.5em;padding-right: 1em" />
+            </a>
+            <a href="https://www.nyu.edu/">
+              <img src="img/NYU.png" style="height: 3em;padding-top:0.5em;padding-right: 1em" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Remove the sorttable.js scripts -->
+  <!-- Include jQuery and DataTables JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+  <!-- Initialize DataTables -->
+  <script>
+    $(document).ready(function () {
+      // Initialize DataTables for each leaderboard table
+      {% for leaderboard in leaderboards %}
+      $('#leaderboard-table-{{leaderboard.name}}').DataTable({
+        "paging": false,
+        "ordering": true,
+        "info": false,
+        "searching": false,
+        "order": [[1, "desc"]], // Set default ordering to the Average column in descending order
+        "columnDefs": [
+          {
+            "orderSequence": ["desc", "asc"],
+            "targets": [
+              1, // % Average
+              2, // BabyAI
+              3, // Crafter
+              {% if leaderboard.name != 'VLM' %}
+              4, // TextWorld
+          5, // BabaIsAI
+          6, // MiniHack
+          7  // NLE
+              {% else %}
+              4, // BabaIsAI
+        5, // MiniHack
+        6  // NLE
+              {% endif %}
+            ]
+          }
+        ]
+      });
+    {% endfor %}
+    });
+  </script>
+  <script>
+    function openLeaderboard(leaderboard) {
+      var tabcontent = document.getElementsByClassName("tabcontent");
+      for (var i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      var tablinks = document.getElementsByClassName("tablinks");
+      for (var i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+      }
+
+      document.getElementById(`leaderboard-${leaderboard}`).style.display = "block";
+      document.querySelector(`[data-leaderboard="${leaderboard}"]`).classList.add("active");
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabs = document.querySelectorAll('.tablinks');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function (event) {
+          openLeaderboard(this.getAttribute('data-leaderboard'));
+        });
+      });
+
+      // Open the 'LLM' leaderboard by default
+      openLeaderboard('LLM');
+    });
+  </script>
+</body>
+
+</html>

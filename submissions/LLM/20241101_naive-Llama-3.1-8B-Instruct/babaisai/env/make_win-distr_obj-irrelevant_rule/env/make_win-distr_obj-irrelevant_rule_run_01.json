@@ -1,0 +1,45 @@
+{
+    "task": "env/make_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "idle": 7,
+        "right": 27,
+        "down": 16,
+        "up": 27,
+        "left": 23
+    },
+    "input_tokens": 256434,
+    "output_tokens": 316,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "left.",
+        "take the rule \"you\" and move it to baba's position, and take the rule \"baba\" and move it to you's position.",
+        "try to rearrange the rules or move the objects to create a new opportunity. \n\n Move the \"key\" to the position of the \"rule `win` 3 step to the left\" is not possible because the key is under ball.",
+        "try to swap the rules \"baba is you\" and \"baba is 4 step to the left\" by moving them on top of each other and then moving them back one step"
+    ],
+    "target_plan": "make[ball is win], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-20",
+    "seed": 1296743081,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

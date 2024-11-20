@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-break_stop-make_win",
+    "action_frequency": {
+        "idle": 2,
+        "down": 17,
+        "right": 32,
+        "up": 23,
+        "left": 26
+    },
+    "input_tokens": 408683,
+    "output_tokens": 233,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "left.",
+        "Since we're trying to reach the door, let's try to get to the wall on the left and swap the rules to create a path to the door.\n\nleft"
+    ],
+    "target_plan": "break[wall is stop], make[door is win], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-10",
+    "seed": 1164972242,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

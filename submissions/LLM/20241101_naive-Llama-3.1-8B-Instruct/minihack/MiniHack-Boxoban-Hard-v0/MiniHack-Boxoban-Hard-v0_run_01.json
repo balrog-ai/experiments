@@ -1,0 +1,48 @@
+{
+    "task": "MiniHack-Boxoban-Hard-v0",
+    "action_frequency": {
+        "east": 40,
+        "south": 23,
+        "west": 17,
+        "north": 20
+    },
+    "input_tokens": 578620,
+    "output_tokens": 229,
+    "done": true,
+    "episode_return": -0.09900000000000009,
+    "num_steps": 100,
+    "failed_candidates": [
+        "push the boulder at west and northnorthwest.",
+        "Take off gloves.",
+        "push boulder",
+        "push north",
+        "push west",
+        "push west",
+        "push west",
+        "move towards the boulder near westsouthwest and west"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-2",
+    "seed": 963113029,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "https://short-stars-matter.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

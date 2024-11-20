@@ -1,0 +1,41 @@
+{
+    "task": "env/two_room-break_stop-goto_win",
+    "action_frequency": {
+        "idle": 3,
+        "up": 80,
+        "down": 17
+    },
+    "input_tokens": 405376,
+    "output_tokens": 348,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Since the current rules are: \n\ndoor is win\nwall is stop\nbaba is you\n\nThe current state of the game is: \n\nwall 3 steps to the right and 1 step up\nwall 3 steps to the right and 1 step down\ndoor 6 steps to the right\nwall 3 steps to the right and 2 steps down\nwall 3 steps to the right and 3 steps down\nwall 3 steps to the right and 4 steps down\nbaba 2 step to the left and 4 steps down\n\nYour goal is to reach the 'win' object, which is behind the 'baba' object.\n\nAction: move the door",
+        "move wall 3 steps to the left"
+    ],
+    "target_plan": "break[wall is stop], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 127132152,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-break_stop-make_win",
+    "action_frequency": {
+        "idle": 1,
+        "up": 32,
+        "right": 13,
+        "down": 8,
+        "left": 46
+    },
+    "input_tokens": 400189,
+    "output_tokens": 217,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "I'd like to move the rule \"baba\" 1 step to the right."
+    ],
+    "target_plan": "break[wall is stop], make[key is win], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 2938149927,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "base_url": "https://wild-ducks-post.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

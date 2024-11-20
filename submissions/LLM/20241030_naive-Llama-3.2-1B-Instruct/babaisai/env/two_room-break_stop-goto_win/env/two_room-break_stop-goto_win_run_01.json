@@ -1,0 +1,44 @@
+{
+    "task": "env/two_room-break_stop-goto_win",
+    "action_frequency": {
+        "idle": 3,
+        "up": 67,
+        "down": 18,
+        "right": 4,
+        "left": 8
+    },
+    "input_tokens": 401575,
+    "output_tokens": 275,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Based on the current observation, I'd like to take the following action:\n\nTake one step up (left)\n\nThis action will help me examine the level more closely, and I can also use it to help identify potential new rules or changes to existing ones.",
+        "Nothing",
+        "Since the episode has just started and there are no objects to move, you can take the first step by going \"up\".\n\nup"
+    ],
+    "target_plan": "break[wall is stop], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-8",
+    "seed": 1827073653,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

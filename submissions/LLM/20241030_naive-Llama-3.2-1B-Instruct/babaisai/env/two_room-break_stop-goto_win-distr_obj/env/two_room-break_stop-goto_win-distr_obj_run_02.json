@@ -1,0 +1,41 @@
+{
+    "task": "env/two_room-break_stop-goto_win-distr_obj",
+    "action_frequency": {
+        "idle": 1,
+        "up": 83,
+        "left": 3,
+        "down": 13
+    },
+    "input_tokens": 419011,
+    "output_tokens": 304,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Considering the current rules and objects on the map, I'd like to propose an action:\n\nAction: Move the rule `wall` 2 steps to the left and 1 step up.\n\nThis would change the rule from `wall` 3 steps to the left and 1 step up to `wall` 2 steps to the left and 1 step up. This seems like a viable option, and it might help us eventually reach the `win` rule or create a new path to the `win` rule."
+    ],
+    "target_plan": "break[wall is stop], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-19",
+    "seed": 1871721144,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

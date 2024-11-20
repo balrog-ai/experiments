@@ -1,0 +1,46 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/putnext",
+    "action_frequency": {
+        "turn left": 25,
+        "pick up": 87,
+        "turn right": 4,
+        "go forward": 12
+    },
+    "input_tokens": 172957,
+    "output_tokens": 394,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "pick up blue box",
+        "pick up blue box",
+        "pick up blue box",
+        "pick up blue box",
+        "pick up blue box"
+    ],
+    "mission": "put a blue box next to the red box",
+    "progression": 0.0,
+    "process_num": "ForkProcess-14",
+    "seed": 4093653895,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

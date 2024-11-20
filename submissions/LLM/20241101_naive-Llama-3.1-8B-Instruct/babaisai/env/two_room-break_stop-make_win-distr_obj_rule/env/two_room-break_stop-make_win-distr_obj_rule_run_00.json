@@ -1,0 +1,46 @@
+{
+    "task": "env/two_room-break_stop-make_win-distr_obj_rule",
+    "action_frequency": {
+        "idle": 7,
+        "right": 34,
+        "down": 19,
+        "left": 25,
+        "up": 15
+    },
+    "input_tokens": 467741,
+    "output_tokens": 264,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "left.",
+        "rule `baba` is you",
+        "I will move the rule 'baba is you' to be on top of the ball. \n\nThe action is: \nup",
+        "take the rule \"is\" and move it to the position of the object \"ball\"",
+        "rule `is` 6 steps to the right and 6 step up"
+    ],
+    "target_plan": "break[wall is stop], make[ball is win], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-22",
+    "seed": 1668954427,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

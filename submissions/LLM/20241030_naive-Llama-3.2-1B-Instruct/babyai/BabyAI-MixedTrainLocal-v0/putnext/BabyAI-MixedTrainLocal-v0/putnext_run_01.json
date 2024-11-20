@@ -1,0 +1,41 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/putnext",
+    "action_frequency": {
+        "go forward": 1,
+        "toggle": 67,
+        "turn right": 28,
+        "turn left": 32
+    },
+    "input_tokens": 193920,
+    "output_tokens": 439,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "I will start by picking up the blue ball which is 2 steps right and 4 steps forward.\n\nCurrent Observation:\na wall 2 steps left\na blue ball 2 steps right and 4 steps forward\na yellow ball 3 steps right and 3 steps forward\na green key 1 step left and 1 step forward\na blue key 3 steps forward\na grey key 1 step right and 1 step forward\na blue key 3 steps forward\na green ball 2 steps right and 4 steps forward\na yellow ball 3 steps right and 3 steps forward"
+    ],
+    "mission": "put the blue box next to the blue key",
+    "progression": 0.0,
+    "process_num": "ForkProcess-32",
+    "seed": 2437307304,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

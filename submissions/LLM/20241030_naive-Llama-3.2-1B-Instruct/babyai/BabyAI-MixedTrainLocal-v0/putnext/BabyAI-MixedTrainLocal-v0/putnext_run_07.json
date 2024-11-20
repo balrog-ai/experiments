@@ -1,0 +1,44 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/putnext",
+    "action_frequency": {
+        "go forward": 7,
+        "toggle": 62,
+        "pick up": 6,
+        "drop": 5,
+        "turn left": 28,
+        "turn right": 20
+    },
+    "input_tokens": 138461,
+    "output_tokens": 337,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "I will take the following action based on my current observation:\n\ngo forward: 5 steps",
+        "a wall 1 step right"
+    ],
+    "mission": "put the green box next to a purple box",
+    "progression": 0.0,
+    "process_num": "ForkProcess-5",
+    "seed": 3670295200,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

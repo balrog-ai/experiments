@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>BALROG</title>
+    <meta name="description" content="BALROG: Benchmarking Agentic LLM/VLM Reasoning On Games" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta property="og:image" content="/logo.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="..." crossorigin="anonymous" />
+    <style>
+        code {
+            background-color: #ddd;
+            color: black;
+        }
+
+        h3 {
+            margin-bottom: 0.5em;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9XFCMDPNS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-H9XFCMDPNS");
+    </script>
+</head>
+
+<body>
+    <div style="padding-bottom: 50px">
+        <section style="background-color: var(--dark_accent_color)">
+            <div class="content-wrapper title-wrapper" style="flex-direction: column;text-align: center;">
+                <h1 style="font-size: 55px; padding-top: 0.4em">Submit to BALROG</h1>
+                <div class="content-wrapper" style="margin-top: 2em">
+                    <a href="index.html">
+                        <button class="outline"
+                            style="flex-direction: row; display: flex; justify-content: center; align-items: center;">
+                            <img src="img/logo.png"
+                                style="height: 1.8em; margin-left: -0.3em; margin-right: 0.3em; margin-bottom: 0em;" />
+                            Home&nbsp;
+                        </button>
+                    </a>
+                    <a href="https://arxiv.org/abs/2310.06770">
+                        <button class="outline">
+                            <i class="fa fa-paperclip"></i> Paper&nbsp;
+                        </button>
+                    </a>
+                    <a href="https://github.com/DavidePaglieri/BALROG">
+                        <button class="outline">
+                            <i class="fab fa-github"></i> Code&nbsp;
+                        </button>
+                    </a>
+                    <!-- Removed the Analysis button -->
+                </div>
+            </div>
+        </section>
+        <section class="main-container">
+            <div class="content-wrapper" style="display: flex; justify-content: center; align-items: center;">
+                <div
+                    style="background-color: black; padding: 1.5em 1em; color: white; border-radius: 1em; text-align: center; width: 80%;">
+                    All official submissions to the BALROG leaderboard are maintained at
+                    <a href="https://github.com/balrog-ai/experiments" class="light-blue-link" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-github"></i> BALROG/experiments
+                    </a>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="content-box">
+                    <h3>
+                        Submit to BALROG Leaderboard
+                    </h3>
+                    <p>
+                        If you are interested in submitting your agent to the <a href="https://balrogai.com/"
+                            style="color:var(--accent_color)">BALROG
+                            Leaderboard</a>, please do the following:
+                    </p>
+                    <ol>
+                        <li>
+                            Fork and clone the <a href="https://github.com/balrog-ai/experiments"
+                                style="color:var(--accent_color)">BALROG/experiments</a> repository.
+                        </li>
+                        <li>
+                            Create a new folder with the submission date and the agent name (e.g.
+                            <code>2024-09-21_balrog_gpt4o</code>).
+                        </li>
+                        <li>
+                            Copy the log of the run of your agent, please include the following files from your agent's
+                            evaluation:
+                            <ul>
+                                <li><code>babaisai</code>: babaisai folder, containing summary and trajectory logs</li>
+                                <li><code>babyai</code>: babyai folder, containing summary and trajectory logs</li>
+                                <li><code>crafter</code>: crafter folder, containing summary and trajectory logs</li>
+                                <li><code>minihack</code>: minihack folder, containing summary and trajectory logs</li>
+                                <li><code>nle</code>: nethack folder, containing summary and trajectory logs</li>
+                                <li><code>textworld</code>: textworld folder, containing summary and trajectory logs
+                                </li>
+                                <li><code>summary.json</code>: Summary of the evaluation outcomes for all environments
+                                </li>
+                            </ul>
+                            <p style="margin-bottom:1em;"><strong>NOTE</strong>: You shouldn't have to create any of
+                                these files. They should automatically be generated by BALROG evaluation.</p>
+                        </li>
+                        <li>
+                            <code>metadata.yaml</code>: Metadata for how the result is shown on website. Please include
+                            the following fields:
+                            <ul>
+                                <li><code>name</code>: The name of your leaderboard entry</li>
+                                <li><code>oss</code>: <code>true</code> if your agent (model + strategy) is open-source
+                                </li>
+                                <li><code>site</code>: URL/link to more information about your agent</li>
+                                <li><code>verified</code>: <code>false</code> (See below for results verification)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <code>README.md</code>: Include anything you'd like to share about your agent here!
+                        </li>
+                        <li>
+                            Run
+                            <code>python submit.py &lt;path-to-submission&gt;</code>
+                        </li>
+                        <li>
+                            Create a pull request to the BALROG/experiments repository with the new folder.
+                        </li>
+                    </ol>
+                    <p>
+                        You can refer to this <a
+                            href="https://github.com/DavidePaglieri/BALROG/tree/main/assets/evaluation.md"
+                            style="color:var(--accent_color)">tutorial</a>
+                        for a quick overview of how to evaluate your agent on BALROG.
+                    </p>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="content-box">
+                    <h3>Verify Your Results</h3>
+                    <p>
+                        The <i>Verified</i> check ✓ indicates that we (the BALROG team) received access to your agent
+                        and were able to reproduce a selection of the results.
+                    </p>
+                    <p style="margin-top:0.5em;">
+                        If you are interested in receiving the "verified" checkmark ✓ on your submission, please do the
+                        following:
+                    </p>
+                    <ol>
+                        <li>Create an issue</li>
+                        <li>In the issue, provide us instructions on how to run your agent on BALROG.</li>
+                        <li>We will run your agent on a random subset of BALROG and verify the results.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

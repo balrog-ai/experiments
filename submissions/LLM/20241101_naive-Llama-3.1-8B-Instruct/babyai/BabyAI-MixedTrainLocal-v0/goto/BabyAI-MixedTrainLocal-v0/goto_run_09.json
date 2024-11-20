@@ -1,0 +1,43 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "go forward": 13,
+        "toggle": 6,
+        "turn right": 4,
+        "turn left": 2,
+        "pick up": 2,
+        "drop": 1
+    },
+    "input_tokens": 23349,
+    "output_tokens": 78,
+    "done": true,
+    "episode_return": 0.60625,
+    "num_steps": 28,
+    "failed_candidates": [
+        "turn right."
+    ],
+    "mission": "go to a yellow key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-10",
+    "seed": 4097003958,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

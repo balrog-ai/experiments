@@ -1,0 +1,55 @@
+{
+    "task": "MiniHack-CorridorBattle-Dark-v0",
+    "action_frequency": {
+        "north": 30,
+        "east": 15,
+        "south": 14,
+        "west": 6,
+        "northwest": 5
+    },
+    "input_tokens": 214452,
+    "output_tokens": 182,
+    "done": true,
+    "episode_return": -0.0009999999999999731,
+    "num_steps": 70,
+    "failed_candidates": [
+        "use blessed +1 long sword",
+        "inventory",
+        "use blessed +1 long sword",
+        "examine",
+        "examine",
+        "examine cursor",
+        "examine",
+        "attack",
+        "try to hit the giant rat with your blessed long sword",
+        "use blessed +1 long sword",
+        "inventory",
+        "examine",
+        "examine cursor",
+        "throw apple at giant rat"
+    ],
+    "progression": 0.0,
+    "end_reason": 1,
+    "process_num": "ForkProcess-7",
+    "seed": 1836251264,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "base_url": "https://wild-ducks-post.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

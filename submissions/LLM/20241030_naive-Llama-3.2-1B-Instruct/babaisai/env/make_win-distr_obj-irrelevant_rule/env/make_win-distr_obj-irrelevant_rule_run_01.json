@@ -1,0 +1,41 @@
+{
+    "task": "env/make_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "idle": 1,
+        "up": 84,
+        "down": 14,
+        "left": 1
+    },
+    "input_tokens": 244536,
+    "output_tokens": 230,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Considering the current state of the map and the active rules, I would like to execute the action 'up' to take one step up.\n\nAction: up"
+    ],
+    "target_plan": "make[ball is win], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-20",
+    "seed": 3971229384,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

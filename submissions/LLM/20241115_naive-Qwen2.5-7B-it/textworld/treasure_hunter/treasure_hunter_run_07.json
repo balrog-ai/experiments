@@ -1,0 +1,39 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "look\ntake mantle from mantle": 2,
+        "take mantle": 75,
+        "look\ntake mantle": 1,
+        "look": 2
+    },
+    "input_tokens": 64328,
+    "output_tokens": 248,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-32",
+    "seed": 2643232190,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-maybe_break_stop-goto_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "idle": 1,
+        "down": 15,
+        "right": 37,
+        "up": 18,
+        "left": 29
+    },
+    "input_tokens": 451230,
+    "output_tokens": 320,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Since the goal is to reach the \"door\" and it's located at 7 steps to the right and 1 step down, and the active rule \"door is win\" makes the door the win condition, but \"wall is stop\" makes the wall an immovable object. \n\nConsidering the position of the wall, I'll try to move the wall that blocks the path to the door. The wall is located at 4 steps to the right and 2 steps down, which is blocking the path to the door at 7 steps to the right and 1 step down.\n\nAction: down"
+    ],
+    "target_plan": "break[wall is stop], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-7",
+    "seed": 1118926183,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

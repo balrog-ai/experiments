@@ -1,0 +1,44 @@
+{
+    "task": "env/two_room-maybe_break_stop-goto_win-distr_obj_rule",
+    "action_frequency": {
+        "idle": 4,
+        "right": 35,
+        "up": 20,
+        "down": 15,
+        "left": 26
+    },
+    "input_tokens": 456219,
+    "output_tokens": 534,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "left.",
+        "down \n\n(Note: Since we're back at the starting position, I'm moving down to see if we can find a new path to the key)",
+        "move the \"stop\" rule to be above the \"wall\" object, by moving the \"stop\" rule 2 steps to the right. \n\nThe new observation is:\n\nActive rules:\nkey is win\nwall is stop\nbaba is you\n\nObjects on the map:\nwall 4 steps to the right and 1 step up\nrule `key` 5 steps to the right and 1 step up\nrule `is` 6 steps to the right and 1 step up\nrule `win` 7 steps to the right and 1 step up\nrule `wall` 1 step to the left\nrule `is` 2 step to the left\nrule `stop` 3 step to the left\ndoor 1 step to the left and 1 step down\nwall 2 steps to the right and 1 step down\nwall 2 steps to the right and 2 steps down\nwall 2 steps to the right and 3 steps down\nkey 2 step to the left and 4 steps down\nwall 2 steps to the right and 4 steps down\nrule `baba` 3 step to the left and 5 steps down\nrule `is` 2 step to the left and 5 steps down\nrule `you` 1 step to the left and 5 steps down\nwall 2 steps to the right and 5 steps down\nrule `door` 5 steps to the right and 5 steps down"
+    ],
+    "target_plan": "goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-19",
+    "seed": 858966278,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

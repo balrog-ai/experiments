@@ -1,0 +1,54 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take block of cheese from showcase": 1,
+        "take raw white tuna from showcase": 1,
+        "take knife from showcase": 11,
+        "examine showcase": 4,
+        "There doesnt seem to be a knife in the showcase Lets check if theres a knife in the supermarket\n\nlook": 1,
+        "look": 1,
+        "looksouth": 1,
+        "look north": 2,
+        "look south": 1,
+        "look east": 1,
+        "look west": 1,
+        "examine sliding door": 2,
+        "examine inventory": 1,
+        "inventory": 2,
+        "examine knife": 2,
+        "take knife from counter": 29,
+        "take knife from sliding door": 1,
+        "take knife from behind counter": 17,
+        "take knife from inventory": 1
+    },
+    "input_tokens": 105688,
+    "output_tokens": 415,
+    "done": true,
+    "episode_return": 159.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-5",
+    "seed": 2664949870,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

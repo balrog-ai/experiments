@@ -1,0 +1,43 @@
+{
+    "task": "MiniHack-CorridorBattle-Dark-v0",
+    "action_frequency": {
+        "southwest": 1,
+        "north": 3,
+        "west": 1,
+        "east": 37,
+        "southeast": 3,
+        "northeast": 4
+    },
+    "input_tokens": 92505,
+    "output_tokens": 373,
+    "done": true,
+    "episode_return": 1.049,
+    "num_steps": 49,
+    "failed_candidates": [
+        "Based on the image and the language observation, it appears we have explored a significant portion of the western part of the level. Our goal is to find the stairs down, which are not visible in the explored area. Therefore, we should continue exploring eastward, as that's the direction with the most unexplored area.\n\neast"
+    ],
+    "progression": 1.0,
+    "end_reason": 2,
+    "process_num": "ForkProcess-2",
+    "seed": 1847539717,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 1,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "claude",
+        "model_id": "claude-3-5-sonnet-20240620",
+        "base_url": "http://localhost:8000/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

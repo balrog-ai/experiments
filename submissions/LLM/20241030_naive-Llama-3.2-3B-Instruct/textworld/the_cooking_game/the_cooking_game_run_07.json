@@ -1,0 +1,53 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "look": 5,
+        "go south": 14,
+        "examine showcase": 5,
+        "open showcase": 1,
+        "examine door": 12,
+        "open door": 1,
+        "go north": 14,
+        "take cheese": 1,
+        "examine street": 1,
+        "examine tuna": 2,
+        "take tuna": 1,
+        "examine cookbook": 5,
+        "examine doorstep": 2,
+        "inventory": 6,
+        "examine cheese": 1,
+        "examine shelves": 3,
+        "go east": 3,
+        "go east is not an option, so I'll try a different action. \n\nlook": 1,
+        "examine door leading north": 2
+    },
+    "input_tokens": 122141,
+    "output_tokens": 281,
+    "done": true,
+    "episode_return": 129.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-8",
+    "seed": 2954828220,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "base_url": "https://wild-ducks-post.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

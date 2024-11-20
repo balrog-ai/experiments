@@ -1,0 +1,50 @@
+{
+    "task": "MiniHack-MazeWalk-15x15-v0",
+    "action_frequency": {
+        "east": 31,
+        "north": 32,
+        "southwest": 11,
+        "west": 9,
+        "northwest": 11,
+        "south": 6
+    },
+    "input_tokens": 312308,
+    "output_tokens": 228,
+    "done": true,
+    "episode_return": 0.05300000000000004,
+    "num_steps": 100,
+    "failed_candidates": [
+        "examine",
+        "examine",
+        "examine",
+        "up",
+        "inventory",
+        "examine",
+        "examine",
+        "examine"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-4",
+    "seed": 1345788226,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "base_url": "https://wild-ducks-post.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

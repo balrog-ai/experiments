@@ -1,0 +1,45 @@
+{
+    "task": "env/two_room-break_stop-goto_win-distr_rule",
+    "action_frequency": {
+        "idle": 4,
+        "up": 23,
+        "right": 30,
+        "down": 16,
+        "left": 27
+    },
+    "input_tokens": 423476,
+    "output_tokens": 379,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Given the current state of the level and the rules, our goal is to reach the key, which is defined as the win. However, the current rules and layout of the level make it difficult to access the key.\n\nOne possible initial action would be to move the rule 'baba is you' block one step up, because as long as this rule is in place, we will be treated as the 'baba' object, which currently has a rule that stops it from moving down and is in a position that makes it difficult to reach the key.\n\nAction: up",
+        "up \n\nThis action will try to move the Baba character upwards.",
+        "move rule `is` 3 step to the left and 1 step down to the wall 1 step to the right and 1 step down",
+        "try to move the \"is\" rule that is on the left to the right by moving it one step to the right."
+    ],
+    "target_plan": "break[wall is stop], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-21",
+    "seed": 520591565,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

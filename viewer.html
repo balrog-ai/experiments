@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>BALROG Model Viewer</title>
+    <meta name="description" content="BALROG: Benchmarking Agentic LLM/VLM Reasoning On Games - Model Viewer" />
+    <link rel="shortcut icon" href="img/logo.png" />
+    <link rel="icon" href="img/logo.png" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/viewer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="..." crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Include a sanitizer for security -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.6/dist/purify.min.js"></script>
+</head>
+
+<body>
+    <div style="padding-bottom: 50px">
+        <!-- Top Section with BALROG Title and Image -->
+        <section style="background-color: var(--dark_accent_color)">
+            <div class="content-wrapper title-wrapper" style="flex-direction: column">
+                <div style="
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                      padding-bottom: 15px;
+                    ">
+                    <h1 style="font-size: 60px; padding-top: 0.4em">BALROG</h1>
+                    <img src="img/logo.png" style="height: 120px; padding-top: 0em; padding-left: 0.5em" />
+                </div>
+                <h3>Benchmarking Agentic LLM/VLM Reasoning On Games</h3>
+                <!-- Model Name -->
+                <h2 id="modelName" style="font-size: 40px; padding-top: 0.4em"></h2>
+                <p id="modelDate">Date: </p>
+                <!-- Navigation Buttons -->
+                <div class="content-wrapper" style="margin-top: 2em">
+                    <a href="index.html">
+                        <button class="outline"
+                            style="flex-direction: row; display: flex; justify-content: center; align-items: center;">
+                            <img src="img/logo.png"
+                                style="height: 1.8em; margin-left: -0.3em; margin-right: 0.3em; margin-bottom: 0em;" />
+                            Home&nbsp;
+                        </button>
+                    </a>
+                    <a href="https://openreview.net/forum?id=fp6t3F669F">
+                        <button class="outline">
+                            <i class="fa fa-paperclip"></i> Paper&nbsp;
+                        </button>
+                    </a>
+                    <a href="https://github.com/DavidePaglieri/BALROG">
+                        <button class="outline">
+                            <i class="fab fa-github"></i> Code&nbsp;
+                        </button>
+                    </a>
+                    <a href="submit.html">
+                        <button class="outline">
+                            <i class="fa fa-upload"></i> Submit&nbsp;
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section class="main-container">
+            <!-- Display README.md content -->
+            <div class="content-wrapper">
+                <div class="content-box" id="readme">
+                    Loading README.md...
+                </div>
+            </div>
+            <!-- Trajectories Section (Always displayed) -->
+            <div class="content-wrapper" id="trajectoriesLinkContainer">
+                <div class="content-box">
+                    <h2 class="text-title">Trajectories</h2>
+                    <p class="text-content" id="trajectoriesText">
+                        <!-- Content will be updated via JavaScript -->
+                    </p>
+                </div>
+            </div>
+            <!-- Display Performance Data -->
+            <div class="content-wrapper">
+                <h3>Performance Data</h3>
+                <table class="table-results" id="performanceTable">
+                    <thead>
+                        <tr>
+                            <th>Environment</th>
+                            <th>Progress (%)</th>
+                            <th>Standard Error</th>
+                            <th>Number of Episodes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <!-- Embed the data variable -->
+    <script>
+        var data = {"leaderboards": [{"name": "LLM", "results": [{"average": [29.978045996171215, 1.9796234258919423], "babaisai": [37.5, 4.419417382415922, 120], "babyai": [52.0, 7.065408693062279, 50], "crafter": [32.72727272727273, 3.2012394293925466, 10], "date": "2024-11-11", "folder": "submissions/LLM/20241103_Claude-3.5-Sonnet", "minihack": [15.0, 5.645794895318107, 40], "name": "Claude-3.5-Sonnet", "nle": [0.5821797203427749, 0.5207173719233047, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "textworld": [42.05882352941177, 5.406976071199611, 60], "trajs": true, "verified": true}, {"average": [10.57, 0.96], "babaisai": [12.8, 2.33, 200], "babyai": [25.6, 3.9, 125], "crafter": [20.0, 0.74, 10], "date": "2024-11-11", "folder": "submissions/LLM/20240924_naive-Gemini-1.5-Flash", "minihack": [5.0, 3.45, 40], "name": "Gemini-1.5-Flash", "nle": [0.0, 0.0, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "textworld": [0.0, 0.0, 60], "trajs": false, "verified": true}, {"average": [14.144385026737968, 1.5144604179619934], "babaisai": [18.333333333333332, 3.532258746447074, 120], "babyai": [30.0, 6.4807406984078595, 50], "crafter": [25.454545454545453, 3.226952608963427, 10], "date": "2024-11-11", "folder": "submissions/LLM/20241101_naive-Llama-3.1-8B-Instruct", "minihack": [5.0, 3.446012188022554, 40], "name": "Llama-3.1-8B-it", "nle": [0.0, 0.0, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "textworld": [6.07843137254902, 2.409186144801279, 30], "trajs": false, "verified": true}, {"average": [8.467023172905524, 1.1182357157818872], "babaisai": [17.5, 3.4686092313779033, 120], "babyai": [10.0, 4.242640687119281, 50], "crafter": [17.27272727272727, 2.7872199485010714, 10], "date": "2024-11-11", "folder": "submissions/LLM/20241030_naive-Llama-3.2-3B-Instruct", "minihack": [2.5, 2.4685522072664368, 40], "name": "Llama-3.2-3B-it", "nle": [0.0, 0.0, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "textworld": [3.5294117647058822, 1.0595494969495132, 30], "trajs": true, "verified": true}, {"average": [32.34, 1.49], "babaisai": [33.66, 3.3, 200], "babyai": [77.6, 3.73, 125], "crafter": [33.1, 2.32, 10], "date": "2024-11-11", "folder": "submissions/LLM/20240924_naive-GPT4o", "minihack": [10.0, 4.74, 40], "name": "GPT-4o", "nle": [0.37, 0.37, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "textworld": [39.31, 5.24, 60], "trajs": false, "verified": true}, {"average": [21.0, 1.18], "babaisai": [32.02, 3.26, 200], "babyai": [58.4, 4.41, 125], "crafter": [30.21, 2.86, 10], "date": "2024-11-11", "folder": "submissions/LLM/20240924_naive-Gemini-1.5-Pro", "minihack": [5.0, 3.45, 40], "name": "Gemini-1.5-Pro", "nle": [0.37, 0.37, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "textworld": [0.0, 0.0, 60], "trajs": false, "verified": true}, {"average": [27.876666666666665, 1.4263453688048735], "babaisai": [40.0, 3.42, 200], "babyai": [73.2, 3.96, 125], "crafter": [31.21, 2.68, 10], "date": "2024-11-17", "folder": "submissions/LLM/20240930_naive-Llama-3.1-70B-Instruct", "minihack": [7.5, 4.16, 40], "name": "Llama-3.1-70B-it", "nle": [0.35, 0.35, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "textworld": [15.0, 4.61, 60], "trajs": false, "verified": true}, {"average": [17.36, 1.35], "babaisai": [15.6, 2.53, 200], "babyai": [50.4, 4.47, 125], "crafter": [15.9, 2.05, 10], "date": "2024-11-11", "folder": "submissions/LLM/20240924_naive-GPT4o-mini", "minihack": [10.0, 4.74, 40], "name": "GPT-4o-mini", "nle": [0.0, 0.0, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "textworld": [12.25, 3.55, 60], "trajs": false, "verified": true}, {"average": [24.49, 1.23], "babaisai": [43.9, 3.47, 200], "babyai": [55.2, 4.45, 125], "crafter": [31.68, 1.36, 10], "date": "2024-11-11", "folder": "submissions/LLM/20240930_naive-Llama-3.2-90B-Instruct", "minihack": [5.0, 3.44, 40], "name": "Llama-3.2-90B-it", "nle": [0.0, 0.0, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "textworld": [11.18, 2.98, 60], "trajs": false, "verified": true}, {"average": [13.95833333333333, 1.1234866364235145], "babaisai": [15.6, 2.5, 200], "babyai": [32.8, 4.19, 125], "crafter": [26.19, 3.29, 10], "date": "2024-11-11", "folder": "submissions/LLM/20240930_naive-Llama-3.2-11B-Instruct", "minihack": [2.5, 2.47, 40], "name": "Llama-3.2-11B-it", "nle": [0.0, 0.0, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "textworld": [6.66, 2.17, 60], "trajs": false, "verified": true}, {"average": [6.315656565656565, 0.9953030118350736], "babaisai": [10.833333333333334, 2.837211398277984, 120], "babyai": [6.0, 3.3585711247493344, 50], "crafter": [12.727272727272727, 1.9069251784911847, 10], "date": "2024-11-11", "folder": "submissions/LLM/20241030_naive-Llama-3.2-1B-Instruct", "minihack": [5.0, 3.446012188022554, 40], "name": "Llama-3.2-1B-it", "nle": [0.0, 0.0, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "textworld": [3.3333333333333335, 0.9063547420103955, 30], "trajs": true, "verified": true}]}, {"name": "VLM", "results": [{"average": [29.076375536839244, 2.2143652259277684], "babaisai": [34.45378151260504, 4.3563101057350435, 119], "babyai": [50.0, 7.0710678118654755, 50], "crafter": [37.272727272727266, 3.1360342383018796, 10], "date": "2024-11-11", "folder": "submissions/VLM/20241103_Claude-3.5-Sonnet", "minihack": [22.5, 6.602556323122129, 40], "name": "Claude-3.5-Sonnet", "nle": [1.1553688988639113, 0.423598115933611, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "trajs": true, "verified": true}, {"average": [14.940000000000001, 1.3992655216219687], "babaisai": [8.3, 1.92, 200], "babyai": [43.2, 4.43, 125], "crafter": [20.7, 4.42, 10], "date": "2024-11-08", "folder": "submissions/VLM/20240924_naive-Gemini-1.5-Flash", "minihack": [2.5, 2.47, 40], "name": "Gemini-1.5-Flash", "nle": [0.0, 0.0, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "trajs": false, "verified": true}, {"average": [22.560000000000002, 1.444882002102594], "babaisai": [18.62, 2.72, 200], "babyai": [62.0, 4.34, 125], "crafter": [26.81, 3.74, 10], "date": "2024-11-08", "folder": "submissions/VLM/20240930_naive-gpt-4o", "minihack": [5.0, 3.44, 40], "name": "GPT-4o", "nle": [0.37, 0.37, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "trajs": false, "verified": true}, {"average": [25.7568, 1.3608593755417937], "babaisai": [31.4, 3.24, 200], "babyai": [58.4, 4.41, 125], "crafter": [33.5, 2.07, 10], "date": "2024-11-08", "folder": "submissions/VLM/20240924_naive-Gemini-1.5-Pro", "minihack": [5.0, 3.44, 40], "name": "Gemini-1.5-Pro", "nle": [0.484, 0.484, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "trajs": false, "verified": true}, {"average": [13.43, 1.16], "babaisai": [21.9, 2.89, 200], "babyai": [28.2, 4.02, 125], "crafter": [14.54, 1.8, 10], "date": "2024-11-11", "folder": "submissions/VLM/20240930_naive-Llama-3.2-90B-Instruct", "minihack": [2.5, 2.47, 40], "name": "Llama-3.2-90B-it", "nle": [0.0, 0.0, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "trajs": false, "verified": true}, {"average": [6.914, 0.8368273418095277], "babaisai": [5.76, 1.63, 200], "babyai": [10.4, 2.73, 125], "crafter": [15.91, 1.16, 10], "date": "2024-11-11", "folder": "submissions/VLM/20240930_naive-Llama-3.2-11B-Instruct", "minihack": [2.5, 2.46, 40], "name": "Llama-3.2-11B-it", "nle": [0.0, 0.0, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "trajs": false, "verified": true}, {"average": [15.3632, 1.2875014563098561], "babaisai": [16.41, 2.59, 200], "babyai": [38.0, 4.34, 125], "crafter": [19.906, 3.13, 10], "date": "2024-11-08", "folder": "submissions/VLM/20240930_naive-gpt-4o-mini", "minihack": [2.5, 2.47, 40], "name": "GPT-4o-mini", "nle": [0.0, 0.0, 5], "org_logo": "https://github.com/balrog-ai.png?size=200", "oss": true, "readme_content": "# BALROG Naive Baseline\nAs part of the original BALROG paper, we use naive zero-shot agents as the baseline approach for all the environments in BALROG.\n\nSpecifically:\n\n1. The agent is first given the rules of the games and available actions\n2. The agent is then shown the history of previous 16 observations-actions in a chat format, \n3. Finally, the agent is asked to only output a single action, with not sophisticated reasoning mechanism. \n\nTo replicate the naive baselines, use `agent.type=naive`, an example with GPT4o-mini is:\n\n```\npython eval.py \\\n  agent.type=naive \\\n  agent.max_image_history=0 \\\n  eval.num_workers=32 \\\n  client.client_name=openai \\\n  client.model_id=gpt-4o-mini-2024-07-18\n```\n\nFor more information, visit:\n\n- [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md)\n- [Paper]()\n- [BALROG](https://balrogai.com)\n\n", "site": null, "trajs": false, "verified": true}]}]};
+    </script>
+    <script>
+        // Function to read query parameters
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                model: params.get('model'),
+                leaderboard: params.get('leaderboard')
+            };
+        }
+
+        // Function to display the model data
+        function displayModelData() {
+            const { model, leaderboard } = getQueryParams();
+            if (!model || !leaderboard) {
+                document.getElementById('modelName').textContent = 'Model not specified';
+                return;
+            }
+
+            const leaderboards = data.leaderboards;
+            let modelData = null;
+
+            // Find the model data
+            for (const lb of leaderboards) {
+                if (lb.name === leaderboard) {
+                    modelData = lb.results.find(item => item.name === model);
+                    break;
+                }
+            }
+
+            if (!modelData) {
+                document.getElementById('modelName').textContent = 'Model not found';
+                return;
+            }
+
+            // Update page content
+            document.getElementById('modelName').textContent = modelData.name;
+            document.getElementById('modelDate').textContent = 'Date: ' + modelData.date;
+
+            // Display performance data
+            const environments = ['babyai', 'crafter', 'textworld', 'babaisai', 'minihack', 'nle'];
+            const tbody = document.querySelector('#performanceTable tbody');
+            tbody.innerHTML = '';
+
+            for (const env of environments) {
+                if (env in modelData) {
+                    const [progress, stdError, episodes] = modelData[env];
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${env.charAt(0).toUpperCase() + env.slice(1)}</td>
+                        <td>${progress.toFixed(2)}</td>
+                        <td>${stdError.toFixed(2)}</td>
+                        <td>${episodes}</td>
+                    `;
+                    tbody.appendChild(row);
+                }
+            }
+
+            // Add average
+            if ('average' in modelData) {
+                const [avgProgress, avgStdError] = modelData.average;
+                const avgRow = document.createElement('tr');
+                avgRow.innerHTML = `
+                    <td><strong>Average</strong></td>
+                    <td>${avgProgress.toFixed(2)}</td>
+                    <td>${avgStdError.toFixed(2)}</td>
+                    <td>-</td>
+                `;
+                tbody.appendChild(avgRow);
+            }
+
+            // Display README.md content
+            const readmeContent = modelData.readme_content || 'README.md not provided.';
+            const sanitizedContent = DOMPurify.sanitize(readmeContent);
+            document.getElementById('readme').innerHTML = marked.parse(sanitizedContent);
+
+            // Display Trajectories Information
+            const trajectoriesLinkContainer = document.getElementById('trajectoriesLinkContainer');
+            const trajectoriesText = document.getElementById('trajectoriesText');
+            if (modelData.trajs === true) {
+                // Construct the GitHub URL
+                const githubUrl = 'https://github.com/balrog-ai/experiments/tree/main/' + modelData.folder;
+                trajectoriesText.innerHTML = `Trajectories are available for this model. You can view them on GitHub: <a href="${githubUrl}" target="_blank">View Trajectories</a>`;
+            } else {
+                trajectoriesText.textContent = 'Trajectories are not available for this model.';
+            }
+        }
+
+        // Call the function on page load
+        displayModelData();
+    </script>
+</body>
+
+</html>

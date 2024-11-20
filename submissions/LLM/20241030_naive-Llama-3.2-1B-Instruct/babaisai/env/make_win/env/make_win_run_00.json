@@ -1,0 +1,43 @@
+{
+    "task": "env/make_win",
+    "action_frequency": {
+        "idle": 5,
+        "left": 11,
+        "up": 65,
+        "down": 17,
+        "right": 2
+    },
+    "input_tokens": 212312,
+    "output_tokens": 369,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Given the current observation, my first action would be:\n\nup: take one step up\n\nThis action would help me try and move towards the 'win' rule, which is currently 2 steps to the right and 3 steps up.\n\nRemaining rules:\n- rule `is` 1 step to the right and 3 steps up\n- rule `win` 2 steps to the right and 3 steps up\n- key 5 steps to the right and 1 step up\n- rule `key` 2 steps to the right and 1 step down\n- rule `baba` 2 steps down\n- rule `is` 1 step to the right and 2 steps down\n- rule `you` 2 steps to the right and 2 steps down\n\nOutputting: up: take one step up",
+        "turn"
+    ],
+    "target_plan": "make[key is win], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-30",
+    "seed": 480686384,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

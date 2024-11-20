@@ -1,0 +1,43 @@
+{
+    "task": "env/make_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "idle": 2,
+        "up": 89,
+        "left": 4,
+        "down": 4,
+        "right": 1
+    },
+    "input_tokens": 248040,
+    "output_tokens": 212,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Action: move the \"ball\" 1 step to the right",
+        "ball"
+    ],
+    "target_plan": "make[door is win], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-19",
+    "seed": 3051235449,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "turn left": 4,
+        "go forward": 86,
+        "turn right": 4,
+        "toggle": 24,
+        "pick up": 8,
+        "drop": 2
+    },
+    "input_tokens": 189875,
+    "output_tokens": 358,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "go back",
+        "go right",
+        "go right"
+    ],
+    "mission": "pick up the blue key, then go to a purple box",
+    "progression": 0.0,
+    "process_num": "ForkProcess-4",
+    "seed": 3099236095,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

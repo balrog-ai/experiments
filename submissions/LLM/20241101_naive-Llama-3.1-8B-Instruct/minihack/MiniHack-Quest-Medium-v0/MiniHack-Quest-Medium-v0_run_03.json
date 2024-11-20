@@ -1,0 +1,69 @@
+{
+    "task": "MiniHack-Quest-Medium-v0",
+    "action_frequency": {
+        "east": 15,
+        "north": 36,
+        "kick": 3,
+        "pickup": 13,
+        "south": 10,
+        "zap": 9,
+        "southwest": 4,
+        "wait": 5,
+        "close": 1,
+        "northwest": 1,
+        "eat": 2,
+        "search": 1
+    },
+    "input_tokens": 349206,
+    "output_tokens": 218,
+    "done": true,
+    "episode_return": 0.03000000000000002,
+    "num_steps": 100,
+    "failed_candidates": [
+        "g",
+        "a",
+        "e",
+        "a",
+        "eat a",
+        "a",
+        "e",
+        "pick up",
+        "a",
+        "a",
+        "eat g",
+        "eat a",
+        "eat a",
+        "eat a",
+        "eat a",
+        "e",
+        "eat a.",
+        "eat a",
+        "eat g",
+        "eat a",
+        "kick east"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-5",
+    "seed": 215758950,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "https://short-stars-matter.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

@@ -1,0 +1,77 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Noop": 3,
+        "Move West": 30,
+        "Move North": 28,
+        "Do": 30,
+        "Move East": 25,
+        "Move South": 20,
+        "Make Wood Pickaxe": 7,
+        "Place Table": 2,
+        "Make Wood Sword": 5,
+        "Place Plant": 5,
+        "Place Stone": 1,
+        "Make Stone Pickaxe": 3,
+        "Make Stone Sword": 1,
+        "Sleep": 2
+    },
+    "input_tokens": 240198,
+    "output_tokens": 975,
+    "done": true,
+    "episode_return": 6.1000000000000005,
+    "num_steps": 162,
+    "failed_candidates": [
+        "Based on the current observation, the most logical action to take is to collect wood, which is likely available from the grass in front of me. This will help me progress towards the first achievement and gather resources for crafting tools.\n\nAction: Do",
+        "Based on the current observation, I'll choose to:\n\nMake Stone Sword\n\nThis action will help us progress towards another achievement and utilize the resources we have collected so far.",
+        "Based on the current observation and inventory, I don't have enough stone to make a Stone Pickaxe. I should focus on collecting more resources. Let's move to explore and gather materials.\n\nMove East"
+    ],
+    "score": 7.0,
+    "progression": 0.3181818181818182,
+    "achievements": {
+        "collect_coal": 0,
+        "collect_diamond": 0,
+        "collect_drink": 2,
+        "collect_iron": 0,
+        "collect_sapling": 0,
+        "collect_stone": 0,
+        "collect_wood": 15,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 1,
+        "eat_cow": 1,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 0,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 4,
+        "make_wood_sword": 4,
+        "place_furnace": 0,
+        "place_plant": 0,
+        "place_stone": 0,
+        "place_table": 1,
+        "wake_up": 0
+    },
+    "process_num": "ForkProcess-1",
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "claude",
+        "model_id": "claude-3-5-sonnet-20240620",
+        "base_url": "https://spotty-toys-teach.loca.lt/v1",
+        "is_chat_model": true,
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

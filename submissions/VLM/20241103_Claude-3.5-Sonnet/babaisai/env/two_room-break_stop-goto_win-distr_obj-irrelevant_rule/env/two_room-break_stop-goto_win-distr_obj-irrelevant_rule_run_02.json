@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-break_stop-goto_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "right": 80,
+        "up": 9,
+        "down": 8,
+        "idle": 3
+    },
+    "input_tokens": 558674,
+    "output_tokens": 1191,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Based on the current game state and the image provided, I recommend the following action:\n\nright\n\nThis action will move Baba (the player character, represented by the white triangle) one step to the right, bringing it closer to the key. Since \"key is win\" is an active rule, reaching the key will allow us to complete the level.",
+        "Based on the image and the current game state, I can see that we (as Baba) are right next to the key, which is defined as the win condition. Therefore, the next logical action is:\n\nright\n\nThis should move Baba onto the key and win the level.",
+        "Based on the image and the current game state, I can see that we (as Baba) are right next to the key, which is defined as the win condition. Therefore, the next logical action is:\n\nright\n\nThis should move Baba onto the key and win the level."
+    ],
+    "target_plan": "break[wall is stop], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 1359797649,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 1,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "claude",
+        "model_id": "claude-3-5-sonnet-20240620",
+        "base_url": "http://localhost:8000/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

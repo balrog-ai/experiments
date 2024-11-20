@@ -1,0 +1,61 @@
+{
+    "task": "MiniHack-MazeWalk-9x9-v0",
+    "action_frequency": {
+        "east": 20,
+        "north": 58,
+        "northeast": 2,
+        "south": 11,
+        "northwest": 3,
+        "southeast": 3,
+        "west": 3
+    },
+    "input_tokens": 295936,
+    "output_tokens": 266,
+    "done": true,
+    "episode_return": 0.03300000000000002,
+    "num_steps": 100,
+    "failed_candidates": [
+        "use a potion of extra healing",
+        "inventory",
+        "use item 'b'",
+        "examine",
+        "use",
+        "use item on self: use potion of extra healing",
+        "use a: 40 +2 darts",
+        "j",
+        "examine",
+        "use darts",
+        "examine",
+        "use 40 +2 darts",
+        "use north of stairs",
+        "use item: 40 +2 darts",
+        "j (use blessed scroll of magic mapping)",
+        "e",
+        "examine cursor",
+        "examine"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-2",
+    "seed": 790981215,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "base_url": "https://wild-ducks-post.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

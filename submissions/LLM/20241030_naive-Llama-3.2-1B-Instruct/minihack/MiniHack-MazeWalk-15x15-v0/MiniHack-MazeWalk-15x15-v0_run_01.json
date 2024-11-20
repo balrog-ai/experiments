@@ -1,0 +1,52 @@
+{
+    "task": "MiniHack-MazeWalk-15x15-v0",
+    "action_frequency": {
+        "north": 36,
+        "west": 29,
+        "east": 20,
+        "northeast": 6,
+        "south": 9
+    },
+    "input_tokens": 332590,
+    "output_tokens": 515,
+    "done": true,
+    "episode_return": 0.05200000000000004,
+    "num_steps": 100,
+    "failed_candidates": [
+        "I'll move northeast to explore the dark area far east.",
+        "swim",
+        "go north",
+        "up",
+        "East",
+        "middle",
+        "attack",
+        "use shield",
+        "inventory:\n\ne: a +1 long sword (in your quiver)\nf: a +2 short sword (in your quiver)\ng: a +1 short sword (on the ground)\nh: a +1 long sword (on the ground)\ni: a +0 long sword (not in your quiver)\nj: a +0 short sword (not in your quiver)\nk: an uncursed food ration (in your backpack)\nl: a +0 long sword (not on the ground)\nm: an uncursed food ration (on the ground)\nn: a +0 short sword (not on the ground)\n\nmessage:\nYou are at the edge of a dense forest. The trees tower above you, casting dappled shadows on the forest floor. You can hear the distant call of a bird, and the rustle of small animals in the underbrush. You see a narrow path leading into the forest, winding its way deeper into the trees.\n\nYou can:\na: move north\nb: move south\nc: move east\nd: move west\ne: examine the forest floor\nf: examine the trees\ng: pick up a nearby object\nh: use your shield\ni: equip an item\nj: equip an item\nk: eat an uncursed food ration\nl: drink from an uncursed water bottle\nm: take a short rest\nn: rest and recover",
+        "Use the +3 small shield",
+        "North"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-21",
+    "seed": 3181389343,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "task": "MiniHack-CorridorBattle-Dark-v0",
+    "action_frequency": {
+        "east": 15,
+        "north": 71,
+        "northeast": 1,
+        "southwest": 3,
+        "northwest": 2,
+        "south": 8
+    },
+    "input_tokens": 318582,
+    "output_tokens": 240,
+    "done": true,
+    "episode_return": 0.027000000000000017,
+    "num_steps": 100,
+    "failed_candidates": [
+        "examine",
+        "examine",
+        "examine",
+        "examine",
+        "examine",
+        "up",
+        "up",
+        "up",
+        "stairs up",
+        "up",
+        "up",
+        "up",
+        "examine",
+        "up",
+        "follow stairs",
+        "I'll make sure to output only one action at a time. Here's my next move:\n\nnorth",
+        "examine",
+        "examine northeast room corner",
+        "stairs up",
+        "up",
+        "up",
+        "stairs up",
+        "up",
+        "up"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-1",
+    "seed": 2094178188,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "base_url": "https://wild-ducks-post.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

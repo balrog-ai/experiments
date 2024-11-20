@@ -1,0 +1,51 @@
+{
+    "task": "MiniHack-Quest-Medium-v0",
+    "action_frequency": {
+        "north": 26,
+        "zap": 13,
+        "east": 24,
+        "pickup": 14,
+        "southwest": 2,
+        "northwest": 3,
+        "down": 1,
+        "south": 9,
+        "search": 1,
+        "wait": 2,
+        "kick": 5
+    },
+    "input_tokens": 351419,
+    "output_tokens": 219,
+    "done": true,
+    "episode_return": 0.028000000000000018,
+    "num_steps": 100,
+    "failed_candidates": [
+        "pick up",
+        "knight try and find a way to pass through the horizontal wall",
+        "kick southeast",
+        "hit"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-6",
+    "seed": 1402298757,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "https://short-stars-matter.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

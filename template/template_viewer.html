@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>BALROG Model Viewer</title>
+    <meta name="description" content="BALROG: Benchmarking Agentic LLM/VLM Reasoning On Games - Model Viewer" />
+    <link rel="shortcut icon" href="img/logo.png" />
+    <link rel="icon" href="img/logo.png" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/viewer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="..." crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Include a sanitizer for security -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.6/dist/purify.min.js"></script>
+</head>
+
+<body>
+    <div style="padding-bottom: 50px">
+        <!-- Top Section with BALROG Title and Image -->
+        <section style="background-color: var(--dark_accent_color)">
+            <div class="content-wrapper title-wrapper" style="flex-direction: column">
+                <div style="
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                      padding-bottom: 15px;
+                    ">
+                    <h1 style="font-size: 60px; padding-top: 0.4em">BALROG</h1>
+                    <img src="img/logo.png" style="height: 120px; padding-top: 0em; padding-left: 0.5em" />
+                </div>
+                <h3>Benchmarking Agentic LLM/VLM Reasoning On Games</h3>
+                <!-- Model Name -->
+                <h2 id="modelName" style="font-size: 40px; padding-top: 0.4em"></h2>
+                <p id="modelDate">Date: </p>
+                <!-- Navigation Buttons -->
+                <div class="content-wrapper" style="margin-top: 2em">
+                    <a href="index.html">
+                        <button class="outline"
+                            style="flex-direction: row; display: flex; justify-content: center; align-items: center;">
+                            <img src="img/logo.png"
+                                style="height: 1.8em; margin-left: -0.3em; margin-right: 0.3em; margin-bottom: 0em;" />
+                            Home&nbsp;
+                        </button>
+                    </a>
+                    <a href="https://openreview.net/forum?id=fp6t3F669F">
+                        <button class="outline">
+                            <i class="fa fa-paperclip"></i> Paper&nbsp;
+                        </button>
+                    </a>
+                    <a href="https://github.com/DavidePaglieri/BALROG">
+                        <button class="outline">
+                            <i class="fab fa-github"></i> Code&nbsp;
+                        </button>
+                    </a>
+                    <a href="submit.html">
+                        <button class="outline">
+                            <i class="fa fa-upload"></i> Submit&nbsp;
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section class="main-container">
+            <!-- Display README.md content -->
+            <div class="content-wrapper">
+                <div class="content-box" id="readme">
+                    Loading README.md...
+                </div>
+            </div>
+            <!-- Trajectories Section (Always displayed) -->
+            <div class="content-wrapper" id="trajectoriesLinkContainer">
+                <div class="content-box">
+                    <h2 class="text-title">Trajectories</h2>
+                    <p class="text-content" id="trajectoriesText">
+                        <!-- Content will be updated via JavaScript -->
+                    </p>
+                </div>
+            </div>
+            <!-- Display Performance Data -->
+            <div class="content-wrapper">
+                <h3>Performance Data</h3>
+                <table class="table-results" id="performanceTable">
+                    <thead>
+                        <tr>
+                            <th>Environment</th>
+                            <th>Progress (%)</th>
+                            <th>Standard Error</th>
+                            <th>Number of Episodes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <!-- Embed the data variable -->
+    <script>
+        var data = {{ data | tojson }};
+    </script>
+    <script>
+        // Function to read query parameters
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                model: params.get('model'),
+                leaderboard: params.get('leaderboard')
+            };
+        }
+
+        // Function to display the model data
+        function displayModelData() {
+            const { model, leaderboard } = getQueryParams();
+            if (!model || !leaderboard) {
+                document.getElementById('modelName').textContent = 'Model not specified';
+                return;
+            }
+
+            const leaderboards = data.leaderboards;
+            let modelData = null;
+
+            // Find the model data
+            for (const lb of leaderboards) {
+                if (lb.name === leaderboard) {
+                    modelData = lb.results.find(item => item.name === model);
+                    break;
+                }
+            }
+
+            if (!modelData) {
+                document.getElementById('modelName').textContent = 'Model not found';
+                return;
+            }
+
+            // Update page content
+            document.getElementById('modelName').textContent = modelData.name;
+            document.getElementById('modelDate').textContent = 'Date: ' + modelData.date;
+
+            // Display performance data
+            const environments = ['babyai', 'crafter', 'textworld', 'babaisai', 'minihack', 'nle'];
+            const tbody = document.querySelector('#performanceTable tbody');
+            tbody.innerHTML = '';
+
+            for (const env of environments) {
+                if (env in modelData) {
+                    const [progress, stdError, episodes] = modelData[env];
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${env.charAt(0).toUpperCase() + env.slice(1)}</td>
+                        <td>${progress.toFixed(2)}</td>
+                        <td>${stdError.toFixed(2)}</td>
+                        <td>${episodes}</td>
+                    `;
+                    tbody.appendChild(row);
+                }
+            }
+
+            // Add average
+            if ('average' in modelData) {
+                const [avgProgress, avgStdError] = modelData.average;
+                const avgRow = document.createElement('tr');
+                avgRow.innerHTML = `
+                    <td><strong>Average</strong></td>
+                    <td>${avgProgress.toFixed(2)}</td>
+                    <td>${avgStdError.toFixed(2)}</td>
+                    <td>-</td>
+                `;
+                tbody.appendChild(avgRow);
+            }
+
+            // Display README.md content
+            const readmeContent = modelData.readme_content || 'README.md not provided.';
+            const sanitizedContent = DOMPurify.sanitize(readmeContent);
+            document.getElementById('readme').innerHTML = marked.parse(sanitizedContent);
+
+            // Display Trajectories Information
+            const trajectoriesLinkContainer = document.getElementById('trajectoriesLinkContainer');
+            const trajectoriesText = document.getElementById('trajectoriesText');
+            if (modelData.trajs === true) {
+                // Construct the GitHub URL
+                const githubUrl = 'https://github.com/balrog-ai/experiments/tree/main/' + modelData.folder;
+                trajectoriesText.innerHTML = `Trajectories are available for this model. You can view them on GitHub: <a href="${githubUrl}" target="_blank">View Trajectories</a>`;
+            } else {
+                trajectoriesText.textContent = 'Trajectories are not available for this model.';
+            }
+        }
+
+        // Call the function on page load
+        displayModelData();
+    </script>
+</body>
+
+</html>

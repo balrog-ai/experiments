@@ -1,0 +1,41 @@
+{
+    "task": "env/two_room-break_stop-make_win-distr_obj_rule",
+    "action_frequency": {
+        "idle": 1,
+        "up": 83,
+        "down": 10,
+        "left": 6
+    },
+    "input_tokens": 447808,
+    "output_tokens": 736,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "I'll examine the current state of the environment and identify the possible actions.\n\nUpon examining the current observation, I see that the following objects are defined as \"STOP\":\n\n1. Wall 1 step to the right\n2. Wall 1 step to the right\n3. Wall 1 step to the right\n4. Wall 1 step to the left and 2 step up\n5. Wall 1 step to the left and 2 step up\n6. Wall 1 step to the left and 3 steps down\n7. Wall 1 step to the left and 3 steps down\n8. Wall 1 step to the left and 3 steps down\n9. Wall 1 step to the left and 2 steps down\n10. Ball 3 steps to the right and 2 steps down\n11. Door 5 steps to the right and 2 steps down\n12. Wall 1 step to the right and 1 step down\n13. Ball 6 steps to the right and 3 steps down\n\nConsidering the current state, I'll choose to \"up\" the ball.\n\nCurrent Observation:\n\nActive rules:\nwall is stop\nbaba is you\nball 3 steps to the right and 2 steps down\n\nObjects on the map:\nwall 1 step to the right and 3 step up\nrule `is` 5 steps to the right and 3 step up\nrule `win` 6 steps to the right and 3 step up\nrule `wall` 4 step to the left and 2 step up\nrule `is` 3 step to the left and 2 step up\nrule `stop` 2 step to the left and 2 step up\nwall 1 step to the right and 2 step up\nwall 1 step to the right and 1 step up\nrule `door` 5 steps to the right and 1 step up\nwall 1 step to the right\nwall 1 step to the right and 1 step down\nwall 1 step to the right and 2 steps down\nball 3 steps to the right and 2 steps down\ndoor 5 steps to the right and 2 steps down\nrule `baba` 4 step to the left and 3 steps down\nrule `is` 3 step to the left and 3 steps down\nrule `you` 2 step to the left and 3 steps down\nwall 1 step to the right and 3 steps down\nrule `ball` 6 steps to the right and 3 steps down\n\nAction: up"
+    ],
+    "target_plan": "break[wall is stop], make[door is win], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 605925101,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

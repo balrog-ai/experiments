@@ -1,0 +1,79 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Noop": 5,
+        "Move North": 34,
+        "Move East": 16,
+        "Do": 45,
+        "Move South": 9,
+        "Place Table": 6,
+        "Make Wood Pickaxe": 3,
+        "Make Wood Sword": 1,
+        "Move West": 19,
+        "Make Stone Pickaxe": 2,
+        "Place Furnace": 3,
+        "Make Iron Pickaxe": 6,
+        "Place Plant": 1,
+        "Sleep": 40
+    },
+    "input_tokens": 417326,
+    "output_tokens": 1011,
+    "done": true,
+    "episode_return": 11.100000000000001,
+    "num_steps": 190,
+    "failed_candidates": [
+        "Based on the current observation, I'll start by collecting wood from the nearby tree, which is essential for crafting tools and progressing through the game.\n\nAction: Move North",
+        "Eat Plant",
+        "Wake Up",
+        "Wake Up",
+        "Given the current situation, the most pressing concern is the zombie directly to the north. With low health, it's crucial to avoid combat. The best action is to move away from the zombie.\n\nMove South"
+    ],
+    "score": 12.0,
+    "progression": 0.5454545454545454,
+    "achievements": {
+        "collect_coal": 1,
+        "collect_diamond": 0,
+        "collect_drink": 2,
+        "collect_iron": 1,
+        "collect_sapling": 1,
+        "collect_stone": 8,
+        "collect_wood": 10,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 0,
+        "eat_cow": 1,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 2,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 2,
+        "make_wood_sword": 0,
+        "place_furnace": 1,
+        "place_plant": 1,
+        "place_stone": 0,
+        "place_table": 2,
+        "wake_up": 0
+    },
+    "process_num": "ForkProcess-2",
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "claude",
+        "model_id": "claude-3-5-sonnet-20240620",
+        "base_url": "https://spotty-toys-teach.loca.lt/v1",
+        "is_chat_model": true,
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

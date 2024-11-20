@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-break_stop-goto_win",
+    "action_frequency": {
+        "idle": 2,
+        "right": 38,
+        "up": 17,
+        "left": 29,
+        "down": 14
+    },
+    "input_tokens": 423055,
+    "output_tokens": 332,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Given the current rules and objects, it seems like the main obstacle is the walls and the fact that the \"BABA IS YOU\" rule is in place. To create a path to the \"door\" (which is currently the win condition), I would like to change the rules to make the walls movable.\n\nAction: up",
+        "I'll try to move the rule \"is\" that is currently 4 steps to the right and 3 steps up, to a position where I can interact with it. \n\nMove rule `is` 3 steps to the left and 2 step up to overlap with the wall 1 step to the right and 2 step up."
+    ],
+    "target_plan": "break[wall is stop], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-9",
+    "seed": 27820125,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

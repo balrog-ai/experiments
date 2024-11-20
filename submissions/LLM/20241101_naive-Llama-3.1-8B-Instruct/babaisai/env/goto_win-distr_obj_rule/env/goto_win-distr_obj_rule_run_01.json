@@ -1,0 +1,43 @@
+{
+    "task": "env/goto_win-distr_obj_rule",
+    "action_frequency": {
+        "idle": 2,
+        "up": 5,
+        "left": 7,
+        "right": 9,
+        "down": 4
+    },
+    "input_tokens": 57458,
+    "output_tokens": 149,
+    "done": true,
+    "episode_return": 0.757,
+    "num_steps": 27,
+    "failed_candidates": [
+        "Since our goal is to reach the \"door\" which is 2 steps to the left and 1 step up, and we need to change the rule \"door is win\" to make the \"key\" the win condition, we can start by moving the \"key\" block to a position that will be closer to the \"door\" after we change the rule.\n\nFirst, let's move the \"key\" to the left. \n\ndown",
+        "rule `you` 2 steps up"
+    ],
+    "target_plan": "goto[door]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-32",
+    "seed": 2675529821,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

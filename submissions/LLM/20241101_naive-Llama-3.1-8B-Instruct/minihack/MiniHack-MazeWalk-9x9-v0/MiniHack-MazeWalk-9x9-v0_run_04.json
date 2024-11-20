@@ -1,0 +1,36 @@
+{
+    "task": "MiniHack-MazeWalk-9x9-v0",
+    "action_frequency": {
+        "north": 1
+    },
+    "input_tokens": 440,
+    "output_tokens": 2,
+    "done": true,
+    "episode_return": 1.001,
+    "num_steps": 1,
+    "failed_candidates": [],
+    "progression": 1.0,
+    "end_reason": 2,
+    "process_num": "ForkProcess-15",
+    "seed": 1940390526,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "base_url": "https://cold-mice-learn.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

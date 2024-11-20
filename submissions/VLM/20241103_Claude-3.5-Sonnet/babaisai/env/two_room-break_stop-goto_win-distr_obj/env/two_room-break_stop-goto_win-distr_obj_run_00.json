@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-break_stop-goto_win-distr_obj",
+    "action_frequency": {
+        "right": 76,
+        "up": 10,
+        "down": 12,
+        "idle": 2
+    },
+    "input_tokens": 525784,
+    "output_tokens": 1173,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Based on the image and the current observation, I can see that we are very close to the key, which is defined as the win condition. The best action to take now is:\n\nright\n\nThis will move us one step closer to the key, which should allow us to win the level on the next turn.",
+        "Based on the image and the current observation, I can see that we are very close to the key, which is defined as the win condition. The best action to take now is:\n\nright\n\nThis will move us one step closer to the key, which should allow us to win the level on the next turn."
+    ],
+    "target_plan": "break[wall is stop], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-3",
+    "seed": 746887102,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 1,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "claude",
+        "model_id": "claude-3-5-sonnet-20240620",
+        "base_url": "http://localhost:8000/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

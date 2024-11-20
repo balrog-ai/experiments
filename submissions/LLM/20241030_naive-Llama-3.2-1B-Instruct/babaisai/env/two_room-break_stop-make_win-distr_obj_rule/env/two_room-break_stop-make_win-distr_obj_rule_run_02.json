@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-break_stop-make_win-distr_obj_rule",
+    "action_frequency": {
+        "idle": 12,
+        "up": 67,
+        "down": 16,
+        "left": 5
+    },
+    "input_tokens": 444072,
+    "output_tokens": 269,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Given the current observation, I'm going to take the action of moving the \"wall\" 1 step to the right and 3 step up.\n\nUpdated Active Rules:\n- wall is stop\n- baba is you\n- wall 4 steps to the right and 3 step up",
+        "wall 4 steps to the right and 4 step up",
+        "baba"
+    ],
+    "target_plan": "break[wall is stop], make[key is win], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-4",
+    "seed": 726771464,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

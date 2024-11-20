@@ -1,0 +1,42 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "go forward": 1,
+        "turn right": 48,
+        "turn left": 29,
+        "toggle": 49,
+        "drop": 1
+    },
+    "input_tokens": 191272,
+    "output_tokens": 351,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "I will start by picking up the green ball 1 step left and 5 steps forward."
+    ],
+    "mission": "go to the green key after you pick up the blue box",
+    "progression": 0.0,
+    "process_num": "ForkProcess-19",
+    "seed": 3298779761,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-1B-Instruct",
+        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

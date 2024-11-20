@@ -1,0 +1,37 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "look": 1,
+        "go north": 1,
+        "take spork": 1
+    },
+    "input_tokens": 1790,
+    "output_tokens": 9,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 3,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 1970521396,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.2-3B-Instruct",
+        "base_url": "https://wild-ducks-post.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2
+    }
+}

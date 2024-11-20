@@ -1,0 +1,37 @@
+{
+    "task": "env/two_room-break_stop-goto_win-distr_obj_rule",
+    "action_frequency": {
+        "right": 100
+    },
+    "input_tokens": 487100,
+    "output_tokens": 200,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [],
+    "target_plan": "break[wall is stop], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-8",
+    "seed": 3022424980,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
