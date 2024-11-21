@@ -56,7 +56,7 @@ If you are interested in submitting your agent to the [BALROG Leaderboard](https
 5. Run python summarise_results.py <submission-folder-patht>
 6. Create a pull request to the BALROG/experiments repository with the new folder.
 
-You can refer to this [tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md) or the [documentation](https://balrog-ai.github.io/docs/) for a quick overview of how to evaluate your agent on BALROG.
+You can refer to this [tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md) for a quick overview of how to evaluate your agent on BALROG.
 
 ## Verify Your Results
 The Verified check ✓ indicates that we (the BALROG team) received access to your agent and were able to reproduce a selection of the results.
