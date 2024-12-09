@@ -1,0 +1,51 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "look": 9,
+        "go east": 10,
+        "go west": 9,
+        "go north": 11,
+        "go south": 14,
+        "examine cookbook": 1,
+        "take cookbook": 1,
+        "take knife": 1,
+        "open fridge": 3,
+        "open frostedglass door": 9,
+        "examine table": 3,
+        "examine fridge": 1,
+        "examine oven": 2,
+        "examine stove": 2,
+        "examine bed": 2,
+        "examine counter": 1,
+        "open door": 1
+    },
+    "input_tokens": 185017,
+    "output_tokens": 279,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-6",
+    "seed": 3545255191,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.3-70B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
