@@ -7,6 +7,7 @@ from collections import defaultdict
 from pathlib import Path
 import shutil
 from datetime import datetime
+from datetime import date
 
 
 def collect_and_summarize_results(output_dir):
@@ -263,18 +264,24 @@ def main():
 
                     # Extract date from submission_path
                     # Try to get date from metadata, or use modification time
-                    date = metadata.get("date")
-                    if not date:
+                    metadata_date = metadata.get("date")
+                    if metadata_date:
+                        if isinstance(metadata_date, date):
+                            # Convert date to ISO string: YYYY-MM-DD
+                            metadata_date = metadata_date.isoformat()
+                    else:
                         try:
                             mtime = os.path.getmtime(summary_path)
-                            date = datetime.fromtimestamp(mtime).strftime("%Y-%m-%d")
+                            metadata_date = datetime.fromtimestamp(mtime).strftime(
+                                "%Y-%m-%d"
+                            )
                         except Exception as e:
-                            date = ""
+                            metadata_date = ""
 
                     metadata_entry = {
                         "name": metadata.get("name", ""),
                         "folder": submission_path,
-                        "date": date,
+                        "date": metadata_date,
                         "trajs": metadata.get("trajs", ""),
                         "site": metadata.get("site", ""),
                         "verified": metadata.get("verified", False),
