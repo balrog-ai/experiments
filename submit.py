@@ -196,9 +196,6 @@ def main():
     parser.add_argument(
         "path", nargs="?", default=None, help="Path to the submission directory."
     )
-    parser.add_argument(
-        "--leaderboard", "-l", default="LLM", help="Name of the leaderboard."
-    )
     args = parser.parse_args()
 
     submissions_dir = "submissions"
@@ -209,27 +206,6 @@ def main():
         output_dir = args.path
         summary = collect_and_summarize_results(output_dir)
         print_summary_table(summary)
-
-        # Now move or copy the output_dir to submissions_dir / args.leaderboard / submission_name
-        lb_name = args.leaderboard
-        submission_name = os.path.basename(output_dir.rstrip("/\\"))
-
-        lb_path = os.path.join(submissions_dir, lb_name)
-        submission_dest_path = os.path.join(lb_path, submission_name)
-
-        # Create the leaderboard directory if it doesn't exist
-        os.makedirs(lb_path, exist_ok=True)
-
-        # Copy the submission directory to the destination
-        if os.path.exists(submission_dest_path):
-            print(
-                f"Submission directory {submission_dest_path} already exists. Overwriting."
-            )
-            shutil.rmtree(submission_dest_path)
-        shutil.copytree(output_dir, submission_dest_path)
-        print(f"Copied submission to {submission_dest_path}")
-
-    # Now proceed to execute the code from submit.py
 
     # Initialize the data structure
     data = {"leaderboards": []}

@@ -37,7 +37,7 @@ Viewing Trajectories:
 If you are interested in submitting your agent to the [BALROG Leaderboard](https://balrogai.com/), please do the following:
 
 1. Fork and clone this repository.
-2. Create a new folder with the submission date and the agent name (e.g. 20240921_balrog_gpt4o).
+2. Create a new folder with the submission date and the agent name in the LLM or VLM directory (e.g. submissions/LLM/20240921_balrog_gpt4o).
 3. Copy the log of the run of your agent, please include the following files from your agent's evaluation:
     - babaisai: babaisai folder, containing summary and trajectory logs
     - babyai: babyai folder, containing summary and trajectory logs
@@ -52,9 +52,9 @@ If you are interested in submitting your agent to the [BALROG Leaderboard](https
     - oss: true if your agent (model + strategy) is open-source
     - site: URL/link to more information about your agent
     - verified: false (See below for results verification)
-    - README.md: Include anything you'd like to share about your agent here!
-5. Run python summarise_results.py <submission-folder-patht>
-6. Create a pull request to the BALROG/experiments repository with the new folder.
+5 README.md: Include anything you'd like to share about your agent here!
+6. Run python submit.py <path-to-submission>
+7. Create a pull request to the BALROG/experiments repository with the new folder.
 
 You can refer to this [tutorial](https://github.com/balrog-ai/BALROG/blob/main/assets/evaluation.md) for a quick overview of how to evaluate your agent on BALROG.
 
