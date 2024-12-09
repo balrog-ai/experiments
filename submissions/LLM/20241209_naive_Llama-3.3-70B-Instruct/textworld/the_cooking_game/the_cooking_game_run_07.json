@@ -1,0 +1,50 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "examine showcase": 1,
+        "take block of cheese from showcase": 1,
+        "take raw white tuna from showcase": 1,
+        "open sliding door": 1,
+        "go south": 1,
+        "go east": 4,
+        "open front door": 1,
+        "go north": 2,
+        "examine cookbook": 1,
+        "take red apple from counter": 1,
+        "chop red apple with knife": 2,
+        "take knife from counter": 1,
+        "grill chopped red apple with stove": 1,
+        "go west": 1,
+        "grill chopped red apple with oven": 1,
+        "cook chopped red apple with oven": 1
+    },
+    "input_tokens": 31784,
+    "output_tokens": 100,
+    "done": true,
+    "episode_return": 54.0,
+    "num_steps": 21,
+    "failed_candidates": [],
+    "progression": 0.23529411764705882,
+    "process_num": "ForkProcess-3",
+    "seed": 1947560283,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "meta-llama/Llama-3.3-70B-Instruct",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
