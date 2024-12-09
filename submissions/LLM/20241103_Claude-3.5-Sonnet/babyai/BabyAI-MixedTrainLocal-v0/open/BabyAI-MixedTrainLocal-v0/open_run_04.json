@@ -1,46 +1,42 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/open",
     "action_frequency": {
-        "turn left": 13,
-        "go forward": 56,
-        "pick up": 24,
-        "turn right": 4,
-        "toggle": 15,
-        "drop": 16
+        "turn left": 3,
+        "go forward": 7,
+        "pick up": 1,
+        "turn right": 3,
+        "toggle": 1
     },
-    "input_tokens": 190034,
-    "output_tokens": 1255,
+    "input_tokens": 10831,
+    "output_tokens": 74,
     "done": true,
-    "episode_return": 0.0,
-    "num_steps": 128,
-    "failed_candidates": [
-        "The green door is locked and I'm carrying a blue key, which should unlock it. I'll use the toggle action to try to unlock the door.\n\ntoggle",
-        "I apologize for the confusion in my previous response. You're right, I should only output a single valid action. Let's correct that:\n\ntoggle",
-        "I apologize for the confusion. You're absolutely right. I'll provide a single valid action now:\n\ntoggle",
-        "I sincerely apologize for the continued confusion. You're absolutely correct, and I'll provide a single valid action without any additional text:\n\ntoggle"
-    ],
+    "episode_return": 0.89453125,
+    "num_steps": 15,
+    "failed_candidates": [],
     "mission": "open the green door",
-    "progression": 0.0,
-    "process_num": "ForkProcess-2",
-    "seed": 437000510,
+    "progression": 1.0,
+    "process_num": "ForkProcess-5",
+    "seed": 1659705664,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "claude",
-        "model_id": "claude-3-5-sonnet-20240620",
-        "base_url": "http://localhost:8000/v1",
+        "model_id": "claude-3-5-sonnet-latest",
+        "base_url": "http://localhost:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
             "max_tokens": 1024
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

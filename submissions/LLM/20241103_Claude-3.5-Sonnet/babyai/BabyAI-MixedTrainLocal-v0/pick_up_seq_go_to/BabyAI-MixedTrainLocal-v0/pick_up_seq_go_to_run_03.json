@@ -1,39 +1,41 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
     "action_frequency": {
-        "turn right": 3,
-        "turn left": 3,
-        "go forward": 5,
+        "turn left": 4,
+        "go forward": 8,
+        "turn right": 1,
         "pick up": 1
     },
-    "input_tokens": 11600,
-    "output_tokens": 112,
+    "input_tokens": 10259,
+    "output_tokens": 70,
     "done": true,
-    "episode_return": 0.915625,
-    "num_steps": 12,
+    "episode_return": 0.9015625,
+    "num_steps": 14,
     "failed_candidates": [],
-    "mission": "pick up the purple key, then go to the purple ball",
+    "mission": "pick up the purple key, then go to the red box",
     "progression": 1.0,
-    "process_num": "ForkProcess-2",
-    "seed": 176159392,
+    "process_num": "ForkProcess-6",
+    "seed": 2302754532,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "claude",
-        "model_id": "claude-3-5-sonnet-20240620",
-        "base_url": "http://localhost:8000/v1",
+        "model_id": "claude-3-5-sonnet-latest",
+        "base_url": "http://localhost:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
             "max_tokens": 1024
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

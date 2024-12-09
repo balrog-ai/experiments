@@ -1,49 +1,43 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
     "action_frequency": {
-        "go forward": 28,
-        "turn left": 5,
-        "pick up": 3,
-        "drop": 8,
-        "turn right": 3
+        "turn left": 11,
+        "go forward": 79,
+        "turn right": 27,
+        "toggle": 8,
+        "pick up": 2,
+        "drop": 1
     },
-    "input_tokens": 69398,
-    "output_tokens": 644,
+    "input_tokens": 118840,
+    "output_tokens": 631,
     "done": true,
-    "episode_return": 0.6695312499999999,
-    "num_steps": 47,
-    "failed_candidates": [
-        "Based on the current observation, I'll start by moving towards the grey key, as it might be useful for opening doors or interacting with other objects later in the game.\n\nAction: turn left",
-        "I apologize for the confusion in my previous response. You're right, I should only output a single valid action. Let's correct that and continue with the game.\n\nAction: turn left",
-        "I apologize for the confusion. I understand now that I should only output a single valid action from the list provided. Let's continue with the game correctly.\n\nAction: turn left",
-        "I apologize for the continued confusion. I understand now that I must only output a single valid action from the list provided, without any additional text. I will do so now:\n\nturn left",
-        "I apologize for the confusion. It seems the 'drop' action didn't work as expected. Let's try a different approach.\n\ngo forward",
-        "I apologize for the confusion in my previous response. You're right, I should only output a single valid action. Let's continue with the game:\n\ngo forward",
-        "I apologize for the confusion. You're absolutely right. I'll provide a single valid action now:\n\ngo forward",
-        "I understand now. I'll provide a single valid action without any additional text:\n\ngo forward"
-    ],
-    "mission": "go to a grey ball after you pick up a grey ball",
-    "progression": 1.0,
-    "process_num": "ForkProcess-1",
-    "seed": 634904238,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [],
+    "mission": "pick up the red box, then go to the yellow key",
+    "progression": 0.0,
+    "process_num": "ForkProcess-8",
+    "seed": 2076270448,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "claude",
-        "model_id": "claude-3-5-sonnet-20240620",
-        "base_url": "http://localhost:8000/v1",
+        "model_id": "claude-3-5-sonnet-latest",
+        "base_url": "http://localhost:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
             "max_tokens": 1024
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

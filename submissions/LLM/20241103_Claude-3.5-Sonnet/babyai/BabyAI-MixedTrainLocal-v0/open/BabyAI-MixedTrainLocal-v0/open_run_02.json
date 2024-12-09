@@ -1,40 +1,42 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/open",
     "action_frequency": {
-        "turn right": 10,
-        "go forward": 26,
-        "pick up": 3,
-        "turn left": 4,
-        "toggle": 6
+        "turn right": 11,
+        "go forward": 38,
+        "pick up": 1,
+        "turn left": 8,
+        "toggle": 1
     },
-    "input_tokens": 65279,
-    "output_tokens": 414,
+    "input_tokens": 53027,
+    "output_tokens": 294,
     "done": true,
-    "episode_return": 0.65546875,
-    "num_steps": 49,
+    "episode_return": 0.58515625,
+    "num_steps": 59,
     "failed_candidates": [],
     "mission": "open the door",
     "progression": 1.0,
-    "process_num": "ForkProcess-1",
-    "seed": 1467093335,
+    "process_num": "ForkProcess-7",
+    "seed": 3542411591,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "claude",
-        "model_id": "claude-3-5-sonnet-20240620",
-        "base_url": "http://localhost:8000/v1",
+        "model_id": "claude-3-5-sonnet-latest",
+        "base_url": "http://localhost:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
             "max_tokens": 1024
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

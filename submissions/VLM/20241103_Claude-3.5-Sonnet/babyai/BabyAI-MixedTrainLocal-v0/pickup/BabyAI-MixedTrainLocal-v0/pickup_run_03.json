@@ -1,41 +1,41 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/pickup",
     "action_frequency": {
-        "turn right": 11,
-        "go forward": 33,
-        "turn left": 9,
-        "toggle": 6,
-        "pick up": 3,
-        "drop": 2
+        "turn right": 3,
+        "go forward": 4,
+        "turn left": 1,
+        "pick up": 1
     },
-    "input_tokens": 80501,
-    "output_tokens": 312,
+    "input_tokens": 5268,
+    "output_tokens": 45,
     "done": true,
-    "episode_return": 0.0,
-    "num_steps": 64,
+    "episode_return": 0.8734375,
+    "num_steps": 9,
     "failed_candidates": [],
-    "mission": "pick up a green box",
-    "progression": 0.0,
-    "process_num": "ForkProcess-1",
-    "seed": 4099426861,
+    "mission": "pick up the purple box",
+    "progression": 1.0,
+    "process_num": "ForkProcess-5",
+    "seed": 2215718402,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
-        "max_image_history": 0,
+        "max_image_history": 1,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "claude",
-        "model_id": "claude-3-5-sonnet-20240620",
-        "base_url": "http://localhost:8000/v1",
+        "model_id": "claude-3-5-sonnet-latest",
+        "base_url": "http://localhost:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
             "max_tokens": 1024
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

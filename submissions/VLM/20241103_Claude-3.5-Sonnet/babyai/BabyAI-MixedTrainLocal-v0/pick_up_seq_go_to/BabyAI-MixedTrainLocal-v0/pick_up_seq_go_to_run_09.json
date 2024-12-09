@@ -1,40 +1,41 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
     "action_frequency": {
-        "go forward": 27,
-        "pick up": 1,
-        "turn right": 5,
         "turn left": 5,
-        "toggle": 1
+        "go forward": 9,
+        "turn right": 3,
+        "pick up": 1
     },
-    "input_tokens": 59756,
-    "output_tokens": 194,
+    "input_tokens": 15722,
+    "output_tokens": 90,
     "done": true,
-    "episode_return": 0.72578125,
-    "num_steps": 39,
+    "episode_return": 0.8734375,
+    "num_steps": 18,
     "failed_candidates": [],
-    "mission": "go to a yellow key after you pick up the green box",
+    "mission": "pick up the green key, then go to the grey ball",
     "progression": 1.0,
-    "process_num": "ForkProcess-4",
-    "seed": 1872326155,
+    "process_num": "ForkProcess-5",
+    "seed": 1105657471,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
-        "max_image_history": 0,
+        "max_image_history": 1,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "claude",
-        "model_id": "claude-3-5-sonnet-20240620",
-        "base_url": "http://localhost:8000/v1",
+        "model_id": "claude-3-5-sonnet-latest",
+        "base_url": "http://localhost:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
             "max_tokens": 1024
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

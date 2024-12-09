@@ -1,40 +1,42 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/putnext",
     "action_frequency": {
-        "turn left": 9,
-        "go forward": 38,
+        "turn right": 9,
+        "go forward": 106,
         "pick up": 3,
-        "turn right": 5,
-        "drop": 73
+        "drop": 6,
+        "turn left": 4
     },
-    "input_tokens": 190128,
-    "output_tokens": 567,
+    "input_tokens": 114992,
+    "output_tokens": 634,
     "done": true,
     "episode_return": 0.0,
     "num_steps": 128,
     "failed_candidates": [],
-    "mission": "put the yellow ball next to the purple ball",
+    "mission": "put the grey box next to the blue box",
     "progression": 0.0,
-    "process_num": "ForkProcess-3",
-    "seed": 969127660,
+    "process_num": "ForkProcess-8",
+    "seed": 2293823429,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
-        "max_image_history": 0,
+        "max_image_history": 1,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "claude",
-        "model_id": "claude-3-5-sonnet-20240620",
-        "base_url": "http://localhost:8000/v1",
+        "model_id": "claude-3-5-sonnet-latest",
+        "base_url": "http://localhost:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
             "max_tokens": 1024
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

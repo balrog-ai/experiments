@@ -1,37 +1,40 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/goto",
     "action_frequency": {
-        "turn left": 2,
-        "go forward": 2
+        "turn right": 2,
+        "go forward": 3,
+        "turn left": 2
     },
-    "input_tokens": 1795,
-    "output_tokens": 37,
+    "input_tokens": 3878,
+    "output_tokens": 35,
     "done": true,
-    "episode_return": 0.94375,
-    "num_steps": 4,
+    "episode_return": 0.9015625,
+    "num_steps": 7,
     "failed_candidates": [],
-    "mission": "go to the purple key",
+    "mission": "go to the purple box",
     "progression": 1.0,
-    "process_num": "ForkProcess-1",
-    "seed": 4044494877,
+    "process_num": "ForkProcess-7",
+    "seed": 2688753314,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "claude",
-        "model_id": "claude-3-5-sonnet-20240620",
-        "base_url": "http://localhost:8000/v1",
+        "model_id": "claude-3-5-sonnet-latest",
+        "base_url": "http://localhost:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
             "max_tokens": 1024
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }
