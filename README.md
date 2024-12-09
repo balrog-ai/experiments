@@ -52,6 +52,7 @@ If you are interested in submitting your agent to the [BALROG Leaderboard](https
     - oss: true if your agent (model + strategy) is open-source
     - site: URL/link to more information about your agent
     - verified: false (See below for results verification)
+    - date: submission date in string format, (e.g. "2024/12/09")
 5 README.md: Include anything you'd like to share about your agent here!
 6. Run python submit.py <path-to-submission>
 7. Create a pull request to the BALROG/experiments repository with the new folder.
