@@ -1,0 +1,45 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/putnext",
+    "action_frequency": {
+        "turn right": 22,
+        "go forward": 52,
+        "pick up": 11,
+        "turn left": 7,
+        "toggle": 25,
+        "drop": 11
+    },
+    "input_tokens": 86257,
+    "output_tokens": 353,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "take",
+        "Understood Next action: go forward",
+        "understood"
+    ],
+    "mission": "put the blue ball next to the purple key",
+    "progression": 0.0,
+    "process_num": "ForkProcess-19",
+    "seed": 1372416233,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": true
+    }
+}

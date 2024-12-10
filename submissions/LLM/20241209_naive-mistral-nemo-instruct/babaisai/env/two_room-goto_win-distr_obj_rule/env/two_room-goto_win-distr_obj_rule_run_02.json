@@ -1,0 +1,41 @@
+{
+    "task": "env/two_room-goto_win-distr_obj_rule",
+    "action_frequency": {
+        "idle": 1,
+        "down": 3,
+        "right": 2,
+        "left": 5
+    },
+    "input_tokens": 25066,
+    "output_tokens": 206,
+    "done": true,
+    "episode_return": 0.901,
+    "num_steps": 11,
+    "failed_candidates": [
+        "Based on the current observation heres a plan:\n\n Move down to reach the door rule block\n Pick up the door rule block\n Move  steps to the right and  steps down to place the door rule block next to the door object\n This will change the rule to DOOR IS YOU allowing you to interact with the door as if you were the door itself\n Move right to open the door\n Move down to go through the open door\n Move right until you reach the key\n Pick up the key making yourself KEY with the rule KEY IS YOU\n\nNow the goal is to reach the wall as the wall is now defined as the win condition with the rule WALL IS WIN So move right until you reach the wall and win the game"
+    ],
+    "target_plan": "goto[key]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-13",
+    "seed": 3745232107,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": true
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/open",
+    "action_frequency": {
+        "turn left": 12,
+        "go forward": 24,
+        "toggle": 59,
+        "pick up": 20,
+        "drop": 3,
+        "turn right": 10
+    },
+    "input_tokens": 77746,
+    "output_tokens": 325,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "Understood Action: toggle",
+        "Toggle"
+    ],
+    "mission": "open the door",
+    "progression": 0.0,
+    "process_num": "ForkProcess-28",
+    "seed": 2926251733,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": true
+    }
+}

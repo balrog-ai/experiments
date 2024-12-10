@@ -1,0 +1,43 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "turn left": 32,
+        "go forward": 51,
+        "turn right": 20,
+        "pick up": 11,
+        "toggle": 12,
+        "drop": 2
+    },
+    "input_tokens": 77496,
+    "output_tokens": 417,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "Obesrvation:\na wall  step forward\na wall  step left\n\nYou always have to output one of the above actions at a time and no other text You always have to output an action until the episode terminates"
+    ],
+    "mission": "pick up the blue box, then go to the green box",
+    "progression": 0.0,
+    "process_num": "ForkProcess-12",
+    "seed": 2446703741,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": true
+    }
+}

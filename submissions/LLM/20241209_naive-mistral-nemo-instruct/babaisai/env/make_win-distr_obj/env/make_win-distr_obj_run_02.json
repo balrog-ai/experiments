@@ -1,0 +1,42 @@
+{
+    "task": "env/make_win-distr_obj",
+    "action_frequency": {
+        "up": 19,
+        "left": 58,
+        "down": 7,
+        "right": 5,
+        "idle": 11
+    },
+    "input_tokens": 215784,
+    "output_tokens": 210,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Right"
+    ],
+    "target_plan": "make[door is win], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-17",
+    "seed": 1794681915,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": true
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "task": "MiniHack-MazeWalk-15x15-v0",
+    "action_frequency": {
+        "north": 50,
+        "northeast": 23,
+        "east": 4,
+        "west": 19,
+        "south": 4
+    },
+    "input_tokens": 334948,
+    "output_tokens": 295,
+    "done": true,
+    "episode_return": -0.8400000000000005,
+    "num_steps": 100,
+    "failed_candidates": [
+        "e",
+        "n",
+        "i",
+        "inventory",
+        "up"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-2",
+    "seed": 794893695,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "base_url": "https://gold-worms-lose.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": true
+    }
+}

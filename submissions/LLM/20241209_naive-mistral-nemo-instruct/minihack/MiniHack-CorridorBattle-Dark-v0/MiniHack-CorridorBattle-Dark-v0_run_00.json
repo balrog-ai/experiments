@@ -1,0 +1,52 @@
+{
+    "task": "MiniHack-CorridorBattle-Dark-v0",
+    "action_frequency": {
+        "north": 13,
+        "northeast": 5,
+        "southeast": 1,
+        "west": 9,
+        "southwest": 1,
+        "south": 13,
+        "east": 6
+    },
+    "input_tokens": 155364,
+    "output_tokens": 119,
+    "done": true,
+    "episode_return": -0.08,
+    "num_steps": 48,
+    "failed_candidates": [
+        "up",
+        "up",
+        "attack",
+        "attack",
+        "attack",
+        "attack",
+        "attack",
+        "attack",
+        "attack"
+    ],
+    "progression": 0.0,
+    "end_reason": 1,
+    "process_num": "ForkProcess-4",
+    "seed": 936338087,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "base_url": "https://gold-worms-lose.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": true
+    }
+}
