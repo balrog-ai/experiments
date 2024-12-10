@@ -1,0 +1,40 @@
+{
+    "task": "env/two_room-goto_win-distr_win_rule",
+    "action_frequency": {
+        "up": 14,
+        "right": 64,
+        "down": 12,
+        "idle": 5,
+        "left": 5
+    },
+    "input_tokens": 514163,
+    "output_tokens": 205,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [],
+    "target_plan": "goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-10",
+    "seed": 1345601744,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": true
+    }
+}

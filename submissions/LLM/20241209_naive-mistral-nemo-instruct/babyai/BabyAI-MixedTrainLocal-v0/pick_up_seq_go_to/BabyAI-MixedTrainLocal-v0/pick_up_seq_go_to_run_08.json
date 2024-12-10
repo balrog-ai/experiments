@@ -1,0 +1,41 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "pick up": 3,
+        "turn right": 17,
+        "go forward": 64,
+        "turn left": 18,
+        "toggle": 23,
+        "drop": 3
+    },
+    "input_tokens": 80328,
+    "output_tokens": 358,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [],
+    "mission": "go to the red ball after you pick up the blue key",
+    "progression": 0.0,
+    "process_num": "ForkProcess-18",
+    "seed": 181672344,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": true
+    }
+}

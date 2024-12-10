@@ -1,0 +1,40 @@
+{
+    "task": "env/make_win",
+    "action_frequency": {
+        "up": 20,
+        "right": 13,
+        "left": 45,
+        "down": 9,
+        "idle": 13
+    },
+    "input_tokens": 199087,
+    "output_tokens": 213,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [],
+    "target_plan": "make[ball is win], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-4",
+    "seed": 89741538,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": true
+    }
+}

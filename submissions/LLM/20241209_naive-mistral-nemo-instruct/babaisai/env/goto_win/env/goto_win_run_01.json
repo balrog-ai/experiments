@@ -1,0 +1,42 @@
+{
+    "task": "env/goto_win",
+    "action_frequency": {
+        "idle": 13,
+        "down": 7,
+        "right": 9,
+        "left": 43,
+        "up": 28
+    },
+    "input_tokens": 211485,
+    "output_tokens": 364,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Given the current observation heres the plan:\n\n Move down to reach the baba rule\n Change baba is you to baba is ball by pushing the baba rule to the right and then down to meet ball\n Move up to reach the is rule\n Change ball is win to baba is win by pushing the ball rule to the right and then up to meet baba\n Since baba is win and I am baba I can now move to the goal\n\nSo the actions are:\n down\n right\n down\n right\n up\n right\n up"
+    ],
+    "target_plan": "goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-9",
+    "seed": 2597260517,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": true
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "task": "env/make_win-distr_rule",
+    "action_frequency": {
+        "idle": 10,
+        "right": 14,
+        "left": 36,
+        "down": 30,
+        "up": 10
+    },
+    "input_tokens": 235155,
+    "output_tokens": 412,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Based on the current observation heres the initial plan:\n\n Move to the ball rule by taking the following steps:\n    right to leave the starting position\n    down towards the ball rule\n    left adjusting position\n    down\n    left\n\n Once at the ball rule interact with it to change the properties of the ball The current plan is to make the ball WIN by moving the win rule to the balls location:\n    up to the win rule\n    right to align with the ball rule\n    down placing win on ball\n\nAfter this the ball should be considered the winning condition and we can interact with it to win the level\n\nSo the sequence of actions is:\n right\n down\n left\n down\n left\n up\n right\n down"
+    ],
+    "target_plan": "make[door is win], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-25",
+    "seed": 4128216937,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": true
+    }
+}

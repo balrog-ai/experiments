@@ -1,0 +1,39 @@
+{
+    "task": "env/two_room-make_you",
+    "action_frequency": {
+        "right": 46,
+        "left": 7,
+        "up": 18,
+        "down": 13,
+        "idle": 16
+    },
+    "input_tokens": 460492,
+    "output_tokens": 216,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [],
+    "target_plan": "make[door is you], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-6",
+    "seed": 149222643,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": true
+    }
+}

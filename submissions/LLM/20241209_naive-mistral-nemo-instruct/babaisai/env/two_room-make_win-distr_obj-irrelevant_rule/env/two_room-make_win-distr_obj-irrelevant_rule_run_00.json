@@ -1,0 +1,42 @@
+{
+    "task": "env/two_room-make_win-distr_obj-irrelevant_rule",
+    "action_frequency": {
+        "idle": 3,
+        "right": 64,
+        "down": 10,
+        "up": 13,
+        "left": 10
+    },
+    "input_tokens": 443496,
+    "output_tokens": 432,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Based on the current observation heres the plan:\n\n Move to the right and down to reach the BABA IS YOU rule text block\n Push the BABA IS YOU text block to the left to create space\n Move to the right and up to reach the RULE IS text block\n Push the RULE IS text block down to change the rule to BABA IS RULE\n Now Baba will behave as the RULE text block Move to the right to reach the WIN text block\n Push the WIN text block down to create a new rule: WIN IS RULE\n Now the goal is to reach the RULE text block Move up and to the right to reach it\n Move right to reach the door\n\nActions:\nright down left up right down right up push down right right up right push down right right right up right right right down"
+    ],
+    "target_plan": "make[ball is win], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-13",
+    "seed": 1412934735,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "mistralai/Mistral-Nemo-Instruct-2407",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": true
+    }
+}
