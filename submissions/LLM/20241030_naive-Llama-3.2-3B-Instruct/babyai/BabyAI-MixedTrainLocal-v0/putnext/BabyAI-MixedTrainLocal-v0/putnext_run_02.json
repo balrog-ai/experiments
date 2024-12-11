@@ -1,41 +1,41 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/putnext",
     "action_frequency": {
-        "go forward": 69,
-        "turn right": 11,
-        "turn left": 1,
-        "toggle": 32,
-        "drop": 8,
-        "pick up": 7
+        "turn right": 15,
+        "go forward": 87,
+        "turn left": 6,
+        "toggle": 20
     },
-    "input_tokens": 177577,
-    "output_tokens": 344,
+    "input_tokens": 111896,
+    "output_tokens": 364,
     "done": true,
     "episode_return": 0.0,
     "num_steps": 128,
     "failed_candidates": [],
-    "mission": "put a purple ball next to the grey box",
+    "mission": "put the yellow ball next to the red box",
     "progression": 0.0,
-    "process_num": "ForkProcess-15",
-    "seed": 2420114234,
+    "process_num": "ForkProcess-3",
+    "seed": 2377354772,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "vllm",
         "model_id": "meta-llama/Llama-3.2-3B-Instruct",
-        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "base_url": "http://0.0.0.0:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
             "max_tokens": 1024
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

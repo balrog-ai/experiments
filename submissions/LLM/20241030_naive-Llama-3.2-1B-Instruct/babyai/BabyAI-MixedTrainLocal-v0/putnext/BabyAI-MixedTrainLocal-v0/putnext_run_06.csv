@@ -1,813 +1,1630 @@
-Step,Observation,Action,Reasoning,Reward,Done
-0,"a wall 4 steps forward
-a yellow key 3 steps left and 1 step forward
-a purple key 2 steps left and 2 steps forward
-a purple box 1 step left and 3 steps forward
-a red key 1 step right and 1 step forward
-a red ball 1 step right",go forward,,0,False
-1,"a wall 4 steps forward
-a yellow key 3 steps left and 1 step forward
-a purple key 2 steps left and 2 steps forward
-a purple box 1 step left and 3 steps forward
-a red key 1 step right and 1 step forward
-a red ball 1 step right",pick up,,0,False
-2,"a wall 3 steps right
-a red key 1 step left and 1 step forward
-a red ball 1 step forward
-a yellow key 2 steps right and 1 step forward",turn right,,0,False
-3,"a wall 3 steps forward
-a yellow key 1 step left and 2 steps forward
-a red ball 1 step left
-a purple key 1 step right and 2 steps forward
-a purple ball 3 steps right and 2 steps forward",turn right,,0,False
-4,"a wall 3 steps forward
-a yellow key 1 step left and 2 steps forward
-a red ball 1 step left
-a purple key 1 step right and 2 steps forward
-a purple ball 3 steps right and 2 steps forward",toggle,,0,False
-5,"a wall 3 steps forward
-a yellow key 1 step left and 2 steps forward
-a red ball 1 step left
-a purple key 1 step right and 2 steps forward
-a purple ball 3 steps right and 2 steps forward",pick up,,0,False
-6,"a wall 3 steps right
-a red key 1 step left and 1 step forward
-a red ball 1 step forward
-a yellow key 2 steps right and 1 step forward",turn left,,0,False
-7,"You carry a red ball
+Step,Action,Reasoning,Observation,Reward,Done
+0,"turn right
+turn left
+go forward
+go forward
+drop",,"
+
+Your previous output action: 'turn right
+turn left
+go forward
+go forward
+drop' is not a valid action. Defaulted to action: go forward
+a wall 4 steps forward
+a wall 2 steps right",0,False
+1,"turn left
+turn right
+go forward
+go forward
+go forward",,"
+
+Your previous output action: 'turn left
+turn right
+go forward
+go forward
+go forward' is not a valid action. Defaulted to action: go forward
+a wall 3 steps forward
+a wall 2 steps right",0,False
+2,"turn left
+go forward
+toggle
+turn right",,"
+
+Your previous output action: 'turn left
+go forward
+toggle
+turn right' is not a valid action. Defaulted to action: go forward
 a wall 2 steps forward
-a wall 3 steps right
-a red key 1 step left and 1 step forward
-a yellow key 2 steps right and 1 step forward",pick up,,0,False
-8,"You carry a red ball
+a wall 2 steps right",0,False
+3,"turn left
+turn right
+go forward
+go forward
+go forward
+toggle",,"
+
+Your previous output action: 'turn left
+turn right
+go forward
+go forward
+go forward
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+4,"turn left
+turn right
+turn left
+go forward
+go forward
+toggle",,"
+
+Your previous output action: 'turn left
+turn right
+turn left
+go forward
+go forward
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+5,"turn left
+turn left
+
+turn right
+turn left
+turn right
+
+turn right
+turn left
+go forward
+toggle",,"
+
+Your previous output action: 'turn left
+turn left
+
+turn right
+turn left
+turn right
+
+turn right
+turn left
+go forward
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+6,"turn left
+turn left
+turn right
+turn right
+turn left
+turn right
+turn left
+turn right
+turn left
+go forward",,"
+
+Your previous output action: 'turn left
+turn left
+turn right
+turn right
+turn left
+turn right
+turn left
+turn right
+turn left
+go forward' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+7,"turn left
+turn right
+go forward
+go forward
+go forward
+toggle
+turn left
+turn right
+turn left
+turn left",,"
+
+Your previous output action: 'turn left
+turn right
+go forward
+go forward
+go forward
+toggle
+turn left
+turn right
+turn left
+turn left' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+8,"turn left
+turn right
+go forward
+go forward
+drop
+turn left
+turn right
+go forward
+toggle",,"
+
+Your previous output action: 'turn left
+turn right
+go forward
+go forward
+drop
+turn left
+turn right
+go forward
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+9,"turn left
+turn right
+go forward
+go forward
+drop
+turn left
+turn left
+toggle",,"
+
+Your previous output action: 'turn left
+turn right
+go forward
+go forward
+drop
+turn left
+turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+10,"turn left
+turn right
+go forward
+go forward
+drop
+toggle",,"
+
+Your previous output action: 'turn left
+turn right
+go forward
+go forward
+drop
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+11,"turn left
+turn right
+turn left
+toggle
+go forward
+go forward
+drop",,"
+
+Your previous output action: 'turn left
+turn right
+turn left
+toggle
+go forward
+go forward
+drop' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+12,"turn left
+turn right
+toggle
+go forward
+turn right",,"
+
+Your previous output action: 'turn left
+turn right
+toggle
+go forward
+turn right' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+13,"turn left
+turn right
+toggle
+go forward
+go forward
+go forward
+toggle",,"
+
+Your previous output action: 'turn left
+turn right
+toggle
+go forward
+go forward
+go forward
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+14,"turn left
+turn right
+toggle
+go forward
+go forward
+go forward
+turn left
+toggle
+go forward",,"
+
+Your previous output action: 'turn left
+turn right
+toggle
+go forward
+go forward
+go forward
+turn left
+toggle
+go forward' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+15,"turn left
+turn right
+toggle
+go forward
+go forward
+go forward
+turn left
+toggle
+go forward",,"
+
+Your previous output action: 'turn left
+turn right
+toggle
+go forward
+go forward
+go forward
+turn left
+toggle
+go forward' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+16,"turn left
+turn right
+toggle
+turn left
+toggle
+turn right
+toggle",,"
+
+Your previous output action: 'turn left
+turn right
+toggle
+turn left
+toggle
+turn right
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+17,"turn left
+turn right
+toggle
+turn left
+toggle
+turn right
+toggle
+turn left",,"
+
+Your previous output action: 'turn left
+turn right
+toggle
+turn left
+toggle
+turn right
+toggle
+turn left' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+18,"turn left
+turn right
+toggle
+go forward
+turn right
+toggle
+toggle
+turn left
+turn right
+toggle
+go forward
+toggle
+turn left",,"
+
+Your previous output action: 'turn left
+turn right
+toggle
+go forward
+turn right
+toggle
+toggle
+turn left
+turn right
+toggle
+go forward
+toggle
+turn left' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+19,"turn left
+turn right
+toggle
+turn left
+toggle
+toggle
+turn left
+turn right
+toggle",,"
+
+Your previous output action: 'turn left
+turn right
+toggle
+turn left
+toggle
+toggle
+turn left
+turn right
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+20,"turn left
+turn right
+toggle
+turn left
+toggle
+toggle
+turn left
+turn right",,"
+
+Your previous output action: 'turn left
+turn right
+toggle
+turn left
+toggle
+toggle
+turn left
+turn right' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+21,"turn left
+turn right
+toggle
+turn left
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+turn right
+toggle
+turn left
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+22,"turn left
+turn right
+toggle
+turn left
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+turn right
+toggle
+turn left
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+23,"turn left
+turn right
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+turn right
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+24,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+25,"turn left
+toggle
+turn left
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+turn left
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+26,"turn left
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle
+turn left",,"
+
+Your previous output action: 'turn left
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle
+turn left' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+27,"turn left
+toggle
+turn left
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+turn left
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+28,"turn left
+toggle
+turn left
+toggle
+turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+turn left
+toggle
+turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+29,"turn left
+turn left
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+turn left
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+30,"turn left
+toggle
+turn left
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+turn left
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+31,"turn left
+toggle
+go forward
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+go forward
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+32,"turn left
+toggle
+go forward
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+go forward
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+33,"turn left
+toggle
+go forward
+toggle
+turn left",,"
+
+Your previous output action: 'turn left
+toggle
+go forward
+toggle
+turn left' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+34,"turn left
+toggle
+go forward
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+go forward
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+35,"turn left
+toggle
+go forward
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+go forward
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+36,"turn left
+turn left
+toggle
+toggle
+turn left
+toggle",,"
+
+Your previous output action: 'turn left
+turn left
+toggle
+toggle
+turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+37,"turn left
+turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+38,"turn left
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+39,"turn left
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+40,"turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+41,"turn left
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+42,"turn left
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+43,"turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+44,"turn left
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+45,"turn left
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+46,"turn left
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+47,"turn left
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+48,"turn left
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+49,"turn left
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+50,"turn left
+turn left",,"
+
+Your previous output action: 'turn left
+turn left' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+51,"turn left
+turn left
+toggle
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+turn left
+toggle
+toggle
+turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+52,"turn left
+toggle
+turn left
+turn left
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+turn left
+turn left
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+53,"turn left
+toggle
+turn left
+toggle
+turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+turn left
+toggle
+turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+54,"turn left
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+55,"turn left
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+56,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+57,"turn left
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+58,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+59,"turn left
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+60,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+61,"toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+62,"turn left
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+63,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+64,"turn left
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+65,"turn left
+turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+66,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+67,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+68,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+69,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+70,"turn left
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+71,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+72,"turn left
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+73,"turn left
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+74,"turn left
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+75,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+76,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+77,"toggle
+turn left
+toggle",,"
+
+Your previous output action: 'toggle
+turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+78,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+79,"turn left
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+80,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+81,"turn left
+turn left",,"
+
+Your previous output action: 'turn left
+turn left' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+82,"turn left
+turn left
+turn left",,"
+
+Your previous output action: 'turn left
+turn left
+turn left' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+83,"turn left
+turn left
+turn left
+toggle",,"
+
+Your previous output action: 'turn left
+turn left
+turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+84,"turn left
+turn left
+toggle",,"
+
+Your previous output action: 'turn left
+turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+85,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+86,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+87,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+88,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+89,"turn left
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+90,"turn left
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+91,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+92,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+93,"turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+turn left",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+turn left' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+94,"turn left
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps right",0,False
+95,turn left,,"a wall 5 steps forward
+a wall 1 step right
+a grey key 2 steps left and 4 steps forward",0,False
+96,"go right
+go forward
+pick up",,"
+
+Your previous output action: 'go right
+go forward
+pick up' is not a valid action. Defaulted to action: go forward
+a wall 4 steps forward
+a wall 1 step right
+a grey key 2 steps left and 3 steps forward",0,False
+97,"toggle
+toggle",,"
+
+Your previous output action: 'toggle
+toggle' is not a valid action. Defaulted to action: go forward
 a wall 3 steps forward
-a wall 2 steps left
-a yellow key 1 step left and 2 steps forward
-a purple key 1 step right and 2 steps forward
-a purple ball 3 steps right and 2 steps forward",turn right,,0,False
-9,"You carry a red ball
+a wall 1 step right
+a grey key 2 steps left and 2 steps forward",0,False
+98,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
 a wall 2 steps forward
-a wall 3 steps right
-a red key 1 step left and 1 step forward
-a yellow key 2 steps right and 1 step forward",turn left,,0,False
-10,"You carry a red ball
-a wall 4 steps forward
-a wall 2 steps right
-a yellow key 3 steps left and 1 step forward
-a purple key 2 steps left and 2 steps forward
-a purple box 1 step left and 3 steps forward
-a red key 1 step right and 1 step forward",turn left,,0,False
-11,"You carry a red ball
-a wall 5 steps forward
-a wall 3 steps left
-a purple ball 2 steps left and 4 steps forward
-a purple ball 2 steps left and 3 steps forward
-a purple key 2 steps left and 1 step forward
-a yellow key 1 step right and 3 steps forward
-a purple key 2 steps right and 4 steps forward
-a purple key 2 steps right and 2 steps forward
-a purple box 3 steps right and 1 step forward",turn left,,0,False
-12,"You carry a red ball
-a wall 5 steps forward
-a wall 3 steps left
-a purple ball 2 steps left and 4 steps forward
-a purple ball 2 steps left and 3 steps forward
-a purple key 2 steps left and 1 step forward
-a yellow key 1 step right and 3 steps forward
-a purple key 2 steps right and 4 steps forward
-a purple key 2 steps right and 2 steps forward
-a purple box 3 steps right and 1 step forward",toggle,,0,False
-13,"You carry a red ball
-a wall 3 steps forward
+a wall 1 step right
+a grey key 2 steps left and 1 step forward",0,False
+99,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right
+a grey key 2 steps left",0,False
+100,turn left,,"a wall 1 step right
+a grey box 1 step left and 4 steps forward
+a grey key 2 steps forward",0,False
+101,"turn left
+toggle
+toggle
+turn left
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+turn left
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step right
+a grey box 1 step left and 3 steps forward
+a grey key 1 step forward",0,False
+102,"turn left
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step right
+a grey box 1 step left and 3 steps forward
+a grey key 1 step forward",0,False
+103,turn left,,"a wall 6 steps forward
 a wall 2 steps left
-a yellow key 1 step left and 2 steps forward
-a purple key 1 step right and 2 steps forward
-a purple ball 3 steps right and 2 steps forward",turn left,,0,False
-14,"You carry a red ball
-a wall 3 steps forward
+a grey key 1 step right
+a grey box 3 steps right and 1 step forward",0,False
+104,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 5 steps forward
 a wall 2 steps left
-a yellow key 1 step left and 2 steps forward
-a purple key 1 step right and 2 steps forward
-a purple ball 3 steps right and 2 steps forward",toggle,,0,False
-15,"You carry a red ball
-a wall 5 steps forward
-a wall 3 steps left
-a purple ball 2 steps left and 4 steps forward
-a purple ball 2 steps left and 3 steps forward
-a purple key 2 steps left and 1 step forward
-a yellow key 1 step right and 3 steps forward
-a purple key 2 steps right and 4 steps forward
-a purple key 2 steps right and 2 steps forward
-a purple box 3 steps right and 1 step forward",turn right,,0,False
-16,"You carry a red ball
-a wall 5 steps forward
-a wall 3 steps left
-a purple ball 2 steps left and 4 steps forward
-a purple ball 2 steps left and 3 steps forward
-a purple key 2 steps left and 1 step forward
-a yellow key 1 step right and 3 steps forward
-a purple key 2 steps right and 4 steps forward
-a purple key 2 steps right and 2 steps forward
-a purple box 3 steps right and 1 step forward",toggle,,0,False
-17,"You carry a red ball
+a grey box 3 steps right",0,False
+105,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
 a wall 4 steps forward
-a purple ball 2 steps left and 3 steps forward
-a purple ball 2 steps left and 2 steps forward
-a purple key 2 steps left
-a yellow key 1 step right and 2 steps forward
-a purple key 2 steps right and 3 steps forward
-a purple key 2 steps right and 1 step forward
-a purple box 3 steps right",go forward,,0,False
-18,"You carry a red ball
-a wall 3 steps right
-a purple key 3 steps left and 2 steps forward
-a yellow key 2 steps left and 1 step forward
-a purple key 1 step left and 2 steps forward
-a purple box 3 steps forward
-a red key 2 steps right and 1 step forward",turn right,,0,False
-19,"You carry a red ball
-a wall 3 steps right
-a purple key 3 steps left and 2 steps forward
-a yellow key 2 steps left and 1 step forward
-a purple key 1 step left and 2 steps forward
-a purple box 3 steps forward
-a red key 2 steps right and 1 step forward",toggle,,0,False
-20,"You carry a red ball
-a wall 3 steps right
-a purple key 3 steps left and 2 steps forward
-a yellow key 2 steps left and 1 step forward
-a purple key 1 step left and 2 steps forward
-a purple box 3 steps forward
-a red key 2 steps right and 1 step forward",toggle,,0,False
-21,"You carry a red ball
-a wall 4 steps forward
-a purple ball 2 steps left and 3 steps forward
-a purple ball 2 steps left and 2 steps forward
-a purple key 2 steps left
-a yellow key 1 step right and 2 steps forward
-a purple key 2 steps right and 3 steps forward
-a purple key 2 steps right and 1 step forward
-a purple box 3 steps right",turn left,,0,False
-22,"You carry a red ball
-a wall 4 steps forward
-a purple ball 2 steps left and 3 steps forward
-a purple ball 2 steps left and 2 steps forward
-a purple key 2 steps left
-a yellow key 1 step right and 2 steps forward
-a purple key 2 steps right and 3 steps forward
-a purple key 2 steps right and 1 step forward
-a purple box 3 steps right",toggle,,0,False
-23,"You carry a red ball
-a wall 4 steps forward
-a purple ball 2 steps left and 3 steps forward
-a purple ball 2 steps left and 2 steps forward
-a purple key 2 steps left
-a yellow key 1 step right and 2 steps forward
-a purple key 2 steps right and 3 steps forward
-a purple key 2 steps right and 1 step forward
-a purple box 3 steps right",toggle,,0,False
-24,"You carry a red ball
-a wall 3 steps right
-a purple key 3 steps left and 2 steps forward
-a yellow key 2 steps left and 1 step forward
-a purple key 1 step left and 2 steps forward
-a purple box 3 steps forward
-a red key 2 steps right and 1 step forward",turn right,,0,False
-25,"You carry a red ball
-a wall 3 steps right
-a purple key 3 steps left and 2 steps forward
-a yellow key 2 steps left and 1 step forward
-a purple key 1 step left and 2 steps forward
-a purple box 3 steps forward
-a red key 2 steps right and 1 step forward",toggle,,0,False
-26,"You carry a red ball
-a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",go forward,,0,False
-27,"You carry a red ball
-a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-28,"You carry a red ball
-a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-29,"You carry a red ball
-a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-30,"You carry a red ball
-a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-31,"You carry a red ball
-a purple box 2 steps left
-a red key 2 steps forward
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",turn right,,0,False
-32,"You carry a red ball
-a purple box 2 steps left
-a red key 2 steps forward
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",toggle,,0,False
-33,"You carry a red ball
-a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn left,,0,False
-34,"You carry a red ball
-a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",turn left,,0,False
-35,"You carry a red ball
-a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",toggle,,0,False
-36,"You carry a red ball
-a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",toggle,,0,False
-37,"You carry a red ball
-a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn right,,0,False
-38,"You carry a red ball
-a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",turn left,,0,False
-39,"You carry a red ball
-a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",toggle,,0,False
-40,"You carry a red ball
-a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn right,,0,False
-41,"You carry a red ball
-a purple box 2 steps left
-a red key 2 steps forward
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",turn right,,0,False
-42,"You carry a red ball
-a purple box 2 steps left
-a red key 2 steps forward
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",toggle,,0,False
-43,"You carry a red ball
-a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",turn right,,0,False
-44,"You carry a red ball
-a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",turn right,,0,False
-45,"You carry a red ball
-a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",turn left,,0,False
-46,"You carry a red ball
-a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",toggle,,0,False
-47,"You carry a red ball
-a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",turn right,,0,False
-48,"You carry a red ball
-a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn right,,0,False
-49,"You carry a red ball
-a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-50,"You carry a red ball
-a purple box 2 steps left
-a red key 2 steps forward
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",turn right,,0,False
-51,"You carry a red ball
-a purple box 2 steps left
-a red key 2 steps forward
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",toggle,,0,False
-52,"You carry a red ball
-a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn left,,0,False
-53,"You carry a red ball
-a purple box 2 steps left
-a red key 2 steps forward
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",turn right,,0,False
-54,"You carry a red ball
-a purple box 2 steps left
-a red key 2 steps forward
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",toggle,,0,False
-55,"You carry a red ball
-a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",turn right,,0,False
-56,"You carry a red ball
-a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",toggle,,0,False
-57,"You carry a red ball
-a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",turn right,,0,False
-58,"You carry a red ball
-a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",turn left,,0,False
-59,"You carry a red ball
-a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",turn right,,0,False
-60,"You carry a red ball
-a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn right,,0,False
-61,"You carry a red ball
-a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",turn left,,0,False
-62,"You carry a red ball
-a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn right,,0,False
-63,"You carry a red ball
-a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-64,"You carry a red ball
-a purple box 2 steps left
-a red key 2 steps forward
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",turn right,,0,False
-65,"You carry a red ball
-a purple box 2 steps left
-a red key 2 steps forward
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",toggle,,0,False
-66,"You carry a red ball
-a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",turn right,,0,False
-67,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",drop,,0,False
-68,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",drop,,0,False
-69,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",turn left,,0,False
-70,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",toggle,,0,False
-71,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn left,,0,False
-72,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-73,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-74,"a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a red ball 1 step left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",turn left,,0,False
-75,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn right,,0,False
-76,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-77,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",turn right,,0,False
-78,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn left,,0,False
-79,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-80,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-81,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-82,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",turn right,,0,False
-83,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn left,,0,False
-84,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-85,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",turn right,,0,False
-86,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn left,,0,False
-87,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-88,"a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a red ball 1 step left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",turn left,,0,False
-89,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",turn left,,0,False
-90,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",toggle,,0,False
-91,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",turn left,,0,False
-92,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn left,,0,False
-93,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-94,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",turn right,,0,False
-95,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",toggle,,0,False
-96,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",toggle,,0,False
-97,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",turn right,,0,False
-98,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",turn left,,0,False
-99,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",toggle,,0,False
-100,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",drop,,0,False
-101,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",toggle,,0,False
-102,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",turn right,,0,False
-103,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",toggle,,0,False
-104,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",go forward,,0,False
-105,"a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a red ball 1 step left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",turn right,,0,False
-106,"a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a red ball 1 step left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",toggle,,0,False
-107,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn right,,0,False
-108,"a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a red ball 1 step left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",turn left,,0,False
-109,"a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a red ball 1 step left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",toggle,,0,False
-110,"a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a red ball 1 step left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",toggle,,0,False
-111,"a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a red ball 1 step left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",toggle,,0,False
-112,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",turn left,,0,False
-113,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",go forward,,0,False
-114,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",toggle,,0,False
-115,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",toggle,,0,False
-116,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",toggle,,0,False
-117,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",toggle,,0,False
-118,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",go forward,,0,False
-119,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",toggle,,0,False
-120,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",toggle,,0,False
-121,"a yellow key 2 steps left and 3 steps forward
-a red key 2 steps left
-a purple key 3 steps forward
-a red ball 1 step forward
-a purple ball 2 steps right and 3 steps forward
-a yellow key 2 steps right
-a purple ball 3 steps right and 3 steps forward",toggle,,0,False
-122,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",turn left,,0,False
-123,"a purple box 2 steps left
-a red key 2 steps forward
-a red ball 1 step right
-a yellow key 3 steps right and 2 steps forward
-a purple key 3 steps right",toggle,,0,False
-124,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",turn left,,0,False
-125,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-126,"a purple key 3 steps left and 1 step forward
-a yellow key 2 steps left
-a purple key 1 step left and 1 step forward
-a purple box 2 steps forward
-a red key 2 steps right",toggle,,0,False
-127,"a purple ball 3 steps left and 3 steps forward
-a purple ball 3 steps left and 2 steps forward
-a purple key 3 steps left
-a red ball 1 step left
-a yellow key 2 steps forward
-a purple key 1 step right and 3 steps forward
-a purple key 1 step right and 1 step forward
-a purple box 2 steps right",turn left,,0,True
+a wall 2 steps left",0,False
+106,"turn left
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 3 steps forward
+a wall 2 steps left",0,False
+107,"go forward
+toggle
+toggle",,"
+
+Your previous output action: 'go forward
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 2 steps forward
+a wall 2 steps left",0,False
+108,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps left",0,False
+109,"turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 2 steps left",0,False
+110,turn left,,"a wall 2 steps forward
+a wall 1 step right",0,False
+111,"go forward
+turn left",,"
+
+Your previous output action: 'go forward
+turn left' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+112,"go right
+turn left",,"
+
+Your previous output action: 'go right
+turn left' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+113,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+114,"turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+115,"turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+116,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+117,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+118,"go forward
+toggle
+toggle",,"
+
+Your previous output action: 'go forward
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+119,"go left
+toggle",,"
+
+Your previous output action: 'go left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+120,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+121,"turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'turn left
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+122,"go forward
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'go forward
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+123,"go forward
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle",,"
+
+Your previous output action: 'go forward
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+124,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+125,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+126,"turn left
+toggle",,"
+
+Your previous output action: 'turn left
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,False
+127,"go forward
+toggle",,"
+
+Your previous output action: 'go forward
+toggle' is not a valid action. Defaulted to action: go forward
+a wall 1 step forward
+a wall 1 step right",0,True

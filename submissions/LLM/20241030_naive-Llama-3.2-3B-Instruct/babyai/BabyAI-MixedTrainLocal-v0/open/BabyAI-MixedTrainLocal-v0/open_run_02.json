@@ -1,52 +1,45 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/open",
     "action_frequency": {
-        "go forward": 93,
-        "turn right": 4,
-        "toggle": 20,
-        "pick up": 4,
-        "drop": 6,
-        "turn left": 1
+        "turn right": 11,
+        "go forward": 68,
+        "turn left": 8,
+        "pick up": 5,
+        "toggle": 35,
+        "drop": 1
     },
-    "input_tokens": 191132,
-    "output_tokens": 411,
+    "input_tokens": 124579,
+    "output_tokens": 347,
     "done": true,
     "episode_return": 0.0,
     "num_steps": 128,
     "failed_candidates": [
-        "go right",
-        "Since I'm close to the green door, I'll try to open it. However, I don't have the correct key yet. I'll use the green key to unlock the door.\n\ntoggle",
-        "pick up red key",
-        "pick up green ball",
-        "pick up green key",
-        "pick up green key",
-        "pick up green ball",
-        "pick up the green key",
-        "toggle grey ball",
-        "pick up grey ball"
+        "use"
     ],
-    "mission": "open the green door",
+    "mission": "open the purple door",
     "progression": 0.0,
-    "process_num": "ForkProcess-7",
-    "seed": 2874251506,
+    "process_num": "ForkProcess-23",
+    "seed": 1734747504,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "vllm",
         "model_id": "meta-llama/Llama-3.2-3B-Instruct",
-        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "base_url": "http://0.0.0.0:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
             "max_tokens": 1024
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

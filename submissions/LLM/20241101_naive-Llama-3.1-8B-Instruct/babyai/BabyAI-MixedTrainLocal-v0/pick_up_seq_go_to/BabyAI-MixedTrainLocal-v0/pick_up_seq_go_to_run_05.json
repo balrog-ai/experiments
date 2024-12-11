@@ -1,34 +1,34 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
     "action_frequency": {
-        "go forward": 44,
-        "turn left": 14,
-        "pick up": 13,
-        "toggle": 35,
-        "turn right": 15,
-        "drop": 7
+        "turn left": 2,
+        "go forward": 43,
+        "toggle": 12,
+        "pick up": 7,
+        "turn right": 9
     },
-    "input_tokens": 179134,
-    "output_tokens": 342,
+    "input_tokens": 67332,
+    "output_tokens": 207,
     "done": true,
-    "episode_return": 0.0,
-    "num_steps": 128,
+    "episode_return": 0.48671875,
+    "num_steps": 73,
     "failed_candidates": [],
-    "mission": "pick up a red ball, then go to the purple box",
-    "progression": 0.0,
-    "process_num": "ForkProcess-18",
-    "seed": 4225766172,
+    "mission": "pick up the purple key, then go to the grey box",
+    "progression": 1.0,
+    "process_num": "ForkProcess-13",
+    "seed": 3759513561,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "vllm",
-        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "model_id": "meta-llama/Llama-3.1-8B-Instruct",
         "base_url": "http://0.0.0.0:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
@@ -36,6 +36,7 @@
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

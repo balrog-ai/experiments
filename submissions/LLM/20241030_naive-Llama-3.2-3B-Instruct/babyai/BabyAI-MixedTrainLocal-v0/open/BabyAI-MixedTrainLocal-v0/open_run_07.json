@@ -1,44 +1,42 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/open",
     "action_frequency": {
-        "go forward": 83,
-        "turn right": 6,
-        "toggle": 29,
-        "drop": 7,
+        "turn right": 5,
+        "go forward": 74,
+        "turn left": 2,
+        "toggle": 44,
         "pick up": 3
     },
-    "input_tokens": 178720,
-    "output_tokens": 353,
+    "input_tokens": 120406,
+    "output_tokens": 340,
     "done": true,
     "episode_return": 0.0,
     "num_steps": 128,
-    "failed_candidates": [
-        "try to open the locked green door",
-        "go right",
-        "go right"
-    ],
-    "mission": "open the green door",
+    "failed_candidates": [],
+    "mission": "open the door",
     "progression": 0.0,
-    "process_num": "ForkProcess-13",
-    "seed": 3842724143,
+    "process_num": "ForkProcess-28",
+    "seed": 2411734400,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "vllm",
         "model_id": "meta-llama/Llama-3.2-3B-Instruct",
-        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "base_url": "http://0.0.0.0:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
             "max_tokens": 1024
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

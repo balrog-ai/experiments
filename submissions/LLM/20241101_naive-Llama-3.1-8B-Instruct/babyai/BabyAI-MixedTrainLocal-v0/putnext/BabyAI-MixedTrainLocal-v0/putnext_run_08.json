@@ -1,36 +1,35 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/putnext",
     "action_frequency": {
-        "go forward": 54,
-        "turn right": 13,
-        "pick up": 13,
-        "toggle": 27,
-        "drop": 9,
-        "turn left": 12
+        "go forward": 79,
+        "toggle": 13,
+        "turn right": 16,
+        "drop": 7,
+        "pick up": 4,
+        "turn left": 9
     },
-    "input_tokens": 156312,
-    "output_tokens": 349,
+    "input_tokens": 115898,
+    "output_tokens": 364,
     "done": true,
     "episode_return": 0.0,
     "num_steps": 128,
-    "failed_candidates": [
-        "turn right."
-    ],
-    "mission": "put the green key next to the grey ball",
+    "failed_candidates": [],
+    "mission": "put the purple key next to the grey key",
     "progression": 0.0,
-    "process_num": "ForkProcess-3",
-    "seed": 2570314536,
+    "process_num": "ForkProcess-9",
+    "seed": 3059209653,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "vllm",
-        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "model_id": "meta-llama/Llama-3.1-8B-Instruct",
         "base_url": "http://0.0.0.0:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
@@ -38,6 +37,7 @@
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

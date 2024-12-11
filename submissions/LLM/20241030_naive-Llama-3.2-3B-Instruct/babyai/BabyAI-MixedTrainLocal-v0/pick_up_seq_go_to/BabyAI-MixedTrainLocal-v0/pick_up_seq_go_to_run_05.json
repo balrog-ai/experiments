@@ -1,57 +1,42 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
     "action_frequency": {
-        "go forward": 98,
-        "pick up": 8,
-        "toggle": 15,
-        "turn right": 3,
-        "drop": 4
+        "turn left": 5,
+        "go forward": 19,
+        "pick up": 2,
+        "toggle": 9,
+        "drop": 2
     },
-    "input_tokens": 167325,
-    "output_tokens": 418,
+    "input_tokens": 30063,
+    "output_tokens": 100,
     "done": true,
-    "episode_return": 0.0,
-    "num_steps": 128,
-    "failed_candidates": [
-        "pick up purple key",
-        "pick up purple key",
-        "pick up purple key",
-        "pick up purple key",
-        "toggle purple key",
-        "pick up purple key",
-        "drop blue ball",
-        "toggle the purple key",
-        "drop blue key",
-        "pick up purple key",
-        "pick up purple key",
-        "pick up purple key",
-        "pick up purple key",
-        "drop the blue key",
-        "pick up purple key",
-        "I'll have to make a decision. Since I'm close to the red box, I'll try to interact with it.\n\ntoggle red box"
-    ],
-    "mission": "go to the purple box after you pick up the purple key",
-    "progression": 0.0,
-    "process_num": "ForkProcess-1",
-    "seed": 3477112654,
+    "episode_return": 0.7398437499999999,
+    "num_steps": 37,
+    "failed_candidates": [],
+    "mission": "go to a grey ball after you pick up a grey ball",
+    "progression": 1.0,
+    "process_num": "ForkProcess-12",
+    "seed": 311135706,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "vllm",
         "model_id": "meta-llama/Llama-3.2-3B-Instruct",
-        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "base_url": "http://0.0.0.0:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
             "max_tokens": 1024
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

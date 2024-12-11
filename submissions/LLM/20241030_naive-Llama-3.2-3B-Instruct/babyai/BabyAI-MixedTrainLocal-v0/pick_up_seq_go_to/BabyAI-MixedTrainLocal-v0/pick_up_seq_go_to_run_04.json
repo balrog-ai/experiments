@@ -1,46 +1,42 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
     "action_frequency": {
-        "go forward": 79,
-        "turn left": 2,
-        "pick up": 13,
-        "toggle": 19,
-        "turn right": 8,
-        "drop": 7
+        "turn right": 16,
+        "pick up": 4,
+        "turn left": 7,
+        "go forward": 77,
+        "toggle": 24
     },
-    "input_tokens": 160395,
-    "output_tokens": 361,
+    "input_tokens": 112382,
+    "output_tokens": 360,
     "done": true,
     "episode_return": 0.0,
     "num_steps": 128,
-    "failed_candidates": [
-        "toggle grey box",
-        "toggle purple box",
-        "toggle purple box",
-        "go right"
-    ],
-    "mission": "go to a purple box after you pick up the purple ball",
+    "failed_candidates": [],
+    "mission": "pick up the purple box, then go to the blue box",
     "progression": 0.0,
-    "process_num": "ForkProcess-5",
-    "seed": 1358439042,
+    "process_num": "ForkProcess-11",
+    "seed": 908177520,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "vllm",
         "model_id": "meta-llama/Llama-3.2-3B-Instruct",
-        "base_url": "https://odd-readers-invite.loca.lt/v1",
+        "base_url": "http://0.0.0.0:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
             "max_tokens": 1024
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

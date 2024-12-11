@@ -1,35 +1,45 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
     "action_frequency": {
-        "go forward": 2,
-        "turn left": 2,
-        "turn right": 1,
-        "pick up": 1
+        "turn left": 6,
+        "go forward": 76,
+        "toggle": 21,
+        "pick up": 12,
+        "turn right": 10,
+        "drop": 3
     },
-    "input_tokens": 3574,
-    "output_tokens": 44,
+    "input_tokens": 128840,
+    "output_tokens": 360,
     "done": true,
-    "episode_return": 0.9578125,
-    "num_steps": 6,
+    "episode_return": 0.0,
+    "num_steps": 128,
     "failed_candidates": [
-        "turn right.",
-        "toggle (the purple key 1 step left is the closest object, we will use the 'toggle' action to pick it up)"
+        "go right",
+        "go right",
+        "go right",
+        "go left",
+        "go left",
+        "go backward",
+        "go left",
+        "go left",
+        "go left"
     ],
-    "mission": "pick up a purple key, then go to a purple key",
-    "progression": 1.0,
-    "process_num": "ForkProcess-1",
-    "seed": 3445698925,
+    "mission": "pick up the purple ball, then go to the red box",
+    "progression": 0.0,
+    "process_num": "ForkProcess-17",
+    "seed": 4061204507,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "vllm",
-        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "model_id": "meta-llama/Llama-3.1-8B-Instruct",
         "base_url": "http://0.0.0.0:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
@@ -37,6 +47,7 @@
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

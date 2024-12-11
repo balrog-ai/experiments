@@ -1,34 +1,37 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/open",
     "action_frequency": {
-        "go forward": 54,
-        "turn right": 12,
-        "pick up": 10,
-        "toggle": 39,
-        "turn left": 8,
-        "drop": 5
+        "go forward": 61,
+        "turn left": 2,
+        "turn right": 5,
+        "toggle": 53,
+        "pick up": 3,
+        "drop": 4
     },
-    "input_tokens": 178008,
-    "output_tokens": 340,
+    "input_tokens": 132414,
+    "output_tokens": 327,
     "done": true,
     "episode_return": 0.0,
     "num_steps": 128,
-    "failed_candidates": [],
-    "mission": "open the blue door",
+    "failed_candidates": [
+        "use key"
+    ],
+    "mission": "open the door",
     "progression": 0.0,
     "process_num": "ForkProcess-30",
-    "seed": 2836372433,
+    "seed": 3821803313,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "vllm",
-        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "model_id": "meta-llama/Llama-3.1-8B-Instruct",
         "base_url": "http://0.0.0.0:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
@@ -36,6 +39,7 @@
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

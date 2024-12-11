@@ -1,34 +1,35 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/putnext",
     "action_frequency": {
-        "turn right": 12,
-        "go forward": 53,
-        "pick up": 10,
-        "toggle": 28,
-        "drop": 8,
-        "turn left": 17
+        "turn right": 14,
+        "go forward": 82,
+        "pick up": 5,
+        "turn left": 7,
+        "toggle": 11,
+        "drop": 9
     },
-    "input_tokens": 151234,
-    "output_tokens": 348,
+    "input_tokens": 121030,
+    "output_tokens": 364,
     "done": true,
     "episode_return": 0.0,
     "num_steps": 128,
     "failed_candidates": [],
-    "mission": "put a yellow ball next to the blue ball",
+    "mission": "put the grey ball next to the green box",
     "progression": 0.0,
     "process_num": "ForkProcess-11",
-    "seed": 267360040,
+    "seed": 366792736,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "vllm",
-        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "model_id": "meta-llama/Llama-3.1-8B-Instruct",
         "base_url": "http://0.0.0.0:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
@@ -36,6 +37,7 @@
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }

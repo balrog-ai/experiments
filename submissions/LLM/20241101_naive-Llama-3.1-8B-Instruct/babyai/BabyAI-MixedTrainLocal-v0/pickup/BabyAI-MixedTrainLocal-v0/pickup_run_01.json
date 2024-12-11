@@ -1,32 +1,35 @@
 {
     "task": "BabyAI-MixedTrainLocal-v0/pickup",
     "action_frequency": {
+        "turn left": 2,
+        "go forward": 16,
+        "toggle": 3,
+        "pick up": 7,
         "turn right": 2,
-        "go forward": 1,
-        "toggle": 1,
-        "pick up": 1
+        "drop": 1
     },
-    "input_tokens": 2008,
-    "output_tokens": 14,
+    "input_tokens": 23456,
+    "output_tokens": 89,
     "done": true,
-    "episode_return": 0.9296875,
-    "num_steps": 5,
+    "episode_return": 0.5640624999999999,
+    "num_steps": 31,
     "failed_candidates": [],
-    "mission": "pick up a red ball",
+    "mission": "pick up the grey box",
     "progression": 1.0,
     "process_num": "ForkProcess-12",
-    "seed": 1536301495,
+    "seed": 1509990523,
     "agent": {
         "type": "naive",
         "remember_cot": true,
         "max_history": 16,
         "max_image_history": 0,
         "max_cot_history": 1,
+        "max_icl_history": 1000,
         "cache_icl": false
     },
     "client": {
         "client_name": "vllm",
-        "model_id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "model_id": "meta-llama/Llama-3.1-8B-Instruct",
         "base_url": "http://0.0.0.0:8080/v1",
         "generate_kwargs": {
             "temperature": 0.0,
@@ -34,6 +37,7 @@
         },
         "timeout": 60,
         "max_retries": 5,
-        "delay": 2
+        "delay": 2,
+        "alternate_roles": false
     }
 }
