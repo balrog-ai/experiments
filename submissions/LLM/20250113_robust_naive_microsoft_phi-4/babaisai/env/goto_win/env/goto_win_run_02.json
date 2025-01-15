@@ -1,0 +1,41 @@
+{
+    "task": "env/goto_win",
+    "action_frequency": {
+        "up": 1,
+        "right": 9,
+        "down": 1,
+        "left": 1
+    },
+    "input_tokens": 13466,
+    "output_tokens": 633,
+    "done": true,
+    "episode_return": 0.892,
+    "num_steps": 12,
+    "failed_candidates": [],
+    "target_plan": "goto[key]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-19",
+    "seed": 851108558,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

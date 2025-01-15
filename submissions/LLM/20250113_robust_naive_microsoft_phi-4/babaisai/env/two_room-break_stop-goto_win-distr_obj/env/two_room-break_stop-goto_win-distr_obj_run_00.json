@@ -1,0 +1,47 @@
+{
+    "task": "env/two_room-break_stop-goto_win-distr_obj",
+    "action_frequency": {
+        "left": 27,
+        "idle": 5,
+        "right": 63,
+        "up": 5
+    },
+    "input_tokens": 455212,
+    "output_tokens": 1392,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "right  \nThe `baba` and `you` text blocks are one step to the left of your current position, which could potentially be used to change the active rules. Moving right will bring you closer to these text blocks, enabling interaction with them. By rearranging these blocks, we can try to alter the current rules\u2014possibly making `baba` something else or changing the properties of objects to progress toward the win condition. This step aligns with the goal of modifying rules to overcome obstacles like `wall` and reach the `door`.",
+        "right  \nMoving right aligns with the strategic goal of reaching the `baba` and `you` text blocks, which are essential for modifying the game rules. By positioning `baba` in front of these blocks, we can potentially alter the rules to overcome the `wall` obstacle. This action brings us closer to enabling the rule change needed to progress toward the `door` and achieve the win condition.",
+        "<|ACTION|>up",
+        "<|ACTION|>up",
+        "<|ACTION|>left"
+    ],
+    "target_plan": "break[wall is stop], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-27",
+    "seed": 1940796728,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

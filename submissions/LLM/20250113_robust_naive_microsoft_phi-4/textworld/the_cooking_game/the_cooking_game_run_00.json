@@ -1,0 +1,55 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "take raw white tuna": 1,
+        "take block of cheese": 1,
+        "go south": 13,
+        "open sliding door": 1,
+        "```json\n{\n  \"action\": \"go south\"\n}\n```": 6,
+        "```json\n{\n  \"action\": \"go north\"\n}\n```": 1,
+        "go north": 7,
+        "go east": 4,
+        "```json\n{\n  \"action\": \"go west\"\n}\n```": 1,
+        "go west": 6,
+        "```json\n{\n  \"action\": \"go east\"\n}\n```": 1,
+        "```json\n{\n  \"action\": \"open front door\"\n}\n```": 6,
+        "open front door": 3,
+        "examine front door": 1,
+        "```json\n{\n  \"action\": \"examine front door\"\n}\n```": 5,
+        "```json\n{\n  \"action\": \"look\"\n}\n```": 5,
+        "```json\n{\n  \"action\": \"go inside\"\n}\n```": 12,
+        "```json\n{\n  \"action\": \"enter house\"\n}\n```": 4,
+        "go inside": 2
+    },
+    "input_tokens": 108702,
+    "output_tokens": 1141,
+    "done": true,
+    "episode_return": 159.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.11764705882352941,
+    "process_num": "ForkProcess-4",
+    "seed": 1067619551,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "https://big-candies-worry.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

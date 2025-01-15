@@ -1,0 +1,60 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "go east": 8,
+        "look": 8,
+        "go north": 6,
+        "go west": 8,
+        "take key": 1,
+        "go south": 5,
+        "look at shelf": 3,
+        "take shelf": 3,
+        "open drawer": 2,
+        "look at drawer": 6,
+        "take drawer": 1,
+        "```json\n{\n  \"action\": \"open drawer\"\n}\n```": 3,
+        "```json\n{\n  \"action\": \"look at drawer\"\n}\n```": 3,
+        "```json\n{\n  \"action\": \"look\"\n}\n```": 3,
+        "```json\n{\n  \"action\": \"go east\"\n}\n```": 4,
+        "```json\n{\n  \"action\": \"go west\"\n}\n```": 1,
+        "```json\n{\n  \"action\": \"look at shelf\"\n}\n```": 2,
+        "```json\n{\n  \"action\": \"take shelf\"\n}\n```": 1,
+        "```json\n{\n  \"action\": \"take drawer\"\n}\n```": 3,
+        "```json\n{\n  \"action\": \"open shelf\"\n}\n```": 1,
+        "```json\n{\n  \"action\": \"go south\"\n}\n```": 3,
+        "take all from drawer": 1,
+        "```json\n{\n  \"action\": \"take all from drawer\"\n}\n```": 2,
+        "```json\n{\n  \"action\": \"go north\"\n}\n```": 2
+    },
+    "input_tokens": 105516,
+    "output_tokens": 855,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-2",
+    "seed": 3408447453,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "https://big-candies-worry.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

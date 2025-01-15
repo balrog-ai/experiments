@@ -1,0 +1,54 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "take Microsoft limited edition latchkey": 1,
+        "look": 2,
+        "open Microsoft limited edition hatch": 2,
+        "unlock Microsoft limited edition hatch with Microsoft limited edition latchkey": 1,
+        "go north": 1,
+        "examine counter": 1,
+        "go west": 1,
+        "take passkey": 1,
+        "examine dresser": 1,
+        "open dresser": 2,
+        "take all from dresser": 1,
+        "|ACTION|examine dresser|  \n|END|  \n\n(Note: There is no need to change anything else in the message format you provided; the action is simply included within the given structure.)": 1,
+        "|ACTION|take all from dresser|  \n|END|": 1,
+        "|ACTION|look|  \n|END|": 20,
+        "|ACTION|go east|  \n|END|": 15,
+        "|ACTION|go north|  \n|END|": 12,
+        "|ACTION|go west|  \n|END|": 8,
+        "|ACTION|go south|  \n|END|": 9
+    },
+    "input_tokens": 72055,
+    "output_tokens": 884,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 1108178873,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "https://big-candies-worry.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

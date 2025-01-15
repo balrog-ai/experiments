@@ -1,0 +1,54 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "go east": 14,
+        "look": 3,
+        "go north": 15,
+        "go west": 14,
+        "take key": 1,
+        "go south": 13,
+        "look drawer": 3,
+        "close drawer": 1,
+        "look shelf": 2,
+        "take all from shelf": 2,
+        "open drawer": 1,
+        "take all from drawer": 1,
+        "```json\n{\n  \"action\": \"go north\"\n}\n```": 5,
+        "```json\n{\n  \"action\": \"look\"\n}\n```": 1,
+        "```json\n{\n  \"action\": \"go west\"\n}\n```": 1,
+        "```json\n{\n  \"action\": \"look drawer\"\n}\n```": 1,
+        "```json\n{\n  \"action\": \"go east\"\n}\n```": 1,
+        "```json\n{\n  \"action\": \"go south\"\n}\n```": 1
+    },
+    "input_tokens": 119174,
+    "output_tokens": 770,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 3264736645,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "https://big-candies-worry.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
