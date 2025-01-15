@@ -1,0 +1,58 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/putnext",
+    "action_frequency": {
+        "turn left": 8,
+        "go forward": 59,
+        "turn right": 8,
+        "pick up": 21,
+        "drop": 16,
+        "toggle": 16
+    },
+    "input_tokens": 102460,
+    "output_tokens": 1844,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 128,
+    "failed_candidates": [
+        "```json\n{\n  \"action\": \"go forward\"\n}\n```",
+        "```json\n{\n  \"action\": \"go forward\"\n}\n```",
+        "```json\n{\n  \"action\": \"drop\"\n}\n```",
+        "```json\n{\n  \"action\": \"drop\"\n}\n```",
+        "```json\n{\n  \"action\": \"go forward\"\n}\n```",
+        "```json\n{\n  \"action\": \"pick up\"\n}\n```",
+        "```json\n{\n  \"action\": \"go forward\"\n}\n```",
+        "```json\n{\n  \"action\": \"pick up\"\n}\n```",
+        "```json\n{\n  \"action\": \"go forward\"\n}\n```",
+        "```json\n{\n  \"action\": \"drop\"\n}\n```",
+        "```json\n{\n  \"action\": \"pick up\"\n}\n```",
+        "```json\n{\n  \"action\": \"go forward\"\n}\n```",
+        "```json\n{\n  \"action\": \"drop\"\n}\n```",
+        "```json\n{\n  \"action\": \"pick up\"\n}\n```"
+    ],
+    "mission": "put the blue ball next to the grey box",
+    "progression": 0.0,
+    "process_num": "ForkProcess-6",
+    "seed": 658165884,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

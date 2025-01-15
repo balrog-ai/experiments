@@ -1,0 +1,54 @@
+{
+    "task": "env/two_room-maybe_break_stop-goto_win-distr_rule",
+    "action_frequency": {
+        "left": 38,
+        "up": 4,
+        "right": 46,
+        "idle": 11,
+        "down": 1
+    },
+    "input_tokens": 445577,
+    "output_tokens": 1384,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "<|ACTION|>up",
+        "To progress, we need to change the current rules. The \"ball is win\" rule can be altered to make the \"door\" the new win condition. Here's the plan:\n\n1. Move to the left to reach the \"baba is you\" text.\n2. Move left again to reach the \"is\" text.\n3. Move left again to reach the \"you\" text.\n4. Move right to place \"you\" next to \"door\".\n5. Move right to place \"is\" next to \"door\".\n6. Move right to place \"baba\" next to \"door\".\n\nThis will create the new rule \"door is win\". Then, move right to reach the door and win the level.\n\n**Action Plan:**\n\n1. left\n2. left\n3. left\n4. right (place \"you\" next to \"door\")\n5. right (place \"is\" next to \"door\")\n6. right (place \"baba\" next to \"door\")\n7. right (move to the door and win)\n\nStart with the first action:\n\n**Action:** left",
+        "<|ACTION|>up",
+        "<|ACTION|>up",
+        "<|ACTION|>up",
+        "<|ACTION|>right",
+        "<|ACTION|>left",
+        "<|ACTION|>left",
+        "<|ACTION|>left",
+        "<|ACTION|>left",
+        "<|ACTION|>left"
+    ],
+    "target_plan": "break[wall is stop], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-24",
+    "seed": 1342509448,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

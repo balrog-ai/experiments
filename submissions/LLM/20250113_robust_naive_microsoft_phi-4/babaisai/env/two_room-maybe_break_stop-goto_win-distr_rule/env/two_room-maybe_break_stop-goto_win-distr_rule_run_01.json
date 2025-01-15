@@ -1,0 +1,54 @@
+{
+    "task": "env/two_room-maybe_break_stop-goto_win-distr_rule",
+    "action_frequency": {
+        "left": 21,
+        "right": 61,
+        "idle": 13,
+        "up": 3,
+        "down": 2
+    },
+    "input_tokens": 449386,
+    "output_tokens": 2138,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "<|ACTION|>down",
+        "<|ACTION|>right",
+        "move baba to is",
+        "<|ACTION|>left",
+        "move baba to is",
+        "<|ACTION|>left",
+        "<|ACTION|>up",
+        "move baba to is",
+        "<|ACTION|>right",
+        "move baba to is",
+        "move baba to is"
+    ],
+    "target_plan": "break[wall is stop], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-19",
+    "seed": 834500824,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

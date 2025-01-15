@@ -1,0 +1,62 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "examine bed": 4,
+        "take cookbook from bed": 2,
+        "go east": 8,
+        "examine sofa": 1,
+        "take cookbook from sofa": 1,
+        "go south": 11,
+        "take cookbook from table": 1,
+        "examine cookbook": 1,
+        "go north": 9,
+        "go west": 4,
+        "take knife from counter": 1,
+        "open frosted-glass door": 1,
+        "```json\n{\n  \"action\": \"go south\"\n}\n```": 6,
+        "```json\n{\n  \"action\": \"examine counter\"\n}\n```": 2,
+        "```json\n{\n  \"action\": \"examine fridge\"\n}\n```": 2,
+        "```json\n{\n  \"action\": \"open fridge\"\n}\n```": 2,
+        "```json\n{\n  \"action\": \"examine oven\"\n}\n```": 1,
+        "examine fridge": 1,
+        "take inventory": 1,
+        "```json\n{\n  \"action\": \"look\"\n}\n```": 3,
+        "```json\n{\n  \"action\": \"go north\"\n}\n```": 6,
+        "look": 1,
+        "```json\n{\n  \"action\": \"go east\"\n}\n```": 5,
+        "```json\n{\n  \"action\": \"go west\"\n}\n```": 3,
+        "```json\n{\n  \"action\": \"open door\"\n}\n```": 2,
+        "```json\n{\n  \"action\": \"examine door\"\n}\n```": 1
+    },
+    "input_tokens": 136385,
+    "output_tokens": 1085,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 3641516447,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "https://big-candies-worry.loca.lt/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

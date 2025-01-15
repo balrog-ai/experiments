@@ -1,0 +1,56 @@
+{
+    "task": "env/two_room-make_win-distr_rule",
+    "action_frequency": {
+        "right": 35,
+        "up": 18,
+        "left": 31,
+        "down": 2,
+        "idle": 14
+    },
+    "input_tokens": 419486,
+    "output_tokens": 2159,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "pick up rule is",
+        "pick up rule win",
+        "take win",
+        "take rule win",
+        "take rule win",
+        "take win",
+        "take rule win",
+        "take win",
+        "take rule win",
+        "move rule win right  \nmove rule win right  \nmove rule win right  \nmove rule win right  \nmove rule win right  \nmove rule win right  \nmove rule win up",
+        "move rule win right  \nmove rule win right  \nmove rule win right  \nmove rule win right  \nmove rule win right  \nmove rule win right  \nmove rule win up",
+        "move win right  \nmove win right  \nmove win right  \nmove win right  \nmove win right  \nmove win right  \nmove win up",
+        "move rule win right"
+    ],
+    "target_plan": "make[ball is win], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-7",
+    "seed": 118570488,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

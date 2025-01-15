@@ -1,0 +1,66 @@
+{
+    "task": "env/two_room-make_win-distr_obj_rule",
+    "action_frequency": {
+        "idle": 24,
+        "up": 9,
+        "down": 1,
+        "right": 66
+    },
+    "input_tokens": 462148,
+    "output_tokens": 2667,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "up, up, up, right, left, left, left, left, left, left",
+        "right, right, right, up, up, up, up, left, left, left, left, left, left",
+        "right, right, right, up, up, up, up, left, left, left, left, left, left",
+        "right, right, right, up, up, up, up, left, left, left, left, left, left",
+        "right, right, right, up, up, up, up, left, left, left, left, left, left",
+        "up, up, up, right, right, right, left, left, left, left, left, left",
+        "up, up, up, right, right, right, left, left, left, left, left, left",
+        "up, up, up, right, right, right, left, left, left, left, left, left",
+        "up, up, up, right, right, right, left, left, left, left, left, left",
+        "up, up, up, right, right, right, left, left, left, left, left, left",
+        "up, up, up, right, right, right, left, left, left, left, left, left",
+        "right, right, right, up, up, up, up, left, left, left, left, left, left",
+        "<|ACTION|>right",
+        "right, right, right, up, up, up, up, left, left, left, left, left, left",
+        "right, right, right, down, down, down, down, left, left, left, left, left, left",
+        "right, up, up, left, left, left, left, left, left, down, down, down, down",
+        "right, right, right, up, up, up, up, left, left, left, left, left, left, down, down, down, down",
+        "right, right, right, up, up, up, up, left, left, left, left, left, left, down, down, down, down",
+        "right, right, right, up, up, up, up, left, left, left, left, left, left, down, down, down, down",
+        "right, right, right, up, up, up, up, left, left, left, left, left, left, down, down, down, down",
+        "right, right, right, up, up, up, up, left, left, left, left, left, left, down, down, down, down",
+        "right, right, right, up, up, up, up, left, left, left, left, left, left, down, down, down, down",
+        "right, right, right, up, up, up, up, left, left, left, left, left, left, down, down, down, down",
+        "right, right, right, up, up, up, up, left, left, left, left, left, left, down, down, down, down"
+    ],
+    "target_plan": "make[key is win], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-1",
+    "seed": 3263561085,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

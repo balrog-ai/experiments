@@ -1,0 +1,46 @@
+{
+    "task": "env/make_win-distr_rule",
+    "action_frequency": {
+        "right": 57,
+        "up": 18,
+        "idle": 5,
+        "down": 1,
+        "left": 19
+    },
+    "input_tokens": 240990,
+    "output_tokens": 1708,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "left\n\nMove left to position the \"baba\" text block adjacent to \"you,\" allowing the formation of a new rule by moving \"you\" to create \"baba is ball.\" This will enable the ball to interact with the key, aligning with the goal to reach the \"win\" condition.",
+        "move right rule `key`",
+        "move right rule `key`"
+    ],
+    "target_plan": "make[ball is win], goto[ball]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-26",
+    "seed": 2524755792,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

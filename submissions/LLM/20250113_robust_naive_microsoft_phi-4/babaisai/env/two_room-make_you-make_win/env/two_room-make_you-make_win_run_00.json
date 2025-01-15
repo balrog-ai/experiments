@@ -1,0 +1,56 @@
+{
+    "task": "env/two_room-make_you-make_win",
+    "action_frequency": {
+        "left": 29,
+        "idle": 14,
+        "up": 5,
+        "right": 51,
+        "down": 1
+    },
+    "input_tokens": 462705,
+    "output_tokens": 2686,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "<|ACTION|>down",
+        "<|ACTION|>right",
+        "<|ACTION|>up",
+        "<|ACTION|>left",
+        "<|ACTION|>right",
+        "<|ACTION|>down",
+        "move rule `is` to position of `baba`",
+        "move `is` to baba",
+        "move `is` to baba",
+        "move rule `is` to rule `baba`",
+        "move `is` to baba",
+        "move `is` to baba",
+        "move `is` to baba"
+    ],
+    "target_plan": "make[ball is you], make[key is win], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-28",
+    "seed": 2371131794,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

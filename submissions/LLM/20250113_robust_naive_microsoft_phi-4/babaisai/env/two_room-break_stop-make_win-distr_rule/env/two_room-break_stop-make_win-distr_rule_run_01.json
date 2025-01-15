@@ -1,0 +1,44 @@
+{
+    "task": "env/two_room-break_stop-make_win-distr_rule",
+    "action_frequency": {
+        "right": 92,
+        "up": 2,
+        "left": 1,
+        "idle": 1,
+        "down": 4
+    },
+    "input_tokens": 449954,
+    "output_tokens": 1429,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "To progress towards the win condition, we need to change the rules by rearranging the text blocks. The immediate goal is to move the `win` rule closer to Baba, allowing Baba to win by reaching it.\n\nHere's the plan:\n1. Move the `win` rule closer to Baba by moving it to the right.\n2. Ensure that no `wall` blocks the path.\n\nCurrent position of `win`: 6 steps to the right and 1 step up.\nCurrent position of Baba: 1 step to the right.\n\nTo achieve this, let's move the `win` rule one step to the right.\n\n**Action:**\n\nright"
+    ],
+    "target_plan": "break[wall is stop], make[door is win], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-2",
+    "seed": 2508677835,
+    "agent": {
+        "type": "robust_naive",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "microsoft/phi-4",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 1024
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
