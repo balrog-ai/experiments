@@ -1,4 +1,4 @@
-# BALROG Robust Naive Baseline
+# BALROG DeepSeek R1 Distill Qwen 32B CoT
 We use naive zero-shot agents as the baseline for all the environments in BALROG.
 
 Specifically:
