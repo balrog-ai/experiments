@@ -1,0 +1,53 @@
+{
+    "task": "MiniHack-MazeWalk-15x15-v0",
+    "action_frequency": {
+        "north": 10,
+        "south": 15,
+        "east": 17,
+        "west": 28,
+        "northeast": 10,
+        "southeast": 17,
+        "southwest": 1,
+        "northwest": 2
+    },
+    "input_tokens": 294562,
+    "output_tokens": 112013,
+    "done": true,
+    "episode_return": -0.49000000000000027,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning."
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-3",
+    "seed": 1984837350,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "base_url": "http://localhost:8090/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

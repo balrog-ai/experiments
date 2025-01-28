@@ -1,0 +1,50 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "look": 5,
+        "go east": 14,
+        "go north": 11,
+        "go west": 12,
+        "take key": 1,
+        "go south": 14,
+        "unlock passageway with key": 1,
+        "open passageway": 1,
+        "unlock east door with key": 2,
+        "take Henderson's limited edition key": 1,
+        "Failed to obtain a valid action from the reasoning.": 1,
+        "unlock door north with Henderson's limited edition key": 1,
+        "unlock north with Henderson's limited edition key": 1,
+        "take passkey": 1
+    },
+    "input_tokens": 89508,
+    "output_tokens": 36787,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 66,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-8",
+    "seed": 687428725,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "turn left": 11,
+        "turn right": 9,
+        "go forward": 1
+    },
+    "input_tokens": 11645,
+    "output_tokens": 9968,
+    "done": true,
+    "episode_return": 0.7046874999999999,
+    "num_steps": 21,
+    "failed_candidates": [],
+    "mission": "go to the purple ball",
+    "progression": 1.0,
+    "process_num": "ForkProcess-6",
+    "seed": 2437730086,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

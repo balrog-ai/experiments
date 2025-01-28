@@ -1,0 +1,49 @@
+{
+    "task": "env/two_room-break_stop-goto_win-distr_obj",
+    "action_frequency": {
+        "left": 4,
+        "up": 5,
+        "idle": 6,
+        "right": 11,
+        "down": 3
+    },
+    "input_tokens": 100072,
+    "output_tokens": 50600,
+    "done": true,
+    "episode_return": 0.739,
+    "num_steps": 29,
+    "failed_candidates": [
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning."
+    ],
+    "target_plan": "break[wall is stop], goto[key]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-4",
+    "seed": 4043587841,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

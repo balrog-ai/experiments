@@ -1,0 +1,58 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "examine showcase": 1,
+        "take block of cheese": 1,
+        "take raw white tuna": 1,
+        "open south": 2,
+        "open sliding door": 1,
+        "go south": 4,
+        "go east": 8,
+        "open front door": 1,
+        "go north": 5,
+        "examine bed": 1,
+        "examine cookbook": 2,
+        "open fridge": 1,
+        "take yellow onion from fridge": 1,
+        "take red onion from counter": 4,
+        "go west": 5,
+        "Failed to obtain a valid action from the reasoning.": 6,
+        "take cookbook from counter": 1,
+        "open west": 1,
+        "open patio door": 1,
+        "take red apple": 1,
+        "take knife": 1,
+        "slice red apple with knife": 1
+    },
+    "input_tokens": 86399,
+    "output_tokens": 54241,
+    "done": true,
+    "episode_return": 134.0,
+    "num_steps": 50,
+    "failed_candidates": [],
+    "progression": 0.23529411764705882,
+    "process_num": "ForkProcess-5",
+    "seed": 3364822022,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

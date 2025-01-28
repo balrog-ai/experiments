@@ -1,0 +1,56 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "take Microsoft limited edition latchkey": 1,
+        "unlock north hatch with Microsoft limited edition latchkey": 2,
+        "unlock Microsoft limited edition hatch with Microsoft limited edition latchkey": 1,
+        "open Microsoft limited edition hatch": 1,
+        "go north": 10,
+        "go west": 12,
+        "take passkey": 1,
+        "go east": 14,
+        "go south": 10,
+        "unlock south hatch with passkey": 3,
+        "unlock hatch with passkey": 1,
+        "open hatch": 1,
+        "look": 1,
+        "open suitcase": 1,
+        "take suitcase": 1,
+        "inventory": 1,
+        "unlock suitcase with Microsoft limited edition latchkey": 1,
+        "Failed to obtain a valid action from the reasoning.": 1,
+        "goal": 6,
+        "take cd": 1
+    },
+    "input_tokens": 96187,
+    "output_tokens": 35077,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 70,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-3",
+    "seed": 2597619553,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

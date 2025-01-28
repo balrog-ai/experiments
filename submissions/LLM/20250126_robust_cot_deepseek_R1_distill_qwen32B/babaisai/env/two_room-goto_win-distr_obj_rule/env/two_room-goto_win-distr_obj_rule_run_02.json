@@ -1,0 +1,40 @@
+{
+    "task": "env/two_room-goto_win-distr_obj_rule",
+    "action_frequency": {
+        "left": 2,
+        "up": 4,
+        "right": 2
+    },
+    "input_tokens": 12466,
+    "output_tokens": 13693,
+    "done": true,
+    "episode_return": 0.9279999999999999,
+    "num_steps": 8,
+    "failed_candidates": [],
+    "target_plan": "goto[ball]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-6",
+    "seed": 3744462113,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
