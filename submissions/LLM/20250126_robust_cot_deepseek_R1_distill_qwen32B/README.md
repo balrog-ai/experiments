@@ -1,4 +1,4 @@
-# BALROG Robust Naive Baseline
+# BALROG DeepSeek R1 Distill Qwen 32B Chain of Thought
 To replicate DeepSeek R1 distill Qwen 32B with the robust chain of thought agent template:
 
 ```
