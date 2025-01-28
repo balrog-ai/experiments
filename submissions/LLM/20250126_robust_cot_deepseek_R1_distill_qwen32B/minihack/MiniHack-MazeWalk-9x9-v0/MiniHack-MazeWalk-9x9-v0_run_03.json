@@ -1,0 +1,38 @@
+{
+    "task": "MiniHack-MazeWalk-9x9-v0",
+    "action_frequency": {
+        "northeast": 2
+    },
+    "input_tokens": 1234,
+    "output_tokens": 1068,
+    "done": true,
+    "episode_return": 1.0,
+    "num_steps": 2,
+    "failed_candidates": [],
+    "progression": 1.0,
+    "end_reason": 2,
+    "process_num": "ForkProcess-4",
+    "seed": 2312404892,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "base_url": "http://localhost:8090/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

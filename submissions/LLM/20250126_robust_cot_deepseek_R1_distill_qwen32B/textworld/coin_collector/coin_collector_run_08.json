@@ -1,0 +1,41 @@
+{
+    "task": "coin_collector",
+    "action_frequency": {
+        "go east": 27,
+        "go west": 17,
+        "go south": 15,
+        "go north": 15,
+        "Failed to obtain a valid action from the reasoning.": 6
+    },
+    "input_tokens": 77751,
+    "output_tokens": 77290,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-3",
+    "seed": 1454633991,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

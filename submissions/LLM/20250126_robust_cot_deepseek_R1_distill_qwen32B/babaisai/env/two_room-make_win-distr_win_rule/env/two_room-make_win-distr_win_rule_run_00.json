@@ -1,0 +1,58 @@
+{
+    "task": "env/two_room-make_win-distr_win_rule",
+    "action_frequency": {
+        "idle": 15,
+        "right": 49,
+        "left": 19,
+        "up": 10,
+        "down": 7
+    },
+    "input_tokens": 521938,
+    "output_tokens": 181890,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning."
+    ],
+    "target_plan": "make[door is win], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-5",
+    "seed": 2460648685,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

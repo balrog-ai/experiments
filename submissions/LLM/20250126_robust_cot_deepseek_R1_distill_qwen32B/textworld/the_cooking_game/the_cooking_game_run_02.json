@@ -1,0 +1,63 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "open sliding door": 1,
+        "go south": 13,
+        "go east": 12,
+        "open front door": 1,
+        "go north": 12,
+        "examine cookbook": 4,
+        "take block of cheese": 1,
+        "go west": 7,
+        "open fridge": 1,
+        "take yellow onion from fridge": 1,
+        "take red apple": 1,
+        "take knife": 1,
+        "open frosted-glass door": 1,
+        "open patio door": 2,
+        "Failed to obtain a valid action from the reasoning.": 6,
+        "chop red apple with knife": 1,
+        "chop block of cheese with knife": 1,
+        "take block of cheese from fridge": 3,
+        "take block of cheese from counter": 2,
+        "take yellow apple": 1,
+        "take red hot pepper": 1,
+        "take cookbook": 1,
+        "unlock patio door with red hot pepper": 2,
+        "take tomato": 1,
+        "take raw yellow potato": 1,
+        "take raw purple potato": 1,
+        "take raw purple potato from counter": 1
+    },
+    "input_tokens": 152432,
+    "output_tokens": 91261,
+    "done": true,
+    "episode_return": 186.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.17647058823529413,
+    "process_num": "ForkProcess-2",
+    "seed": 3901218986,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 0.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
