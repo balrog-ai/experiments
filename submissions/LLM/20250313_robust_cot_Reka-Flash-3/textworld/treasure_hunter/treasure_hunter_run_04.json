@@ -1,0 +1,57 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "go east": 7,
+        "go north": 7,
+        "go west": 7,
+        "take key": 1,
+        "go south": 6,
+        "unlock south passageway with key": 6,
+        "open south passageway": 9,
+        "open south": 3,
+        "open closed passageway": 5,
+        "open closed door": 1,
+        "open door south": 4,
+        "open passageway": 1,
+        "unlock south door with key": 4,
+        "look": 6,
+        "open closed passageway south": 2,
+        "Failed to obtain a valid action from the reasoning.": 1,
+        "open closed south passageway": 6,
+        "inventory": 1,
+        "open the closed south passageway": 1,
+        "unlock south door with the key": 1,
+        "open the south door": 1
+    },
+    "input_tokens": 92331,
+    "output_tokens": 113160,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-6",
+    "seed": 965375686,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "RekaAI/reka-flash-3",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

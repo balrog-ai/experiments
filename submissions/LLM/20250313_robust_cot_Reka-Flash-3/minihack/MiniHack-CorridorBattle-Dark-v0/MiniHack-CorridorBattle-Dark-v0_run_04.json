@@ -1,0 +1,53 @@
+{
+    "task": "MiniHack-CorridorBattle-Dark-v0",
+    "action_frequency": {
+        "north": 14,
+        "east": 10,
+        "west": 11,
+        "southeast": 7,
+        "south": 10,
+        "southwest": 9,
+        "northeast": 5,
+        "northwest": 2
+    },
+    "input_tokens": 212974,
+    "output_tokens": 94882,
+    "done": true,
+    "episode_return": -0.20000000000000004,
+    "num_steps": 68,
+    "failed_candidates": [
+        "attack-east",
+        "attack-east",
+        "attack-east",
+        "attack-east",
+        "attack southeast",
+        "attack east",
+        "attack-east"
+    ],
+    "progression": 0.0,
+    "end_reason": 1,
+    "process_num": "ForkProcess-11",
+    "seed": 3613312800,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "RekaAI/reka-flash-3",
+        "base_url": "http://0.0.0.0:8090/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pickup",
+    "action_frequency": {
+        "turn left": 9,
+        "turn right": 8,
+        "go forward": 19,
+        "pick up": 1
+    },
+    "input_tokens": 26011,
+    "output_tokens": 66003,
+    "done": true,
+    "episode_return": 0.47968749999999993,
+    "num_steps": 37,
+    "failed_candidates": [
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning."
+    ],
+    "mission": "pick up the yellow ball",
+    "progression": 1.0,
+    "process_num": "ForkProcess-13",
+    "seed": 3551082566,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "RekaAI/reka-flash-3",
+        "base_url": "http://0.0.0.0:8090/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

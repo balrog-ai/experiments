@@ -1,0 +1,59 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "examine showcase": 1,
+        "open south": 1,
+        "open sliding door": 1,
+        "go south": 9,
+        "go east": 15,
+        "open front door": 1,
+        "go north": 13,
+        "open patio door": 1,
+        "go west": 11,
+        "open wooden door": 1,
+        "open toolbox": 1,
+        "Failed to obtain a valid action from the reasoning.": 8,
+        "examine workbench": 1,
+        "examine cookbook": 3,
+        "examine BBQ": 3,
+        "open fridge": 2,
+        "open frosted-glass door": 1,
+        "prepare meal": 1,
+        "examine patio table": 1,
+        "take red onion": 1,
+        "take white onion": 1,
+        "take red apple": 2,
+        "take yellow onion from fridge": 1
+    },
+    "input_tokens": 158656,
+    "output_tokens": 143221,
+    "done": true,
+    "episode_return": 32.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.058823529411764705,
+    "process_num": "ForkProcess-16",
+    "seed": 1538045190,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "RekaAI/reka-flash-3",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

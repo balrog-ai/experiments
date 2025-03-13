@@ -1,0 +1,66 @@
+{
+    "task": "MiniHack-Boxoban-Hard-v0",
+    "action_frequency": {
+        "south": 21,
+        "west": 20,
+        "north": 43,
+        "east": 16
+    },
+    "input_tokens": 595334,
+    "output_tokens": 195898,
+    "done": true,
+    "episode_return": 0.0009999999999999237,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "push east",
+        "push north",
+        "push east",
+        "push south",
+        "Failed to obtain a valid action from the reasoning.",
+        "push east",
+        "push east",
+        "push east",
+        "push south",
+        "push south",
+        "push south",
+        "push south",
+        "push south",
+        "use d",
+        "use d",
+        "use d",
+        "push southeast",
+        "push southeast",
+        "push east",
+        "use d",
+        "push southeast",
+        "push southeast"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-7",
+    "seed": 3496255020,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "RekaAI/reka-flash-3",
+        "base_url": "http://0.0.0.0:8090/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

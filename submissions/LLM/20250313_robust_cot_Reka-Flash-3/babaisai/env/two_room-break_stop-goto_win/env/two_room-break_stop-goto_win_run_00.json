@@ -1,0 +1,67 @@
+{
+    "task": "env/two_room-break_stop-goto_win",
+    "action_frequency": {
+        "right": 13,
+        "down": 6,
+        "idle": 24,
+        "left": 6,
+        "up": 5
+    },
+    "input_tokens": 223135,
+    "output_tokens": 178210,
+    "done": true,
+    "episode_return": 0.514,
+    "num_steps": 54,
+    "failed_candidates": [
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning."
+    ],
+    "target_plan": "break[wall is stop], goto[ball]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-18",
+    "seed": 3742071835,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "RekaAI/reka-flash-3",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
