@@ -1,0 +1,56 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "look": 8,
+        "go north": 5,
+        "take key": 1,
+        "go east": 4,
+        "go south": 5,
+        "go west": 4,
+        "open south": 3,
+        "open closed passageway": 7,
+        "unlock closed passageway with key": 8,
+        "unlock closed door with key": 2,
+        "open drawer": 1,
+        "unlock south door with key": 3,
+        "inventory": 3,
+        "unlock south passageway with key": 4,
+        "unlock door south with key": 6,
+        "unlock south with key": 1,
+        "open south door": 2,
+        "open south passageway": 8,
+        "open closed south passageway": 2,
+        "open door south": 3
+    },
+    "input_tokens": 88369,
+    "output_tokens": 116564,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.0,
+    "process_num": "ForkProcess-7",
+    "seed": 330032560,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "RekaAI/reka-flash-3",
+        "base_url": "http://0.0.0.0:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "task": "MiniHack-Boxoban-Medium-v0",
+    "action_frequency": {
+        "east": 26,
+        "west": 21,
+        "south": 20,
+        "north": 33
+    },
+    "input_tokens": 601704,
+    "output_tokens": 187089,
+    "done": true,
+    "episode_return": -0.09900000000000009,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Failed to obtain a valid action from the reasoning.",
+        "push west",
+        "push west",
+        "Failed to obtain a valid action from the reasoning.",
+        "push west",
+        "push west",
+        "push east",
+        "push west",
+        "push west",
+        "southwest",
+        "push east",
+        "push west",
+        "push west",
+        "push west"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-14",
+    "seed": 304105040,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "RekaAI/reka-flash-3",
+        "base_url": "http://0.0.0.0:8090/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
