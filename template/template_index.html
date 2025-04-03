@@ -68,6 +68,129 @@
               <i class="fa fa-upload"></i> Submit&nbsp;
             </button>
           </a>
+          <a>
+            <button class="outline" id="toggle-style-btn">
+              <i class="fa fa-circle"> Mode </i> 
+            </button>
+          </a>
+
+          <script>
+            // Define the style block as a string
+            const styleBlock = `
+              <style id="dynamic-style">
+                :root {
+                  --black: #000000;
+                  --green: #699f56;
+                  --forest: #032f14;
+                  --blue: #34566f;
+                  --grey: #40434b;
+                  --grey2: #d8d8d8;
+                  --red: #aa4926;
+                  --orange: #ff7040;
+                  --lightgreen: #C2D8B9;
+                  --darkorange: #d54718;
+          
+                  /* BALROG */
+                  /* --accent_color: rgb(200, 40, 40); */
+                  --accent_color: rgb(240, 180, 95);
+                  --outline_accent_color: #000;
+                  /* --accent_color: #FF5733; */
+                  --lighted_accent_color: rgb(90, 80, 255);
+                  --dark_accent_color: transparent;
+          
+                  /* Dark grey and gold */
+                  /* --accent_color: rgb(242, 182, 98);
+                  --dark_accent_color: rgb(41, 49, 60); */
+          
+                  /* Blue and red */
+                  /* --accent_color: #e91518;
+                  --dark_accent_color: #0454f4; */
+                  --odd_line_color: transparent;
+                  --even_line_color: transparent;
+                  --slate_gray: transparent;
+                }
+          
+                body {
+                  background-image: url('img/background.png'); /* Replace 'img/background.jpg' with your desired image path */
+                  background-size: cover; /* Ensures the image covers the entire page */
+                  background-repeat: no-repeat; /* Prevents the image from repeating */
+                  background-attachment: fixed; /* Keeps the image fixed during scrolling */
+                }
+          
+                body, h1, h2, h3, h4, h5, h6, p, a, table, th, td {
+                  color: #fff !important;
+                }
+                
+                .number, .label-date, .text-content, .sticky-header-content {
+                  color: #fff !important;
+                }
+          
+                .label-date{
+                  color: #000 !important;
+                  background-color: #fff !important;
+                }
+        
+                button {
+        
+                &.outline {
+                  color: var(--outline_accent_color);
+                }
+
+                &.outline:hover {
+                  color: #40434b;
+                  border-color: #40434b;
+                  transition: all 0.2s linear;
+                }
+
+              </style>
+            `;
+          
+            const toggleButton = document.getElementById('toggle-style-btn');
+          
+            // Function to apply dark mode
+            function enableDarkMode() {
+              if (!document.getElementById('dynamic-style')) {
+                document.head.insertAdjacentHTML('beforeend', styleBlock);
+              }
+              localStorage.setItem('darkMode', 'enabled');
+              
+              // Update button text without removing the icon
+              toggleButton.innerHTML = '<i class="fa fa-moon">  </i> Mode';
+            }
+
+            // Function to disable dark mode
+            function disableDarkMode() {
+              const existingStyle = document.getElementById('dynamic-style');
+              if (existingStyle) {
+                existingStyle.remove();
+              }
+              localStorage.setItem('darkMode', 'disabled');
+              
+              // Update button text without removing the icon
+              toggleButton.innerHTML = '<i class="fa fa-circle">  </i> Mode';
+            }
+          
+            // Check localStorage on page load
+            window.addEventListener('DOMContentLoaded', () => {
+              const darkMode = localStorage.getItem('darkMode');
+              if (darkMode === 'enabled') {
+                enableDarkMode();
+              } else {
+                disableDarkMode();
+              }
+            });
+          
+            // Add event listener to the button
+            toggleButton.addEventListener('click', () => {
+              const darkMode = localStorage.getItem('darkMode');
+              if (darkMode === 'enabled') {
+                disableDarkMode();
+              } else {
+                enableDarkMode();
+              }
+            });
+          </script>
+
           <!-- <a href="viewer.html">
             <button class="outline">
               <i class="fa fa-chart-simple"></i> Analysis&nbsp;
@@ -316,6 +439,7 @@
   <!-- Include jQuery and DataTables JS -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="js/theme.js"></script>
 
   <!-- Initialize DataTables -->
   <script>
