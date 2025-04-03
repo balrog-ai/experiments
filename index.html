@@ -117,8 +117,26 @@
                   background-attachment: fixed; /* Keeps the image fixed during scrolling */
                 }
           
-                body, h1, h2, h3, h4, h5, h6, p, a, table, th, td {
+                body, h1, h2, h3, h4, h5, h6, p, a, .tablinks, table, th, td {
                   color: #fff !important;
+                }
+
+                ul.tab {
+                  background-color: transparent !important;
+                }
+
+                ul.tab {
+                  background-color: #000;
+                }
+
+                .tablinks
+                {
+                  background-color: #333;
+                }
+
+                ul.tab li a:focus,.active
+                {
+                  background-color: #121212;
                 }
                 
                 .number, .label-date, .text-content, .sticky-header-content {
@@ -153,9 +171,15 @@
                 document.head.insertAdjacentHTML('beforeend', styleBlock);
               }
               localStorage.setItem('darkMode', 'enabled');
-              
+
               // Update button text without removing the icon
               toggleButton.innerHTML = '<i class="fa fa-moon">  </i> Mode';
+
+              // Change diagram to dark version
+              const diagram = document.querySelector('img[src="img/diagram.png"]');
+              if (diagram) {
+                diagram.src = 'img/diagram_dark.png';
+              }
             }
 
             // Function to disable dark mode
@@ -165,10 +189,17 @@
                 existingStyle.remove();
               }
               localStorage.setItem('darkMode', 'disabled');
-              
+
               // Update button text without removing the icon
               toggleButton.innerHTML = '<i class="fa fa-circle">  </i> Mode';
+
+              // Change diagram back to light version
+              const diagram = document.querySelector('img[src="img/diagram_dark.png"]');
+              if (diagram) {
+                diagram.src = 'img/diagram.png';
+              }
             }
+
           
             // Check localStorage on page load
             window.addEventListener('DOMContentLoaded', () => {
