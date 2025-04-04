@@ -204,7 +204,7 @@
             // Check localStorage on page load
             window.addEventListener('DOMContentLoaded', () => {
               const darkMode = localStorage.getItem('darkMode');
-              if (darkMode === 'enabled') {
+              if (darkMode === null || darkMode === 'enabled') {
                 enableDarkMode();
               } else {
                 disableDarkMode();
