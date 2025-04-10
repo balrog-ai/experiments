@@ -1,0 +1,39 @@
+{
+    "task": "env/two_room-goto_win",
+    "action_frequency": {
+        "right": 1,
+        "up": 1
+    },
+    "input_tokens": 1354,
+    "output_tokens": 5528,
+    "done": true,
+    "episode_return": 0.982,
+    "num_steps": 2,
+    "failed_candidates": [],
+    "target_plan": "goto[key]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-4",
+    "seed": 3980936228,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "nvidia",
+        "model_id": "deepseek-ai/deepseek-r1",
+        "base_url": "https://integrate.api.nvidia.com/v1",
+        "generate_kwargs": {
+            "temperature": null,
+            "max_tokens": 8192
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

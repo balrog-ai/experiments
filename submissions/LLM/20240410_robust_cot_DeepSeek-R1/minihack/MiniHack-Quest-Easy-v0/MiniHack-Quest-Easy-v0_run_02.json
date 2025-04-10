@@ -1,0 +1,63 @@
+{
+    "task": "MiniHack-Quest-Easy-v0",
+    "action_frequency": {
+        "north": 20,
+        "south": 14,
+        "east": 10,
+        "search": 28,
+        "west": 3,
+        "northwest": 2
+    },
+    "input_tokens": 304741,
+    "output_tokens": 150012,
+    "done": true,
+    "episode_return": -0.23000000000000007,
+    "num_steps": 77,
+    "failed_candidates": [
+        "YOUR_CHOSEN_ACTION",
+        "action",
+        "kick north",
+        "YOUR_CHOSEN_ACTION",
+        "kick south",
+        "kick south",
+        "kick south",
+        "kick north",
+        "kick south",
+        "kick south",
+        "kick south",
+        "kick west",
+        "kick west",
+        "kick southwest",
+        "apply d east",
+        "apply d",
+        "kick west",
+        "kick west",
+        "kick west"
+    ],
+    "progression": 0.0,
+    "end_reason": 1,
+    "process_num": "ForkProcess-2",
+    "seed": 1001917428,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "nvidia",
+        "model_id": "deepseek-ai/deepseek-r1",
+        "base_url": "https://integrate.api.nvidia.com/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

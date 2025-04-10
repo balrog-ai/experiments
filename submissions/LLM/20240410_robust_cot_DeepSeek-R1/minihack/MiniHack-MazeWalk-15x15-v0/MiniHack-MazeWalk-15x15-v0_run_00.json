@@ -1,0 +1,45 @@
+{
+    "task": "MiniHack-MazeWalk-15x15-v0",
+    "action_frequency": {
+        "northeast": 8,
+        "west": 4,
+        "south": 7,
+        "east": 8,
+        "southeast": 4,
+        "northwest": 6,
+        "southwest": 11,
+        "north": 3
+    },
+    "input_tokens": 139128,
+    "output_tokens": 75203,
+    "done": true,
+    "episode_return": 0.82,
+    "num_steps": 51,
+    "failed_candidates": [],
+    "progression": 1.0,
+    "end_reason": 2,
+    "process_num": "ForkProcess-5",
+    "seed": 3006526592,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "nvidia",
+        "model_id": "deepseek-ai/deepseek-r1",
+        "base_url": "https://integrate.api.nvidia.com/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
