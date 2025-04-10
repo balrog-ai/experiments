@@ -1,0 +1,42 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "turn left": 16,
+        "turn right": 20,
+        "go forward": 32,
+        "toggle": 8,
+        "pick up": 1
+    },
+    "input_tokens": 49239,
+    "output_tokens": 201094,
+    "done": true,
+    "episode_return": 0.45859375,
+    "num_steps": 77,
+    "failed_candidates": [],
+    "mission": "go to the purple key after you pick up the blue key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-2",
+    "seed": 2678473060,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "nvidia",
+        "model_id": "deepseek-ai/deepseek-r1",
+        "base_url": "https://integrate.api.nvidia.com/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "task": "env/two_room-make_wall_win",
+    "action_frequency": {
+        "left": 24,
+        "up": 13,
+        "idle": 13,
+        "right": 33,
+        "down": 17
+    },
+    "input_tokens": 388099,
+    "output_tokens": 430385,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning.",
+        "Failed to obtain a valid action from the reasoning."
+    ],
+    "target_plan": "break[wall is stop], make[wall is win], goto[wall]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-8",
+    "seed": 1592497223,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "nvidia",
+        "model_id": "deepseek-ai/deepseek-r1",
+        "base_url": "https://integrate.api.nvidia.com/v1",
+        "generate_kwargs": {
+            "temperature": null,
+            "max_tokens": 8192
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

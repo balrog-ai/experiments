@@ -1,0 +1,46 @@
+{
+    "task": "MiniHack-Boxoban-Hard-v0",
+    "action_frequency": {
+        "north": 21,
+        "east": 35,
+        "south": 19,
+        "west": 25
+    },
+    "input_tokens": 633097,
+    "output_tokens": 296420,
+    "done": true,
+    "episode_return": -0.09900000000000009,
+    "num_steps": 100,
+    "failed_candidates": [
+        "northeast",
+        "Failed to obtain a valid action from the reasoning.",
+        "southeast",
+        "southeast"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-2",
+    "seed": 1601937536,
+    "agent": {
+        "type": "robust_cot",
+        "remember_cot": true,
+        "max_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "nvidia",
+        "model_id": "deepseek-ai/deepseek-r1",
+        "base_url": "https://integrate.api.nvidia.com/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192
+        },
+        "timeout": 60,
+        "max_retries": 10,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
