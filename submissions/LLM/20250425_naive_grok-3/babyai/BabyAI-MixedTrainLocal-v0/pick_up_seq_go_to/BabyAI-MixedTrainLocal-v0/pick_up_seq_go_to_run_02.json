@@ -1,0 +1,43 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/pick_up_seq_go_to",
+    "action_frequency": {
+        "turn right": 22,
+        "go forward": 6,
+        "turn left": 22,
+        "pick up": 1
+    },
+    "input_tokens": 41947,
+    "output_tokens": 229,
+    "done": true,
+    "episode_return": 0.64140625,
+    "num_steps": 51,
+    "failed_candidates": [
+        "turn it seems like Ive been stuck in a loop of turning left and right without making progress Let me try a different approach to reach the blue ball\n\nSince the blue ball is  steps right and  steps forward from my current orientation Ill turn right to face the direction where the ball is closer to my forward path then move forward\n\nAction: turn right"
+    ],
+    "mission": "go to the blue ball after you pick up the yellow key",
+    "progression": 1.0,
+    "process_num": "ForkProcess-2",
+    "seed": 1620467137,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "xai",
+        "model_id": "grok-3-latest",
+        "base_url": "https://api.x.ai/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 1,
+        "delay": 5,
+        "alternate_roles": false
+    }
+}
