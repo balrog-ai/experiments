@@ -1,6 +1,9 @@
 # BALROG DeepSeek R1 Chain of Thought
 To replicate DeepSeek R1 with the robust chain of thought agent template using NVIDIA NIM
 
+
+export OPENAI_API_KEY=YOUR-NVIDIA-NIM-API-KEY
+
 ```
 python3 -m eval \
   agent.type=robust_cot \
