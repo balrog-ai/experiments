@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-goto_win-distr_win_rule",
+    "action_frequency": {
+        "idle": 1,
+        "up": 3,
+        "down": 3,
+        "left": 3
+    },
+    "input_tokens": 23099,
+    "output_tokens": 9,
+    "done": true,
+    "episode_return": 0.91,
+    "num_steps": 10,
+    "failed_candidates": [
+        ""
+    ],
+    "target_plan": "goto[ball]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-10",
+    "seed": 167679816,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 1,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "gemini",
+        "model_id": "gemini-2.5-pro-exp-03-25",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

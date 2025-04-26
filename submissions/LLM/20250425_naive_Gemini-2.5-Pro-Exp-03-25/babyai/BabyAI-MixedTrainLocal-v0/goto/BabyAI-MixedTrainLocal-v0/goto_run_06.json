@@ -1,0 +1,40 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/goto",
+    "action_frequency": {
+        "turn left": 3,
+        "turn right": 3,
+        "go forward": 2
+    },
+    "input_tokens": 2807,
+    "output_tokens": 16,
+    "done": true,
+    "episode_return": 0.8875,
+    "num_steps": 8,
+    "failed_candidates": [],
+    "mission": "go to the blue box",
+    "progression": 1.0,
+    "process_num": "ForkProcess-2",
+    "seed": 3318094293,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "gemini",
+        "model_id": "gemini-2.5-pro-exp-03-25",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

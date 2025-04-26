@@ -1,0 +1,49 @@
+{
+    "task": "treasure_hunter",
+    "action_frequency": {
+        "goal": 48,
+        "look": 1,
+        "open locker": 2,
+        "go north": 4,
+        "take passkey": 1,
+        "inventory": 1,
+        "go south": 2,
+        "unlock locker with passkey": 1,
+        "take American style passkey from locker": 1,
+        "unlock American style passageway with American style passkey": 1,
+        "open American style passageway": 1,
+        "go west": 3,
+        "take potato": 1
+    },
+    "input_tokens": 44203,
+    "output_tokens": 104,
+    "done": true,
+    "episode_return": 1.0,
+    "num_steps": 67,
+    "failed_candidates": [],
+    "progression": 1.0,
+    "process_num": "ForkProcess-1",
+    "seed": 3367411920,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "gemini",
+        "model_id": "gemini-2.5-pro-exp-03-25",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
