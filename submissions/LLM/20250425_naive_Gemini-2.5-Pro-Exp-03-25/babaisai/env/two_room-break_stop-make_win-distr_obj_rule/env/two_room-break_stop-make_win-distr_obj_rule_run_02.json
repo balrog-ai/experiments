@@ -1,0 +1,54 @@
+{
+    "task": "env/two_room-break_stop-make_win-distr_obj_rule",
+    "action_frequency": {
+        "up": 15,
+        "right": 15,
+        "down": 17,
+        "left": 8,
+        "idle": 11
+    },
+    "input_tokens": 222767,
+    "output_tokens": 100270,
+    "done": true,
+    "episode_return": 0.4059999999999999,
+    "num_steps": 66,
+    "failed_candidates": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "target_plan": "break[wall is stop], make[key is win], goto[key]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-3",
+    "seed": 1436549802,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "gemini",
+        "model_id": "gemini-2.5-pro-exp-03-25",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
