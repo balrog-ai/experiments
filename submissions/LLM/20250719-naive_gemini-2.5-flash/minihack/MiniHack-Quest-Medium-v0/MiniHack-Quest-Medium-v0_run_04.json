@@ -1,0 +1,55 @@
+{
+    "task": "MiniHack-Quest-Medium-v0",
+    "action_frequency": {
+        "east": 27,
+        "south": 17,
+        "north": 14,
+        "southwest": 8,
+        "west": 15,
+        "open": 2,
+        "search": 3,
+        "northeast": 1,
+        "southeast": 6,
+        "pickup": 4,
+        "eat": 3
+    },
+    "input_tokens": 417985,
+    "output_tokens": 442,
+    "done": true,
+    "episode_return": -0.3200000000000001,
+    "num_steps": 100,
+    "failed_candidates": [
+        "",
+        "think\nThe agent just moved east and was bitten by a giant rat The giant rat is now at x y which is east of the agent The agent should attack the rat\n\nThe current map shows the agent at  and the rat at ",
+        "g",
+        "think\nThe agent is at   There is a giant rat at   The agent is damaged and should heal The agent has apples and carrots in the inventory\nThe agent should eat an apple to heal\nThe previous action was north which moved the agent to  \nThe agent has g:  uncursed apples and h:  uncursed carrots\nThe agent previously tried to eat g but the environment returned What do you want to eat gh or  This is because eat is an action that takes an item as an argument The agent needs to choose the item The item g corresponds to apples\nSo the correct action should be eat followed by g\nSince the previous action was north and the prompt asked for the next action and the What do you want to eat prompt implies an input is needed the eat action should be repeated to get to the prompt for which item to eat Then the g for apples should be provided Since the model can only output one action it should try eat again",
+        "g",
+        "g"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-2",
+    "seed": 4236578312,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "gemini",
+        "model_id": "gemini-2.5-flash",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

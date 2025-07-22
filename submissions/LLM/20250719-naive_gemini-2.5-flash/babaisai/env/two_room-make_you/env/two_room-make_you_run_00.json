@@ -1,0 +1,60 @@
+{
+    "task": "env/two_room-make_you",
+    "action_frequency": {
+        "up": 41,
+        "down": 5,
+        "idle": 17,
+        "right": 13,
+        "left": 24
+    },
+    "input_tokens": 376138,
+    "output_tokens": 333,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "",
+        "",
+        "",
+        "",
+        " Move up: This will place BABA on top of the is text block of the wall is stop rule\n Move right: This will place BABA on top of the stop text block\n Move right: BABA will push the stop text block one step to the right breaking the wall is stop rule Walls will no longer be stop\n Move right: BABA moves past the location of the stop block closer to the wall\n Move right: BABA moves through the wall since its no longer stop\n Move right: BABA moves closer to the key\n Move down: BABA reaches the key which is defined as WIN\n\nGiven the current observation my position is \nrule is is at \nrule stop is at \nkey object is at \n\nLets try the first step:\n\nup",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "target_plan": "make[door is you], goto[key]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-2",
+    "seed": 3148654370,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "gemini",
+        "model_id": "gemini-2.5-flash",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
