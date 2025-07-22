@@ -1,0 +1,68 @@
+{
+    "task": "env/two_room-make_you-make_win",
+    "action_frequency": {
+        "up": 30,
+        "idle": 25,
+        "right": 13,
+        "left": 29,
+        "down": 3
+    },
+    "input_tokens": 339959,
+    "output_tokens": 191,
+    "done": true,
+    "episode_return": 0.0,
+    "num_steps": 100,
+    "failed_candidates": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "The goal is to reach the WIN condition Currently BABA IS YOU and WALL IS STOP Theres a wall blocking the path to the key object and the is win text Since WALL IS STOP I cannot move through the wall\n\nThe WALL IS STOP rule is formed by text blocks:\n rule wall  step to the left\n rule is  step to the left\n rule stop  step to the left",
+        "",
+        ""
+    ],
+    "target_plan": "make[key is you], make[door is win], goto[door]",
+    "progression": 0.0,
+    "process_num": "ForkProcess-3",
+    "seed": 2459847700,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "gemini",
+        "model_id": "gemini-2.5-flash",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

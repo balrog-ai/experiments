@@ -1,0 +1,46 @@
+{
+    "task": "MiniHack-CorridorBattle-Dark-v0",
+    "action_frequency": {
+        "west": 22,
+        "south": 16,
+        "east": 42,
+        "northwest": 3,
+        "north": 13,
+        "northeast": 3,
+        "southwest": 1
+    },
+    "input_tokens": 395981,
+    "output_tokens": 107,
+    "done": true,
+    "episode_return": -0.13999999999999999,
+    "num_steps": 100,
+    "failed_candidates": [
+        "eat"
+    ],
+    "progression": 0.0,
+    "end_reason": -1,
+    "process_num": "ForkProcess-3",
+    "seed": 1639985052,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "gemini",
+        "model_id": "gemini-2.5-flash",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

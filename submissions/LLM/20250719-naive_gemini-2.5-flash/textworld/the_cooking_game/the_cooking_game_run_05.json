@@ -1,0 +1,59 @@
+{
+    "task": "the_cooking_game",
+    "action_frequency": {
+        "": 1,
+        "go east": 9,
+        "go west": 13,
+        "open wooden door": 1,
+        "go north": 16,
+        "open toolbox": 1,
+        "examine toolbox": 1,
+        "look": 4,
+        "go south": 20,
+        "open sliding patio door": 1,
+        "open fiberglass door": 1,
+        "open sliding door": 1,
+        "think\nThe goal is to find the recipe prepare food according to it and finally eat the meal\nIve explored a few rooms: Livingroom Driveway Street Supermarket Corridor Backyard Shed Garden\nI havent found a recipe yet I also havent found any cooking tools except a BBQ in the Backyard\n\nMy current location is Backyard\nFrom Backyard I can go north to Shed west to Corridor or east to Garden\nIve been to Shed empty toolbox empty workbench Garden vegetablesfruits on the floor\nI need to find the recipe first Recipes are usually in a kitchen or a similar place I havent found a kitchen yet\nThe Corridor has exits north south west I came from west Livingroom I went east Backyard\nLets try going south from the Corridor\nSo from Backyard go west to Corridor then try another direction": 1,
+        "think\nI have explored:\n Backyard: BBQ patio chair empty patio table empty Exits: north Shed west Corridor east Garden\n Shed: toolbox empty workbench empty Exits: south Backyard\n Garden: vegetables fruits on floor Exits: west Backyard\n Corridor: Exits: east Backyard north Bedroom south Bathroom west Livingroom\n Bathroom: toilet empty Exits: north Corridor\n Bedroom: bed empty Exits: south Corridor\n Livingroom: sofa empty Exits: north Driveway east Corridor south unknown\n Driveway: Exits: south Livingroom north Street\n Street: Exits: east Supermarket south Driveway\n Supermarket: showcase empty Exits: west Street\n\nI still need to find the recipe and a kitchen\nIve gone north from Livingroom to Driveway then north to Street then east to Supermarket None of these seem to be a kitchen\nI need to find a new path\nFrom Livingroom I can go south I havent explored that direction\n\nCurrent location: Driveway\nPath to Livingroom: go south\nPath to Corridor: From Livingroom go east\nPath to Backyard: From Corridor go east\n\nLets go back to Livingroom and try going south\nCurrent location: Driveway\nAction: go south": 1,
+        "take cookbook from counter": 1,
+        "examine cookbook": 1,
+        "take knife from counter": 1,
+        "take tomato from counter": 1,
+        "open fridge": 1,
+        "take raw pork chop from fridge": 1,
+        "take block of cheese from fridge": 1,
+        "take yellow bell pepper from fridge": 1,
+        "open plain door": 1
+    },
+    "input_tokens": 177594,
+    "output_tokens": 736,
+    "done": true,
+    "episode_return": 64.0,
+    "num_steps": 80,
+    "failed_candidates": [],
+    "progression": 0.17647058823529413,
+    "process_num": "ForkProcess-3",
+    "seed": 2871501302,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "gemini",
+        "model_id": "gemini-2.5-flash",
+        "base_url": "http://localhost:8080/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
