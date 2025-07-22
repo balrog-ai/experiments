@@ -13,8 +13,6 @@ python3 -m eval \
   client.model_id=gemini-2.5-flash
 ```
 
-Bare in mind that Gemini 2.5 Flash is using some reasoning internally
-
 For more information, visit:
 
 - [Evaluation tutorial](https://github.com/balrog-ai/BALROG/blob/main/docs/evaluation.md)
