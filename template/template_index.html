@@ -162,9 +162,9 @@
 
               </style>
             `;
-          
+
             const toggleButton = document.getElementById('toggle-style-btn');
-          
+
             // Function to apply dark mode
             function enableDarkMode() {
               if (!document.getElementById('dynamic-style')) {
@@ -200,7 +200,7 @@
               }
             }
 
-          
+
             // Check localStorage on page load
             window.addEventListener('DOMContentLoaded', () => {
               const darkMode = localStorage.getItem('darkMode');
@@ -210,7 +210,7 @@
                 disableDarkMode();
               }
             });
-          
+
             // Add event listener to the button
             toggleButton.addEventListener('click', () => {
               const darkMode = localStorage.getItem('darkMode');
@@ -432,12 +432,15 @@
               href="#" , target="_blank">paper</a>!
           </p class="text-content">
           <h3 class="text-title" style="margin-bottom:0.5em">Citation</h3>
-          <pre id="citation"><code>@article{paglieri2024balrog,
-    title={Balrog: Benchmarking Agentic LLM and VLM Reasoning On Games},
-    author={Paglieri, Davide and Cupia{\l}, Bart{\l}omiej and Coward, Sam and Piterbarg, Ulyana and Wo{\l}czyk, Maciej and Khan, Akbir and Pignatelli, Eduardo and Kuci{\'n}ski, {\L}ukasz and Pinto, Lerrel and Fergus, Rob and Foerster, Jakob Nicolaus and Parker-Holder, Jack and Rockt{\"a}schel, Tim},
-    journal={arXiv preprint arXiv:2411.13543},
-    year={2024}
-  }</code></pre>
+          <pre id="citation"><code>{% raw %}
+  @inproceedings{paglieri2025balrog,  
+    title={{BALROG}: Benchmarking Agentic {LLM} and {VLM} Reasoning On Games},
+    author={Davide Paglieri and Bart{\l}omiej Cupia{\l} and Samuel Coward and Ulyana Piterbarg and Maciej Wolczyk and Akbir Khan and Eduardo Pignatelli and {\L}ukasz Kuci{\'n}ski and Lerrel Pinto and Rob Fergus and Jakob Nicolaus Foerster and Jack Parker-Holder and Tim Rockt{\"a}schel},
+    booktitle={The Thirteenth International Conference on Learning Representations},
+    year={2025},
+    url={https://openreview.net/forum?id=fp6t3F669F}
+  }
+    {% endraw %}</code></pre>
           <p class="text-content" style="margin-bottom: 0;">
           <p style="line-height: 1.6667em;">
             <b>Usage:</b> BALROG's website and leaderboard use the template made available by <a
