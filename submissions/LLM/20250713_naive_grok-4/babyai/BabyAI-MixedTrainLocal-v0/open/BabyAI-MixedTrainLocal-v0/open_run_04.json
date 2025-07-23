@@ -1,0 +1,46 @@
+{
+    "task": "BabyAI-MixedTrainLocal-v0/open",
+    "action_frequency": {
+        "go forward": 8,
+        "turn right": 2,
+        "toggle": 2,
+        "pick up": 1,
+        "turn left": 3
+    },
+    "input_tokens": 7431,
+    "output_tokens": 24,
+    "done": true,
+    "episode_return": 0.8875,
+    "num_steps": 16,
+    "failed_candidates": [
+        "",
+        "",
+        ""
+    ],
+    "mission": "open the door",
+    "progression": 1.0,
+    "process_num": "ForkProcess-8",
+    "seed": 3166982558,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "xai",
+        "model_id": "grok-4-latest",
+        "base_url": "https://api.x.ai/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 4096
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
