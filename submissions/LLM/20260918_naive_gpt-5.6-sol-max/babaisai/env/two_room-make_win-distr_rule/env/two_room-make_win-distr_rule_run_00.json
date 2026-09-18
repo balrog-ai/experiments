@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-make_win-distr_rule",
+    "action_frequency": {
+        "right": 5,
+        "up": 5,
+        "left": 6,
+        "down": 4
+    },
+    "input_tokens": 59859,
+    "output_tokens": 17634,
+    "done": true,
+    "episode_return": 0.82,
+    "num_steps": 20,
+    "failed_candidates": [],
+    "target_plan": "make[door is win], goto[door]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-1",
+    "seed": 608806645,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "capi",
+        "model_id": "gpt-5.6-sol",
+        "base_url": "https://api.enterprise.githubcopilot.com",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null,
+            "reasoning_effort": "max"
+        },
+        "timeout": 600,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

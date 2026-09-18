@@ -1,0 +1,52 @@
+{
+    "task": "env/two_room-make_win-distr_rule",
+    "action_frequency": {
+        "idle": 7,
+        "up": 9,
+        "right": 8,
+        "down": 9,
+        "left": 8
+    },
+    "input_tokens": 158103,
+    "output_tokens": 204666,
+    "done": true,
+    "episode_return": 0.631,
+    "num_steps": 41,
+    "failed_candidates": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "target_plan": "make[ball is win], goto[ball]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-12",
+    "seed": 1592758980,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "capi",
+        "model_id": "gpt-5.6-luna",
+        "base_url": "https://api.enterprise.githubcopilot.com",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null,
+            "reasoning_effort": "max"
+        },
+        "timeout": 600,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
