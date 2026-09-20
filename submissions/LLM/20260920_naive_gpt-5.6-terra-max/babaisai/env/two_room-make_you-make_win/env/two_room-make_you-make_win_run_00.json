@@ -1,0 +1,50 @@
+{
+    "task": "env/two_room-make_you-make_win",
+    "action_frequency": {
+        "up": 7,
+        "right": 8,
+        "down": 8,
+        "idle": 5,
+        "left": 9
+    },
+    "input_tokens": 145700,
+    "output_tokens": 145123,
+    "done": true,
+    "episode_return": 0.667,
+    "num_steps": 37,
+    "failed_candidates": [
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "target_plan": "make[ball is you], make[door is win], goto[door]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-11",
+    "seed": 360797110,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "capi",
+        "model_id": "gpt-5.6-terra",
+        "base_url": "https://api.enterprise.githubcopilot.com",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null,
+            "reasoning_effort": "max"
+        },
+        "timeout": 600,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

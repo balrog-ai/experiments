@@ -1,0 +1,59 @@
+{
+    "task": "env/two_room-make_win-distr_win_rule",
+    "action_frequency": {
+        "up": 12,
+        "right": 18,
+        "idle": 14,
+        "down": 12,
+        "left": 14
+    },
+    "input_tokens": 352842,
+    "output_tokens": 309328,
+    "done": true,
+    "episode_return": 0.37,
+    "num_steps": 70,
+    "failed_candidates": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "target_plan": "make[key is win], goto[key]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-3",
+    "seed": 3639658024,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "capi",
+        "model_id": "gpt-5.6-terra",
+        "base_url": "https://api.enterprise.githubcopilot.com",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null,
+            "reasoning_effort": "max"
+        },
+        "timeout": 600,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
