@@ -1,0 +1,43 @@
+{
+    "task": "env/two_room-break_stop-make_win-distr_obj_rule",
+    "action_frequency": {
+        "up": 5,
+        "down": 4,
+        "right": 7,
+        "left": 2
+    },
+    "input_tokens": 52424,
+    "output_tokens": 29092,
+    "done": true,
+    "episode_return": 0.838,
+    "num_steps": 18,
+    "failed_candidates": [],
+    "target_plan": "break[wall is stop], make[key is win], goto[key]",
+    "progression": 1.0,
+    "process_num": "ForkProcess-13",
+    "seed": 2473202804,
+    "agent": {
+        "type": "naive",
+        "remember_cot": true,
+        "max_text_history": 16,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "capi",
+        "model_id": "gpt-5.6-terra",
+        "base_url": "https://api.enterprise.githubcopilot.com",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 8192,
+            "thinking_budget": null,
+            "reasoning_effort": "max"
+        },
+        "timeout": 600,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}
